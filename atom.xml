@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/"/>
-  <updated>2019-09-02T04:29:41.357Z</updated>
+  <updated>2019-09-02T04:32:59.453Z</updated>
   <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/02/Python%E4%B8%ADjoin%E9%97%AE%E9%A2%98/"/>
     <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/02/Python中join问题/</id>
     <published>2019-09-02T04:19:07.000Z</published>
-    <updated>2019-09-02T04:29:41.357Z</updated>
+    <updated>2019-09-02T04:32:59.453Z</updated>
     
     <content type="html"><![CDATA[<p>以<em>‘ ‘.join()</em>的方式将列表转为字符串，要求list中的元素都是字符串，否则需要<em>map(str, list)</em>进行转换。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = [&#123;<span class="string">"a"</span>:<span class="number">1</span>&#125;, &#123;<span class="string">"b"</span>:<span class="number">2</span>&#125;]  </span><br><span class="line"><span class="string">','</span>.join(map(str, a))</span><br></pre></td></tr></table></figure>]]></content>
     
