@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/"/>
-  <updated>2019-09-02T08:22:05.821Z</updated>
+  <updated>2019-09-02T08:23:25.515Z</updated>
   <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/02/VSCode%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E5%BC%80%E5%8F%91/"/>
     <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/02/VSCode远程连接开发/</id>
     <published>2019-09-02T07:59:51.000Z</published>
-    <updated>2019-09-02T08:22:05.821Z</updated>
+    <updated>2019-09-02T08:23:25.515Z</updated>
     
     <content type="html"><![CDATA[<p>说明： 示例是Mac上的VSCode连接远程Ubuntu服务器。</p><h2 id="一、-服务器配置"><a href="#一、-服务器配置" class="headerlink" title="一、 服务器配置"></a>一、 服务器配置</h2><ol><li>首先，给Ubuntu安装openssh-server；  <blockquote><p>sudo apt-get install openssh-server</p></blockquote></li><li>其次，启动ssh；  <blockquote><p>sudo service ssh start</p></blockquote></li><li>检查ssh是否开启。<blockquote><p>ps -e | grep ssh</p></blockquote></li></ol><h2 id="二、-本地配置"><a href="#二、-本地配置" class="headerlink" title="二、 本地配置"></a>二、 本地配置</h2><ol><li>Mac本身自带了ssh，不必安装；  </li><li>查看是否存在ssh密钥: ~/.ssh/id_rsa_pub；  </li><li>不存在的话，输入命令： ssh-keygen -t rsa -b 4096 ，生成两个文件；  <img src="/2019/09/02/VSCode远程连接开发/key.jpg" title="avatar"></li><li>将本地的公共密钥发送到服务器。  <blockquote><p>ssh-copy-id <a href="mailto:wangmeng@10.61.3.212" target="_blank" rel="noopener">wangmeng@10.61.3.212</a>  </p></blockquote></li></ol><h2 id="三、-VSCode配置"><a href="#三、-VSCode配置" class="headerlink" title="三、 VSCode配置"></a>三、 VSCode配置</h2><ol><li>首先安装VSCode Remote SSH，安装完左侧会显示新图标；  </li><li>点击CONNECTIONS后面的设置图标，再点击第一项进行配置； <img src="/2019/09/02/VSCode远程连接开发/1.jpg" title="avatar"></li><li>设置连接名、服务器地址、服务器上的用户名。  <img src="/2019/09/02/VSCode远程连接开发/2.jpg" title="avatar"><img src="/2019/09/02/VSCode远程连接开发/3.jpg" title="avatar"></li></ol>]]></content>
     
