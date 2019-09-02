@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/"/>
-  <updated>2019-09-02T04:32:59.453Z</updated>
+  <updated>2019-09-02T07:58:08.187Z</updated>
   <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用conda安装Python模块</title>
+    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/02/%E4%BD%BF%E7%94%A8conda%E5%AE%89%E8%A3%85Python%E6%A8%A1%E5%9D%97/"/>
+    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/02/使用conda安装Python模块/</id>
+    <published>2019-09-02T07:54:46.000Z</published>
+    <updated>2019-09-02T07:58:08.187Z</updated>
+    
+    <content type="html"><![CDATA[<p>问题：在终端中pip成功安装的模块，在<em>Jupyter-Notebook</em>中<em>import</em>失败，原因在于终端和Jupyter-Notebook使用的Python内核位置不同。  </p><p>如何解决：在Anaconda的bin目录下，使用pip重新安装，conda list查看是否安装成功。  </p><img src="/2019/09/02/使用conda安装Python模块/eg.jpg" title="avatar">]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;问题：在终端中pip成功安装的模块，在&lt;em&gt;Jupyter-Notebook&lt;/em&gt;中&lt;em&gt;import&lt;/em&gt;失败，原因在于终端和Jupyter-Notebook使用的Python内核位置不同。  &lt;/p&gt;
+&lt;p&gt;如何解决：在Anaconda的bin目录下，使用p
+      
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Python/"/>
+    
+      <category term="Conda" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Conda/"/>
+    
+  </entry>
   
   <entry>
     <title>Python中join问题</title>
