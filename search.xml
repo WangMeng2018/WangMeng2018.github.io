@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>Ubuntu安装Docker</title>
+      <link href="/2019/09/04/Ubuntu%E5%AE%89%E8%A3%85Docker/"/>
+      <url>/2019/09/04/Ubuntu%E5%AE%89%E8%A3%85Docker/</url>
+      
+        <content type="html"><![CDATA[<ol><li>从Docker仓库下载安装，首先确保能够访问Docker仓库地址：<a href="https://download.docker.com/linux/ubuntu，如果能够访问，按照下面的操作步骤进行安装。" target="_blank" rel="noopener">https://download.docker.com/linux/ubuntu，如果能够访问，按照下面的操作步骤进行安装。</a>  <blockquote><p>sudo apt update<br>sudo apt install apt-transport-https ca-certificates curl software-properties-common</p></blockquote></li><li>在/etc/apt/sources.list.d/docker.list文件中添加下面内容；  <blockquote><p>deb [arch=amd64] <a href="https://download.docker.com/linux/ubuntu" target="_blank" rel="noopener">https://download.docker.com/linux/ubuntu</a> bionic stable</p></blockquote></li><li>添加秘钥；  <blockquote><pre><code>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</code></pre></blockquote></li><li>安装docker-ce；  <blockquote><pre><code>sudo apt install docker-ce</code></pre></blockquote></li><li>查看是否安装成功。  <blockquote><p>docker –version<br>输出结果： Docker version 19.03.2, build 6a30dfc</p></blockquote></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Ubuntu </tag>
+            
+            <tag> Docker </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>VSCode远程连接开发</title>
       <link href="/2019/09/02/VSCode%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E5%BC%80%E5%8F%91/"/>
       <url>/2019/09/02/VSCode%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E5%BC%80%E5%8F%91/</url>
@@ -14,9 +35,9 @@
       
         <tags>
             
-            <tag> Mac </tag>
-            
             <tag> Ubuntu </tag>
+            
+            <tag> Mac </tag>
             
             <tag> VSCode </tag>
             

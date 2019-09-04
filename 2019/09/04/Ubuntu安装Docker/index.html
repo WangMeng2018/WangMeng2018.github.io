@@ -6,20 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master">
-  <title>Tag: 软件 | 鱼咸滚酱</title>
+  <title>Ubuntu安装Docker | 鱼咸滚酱</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="鱼咸滚酱_个人博客">
-<meta name="keywords" content="鱼咸滚酱,个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="鱼咸滚酱">
-<meta property="og:url" content="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/软件/index.html">
+  <meta name="description" content="从Docker仓库下载安装，首先确保能够访问Docker仓库地址：https://download.docker.com/linux/ubuntu，如果能够访问，按照下面的操作步骤进行安装。   sudo apt updatesudo apt install apt-transport-https ca-certificates curl software-properties-common">
+<meta name="keywords" content="Ubuntu,Docker">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ubuntu安装Docker">
+<meta property="og:url" content="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/04/Ubuntu安装Docker/index.html">
 <meta property="og:site_name" content="鱼咸滚酱">
-<meta property="og:description" content="鱼咸滚酱_个人博客">
+<meta property="og:description" content="从Docker仓库下载安装，首先确保能够访问Docker仓库地址：https://download.docker.com/linux/ubuntu，如果能够访问，按照下面的操作步骤进行安装。   sudo apt updatesudo apt install apt-transport-https ca-certificates curl software-properties-common">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-09-04T06:36:22.780Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="鱼咸滚酱">
-<meta name="twitter:description" content="鱼咸滚酱_个人博客">
+<meta name="twitter:title" content="Ubuntu安装Docker">
+<meta name="twitter:description" content="从Docker仓库下载安装，首先确保能够访问Docker仓库地址：https://download.docker.com/linux/ubuntu，如果能够访问，按照下面的操作步骤进行安装。   sudo apt updatesudo apt install apt-transport-https ca-certificates curl software-properties-common">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -176,116 +177,199 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Ubuntu安装Docker" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/01/Ubuntu-SSR/" class="archive-article-date">
-        <time datetime="2019-09-01T12:05:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-01</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/01/Ubuntu-SSR/" target="_blank">Ubuntu SSR</a>
   
+    <h1 class="article-title" itemprop="name">
+      Ubuntu安装Docker
     </h1>
   
 
 
-        <div class="article-info info-on-right">
-          
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2019/09/04/Ubuntu安装Docker/" class="archive-article-date">
+        <time datetime="2019-09-04T06:31:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-04</time>
+</a>
+
+  
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <ol>
+<li>从Docker仓库下载安装，首先确保能够访问Docker仓库地址：<a href="https://download.docker.com/linux/ubuntu，如果能够访问，按照下面的操作步骤进行安装。" target="_blank" rel="noopener">https://download.docker.com/linux/ubuntu，如果能够访问，按照下面的操作步骤进行安装。</a>  <blockquote>
+<p>sudo apt update<br>sudo apt install apt-transport-https ca-certificates curl software-properties-common</p>
+</blockquote>
+</li>
+<li>在/etc/apt/sources.list.d/docker.list文件中添加下面内容；  <blockquote>
+<p>deb [arch=amd64] <a href="https://download.docker.com/linux/ubuntu" target="_blank" rel="noopener">https://download.docker.com/linux/ubuntu</a> bionic stable</p>
+</blockquote>
+</li>
+<li>添加秘钥；  <blockquote>
+<pre><code>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</code></pre></blockquote>
+</li>
+<li>安装docker-ce；  <blockquote>
+<pre><code>sudo apt install docker-ce</code></pre></blockquote>
+</li>
+<li>查看是否安装成功。  <blockquote>
+<p>docker –version<br>输出结果： Docker version 19.03.2, build 6a30dfc</p>
+</blockquote>
+</li>
+</ol>
+
+    
+
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          鱼咸滚酱
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/04/Ubuntu安装Docker/" title="Ubuntu安装Docker" target="_blank">https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/04/Ubuntu安装Docker/</a>
+        </li>
+        <li>
+          <strong>版权声明： </strong>
+          本博客所有文章除特别声明外，均采用 <a href="https://www.apache.org/licenses/LICENSE-2.0.html" rel="external nofollow" target="_blank">Apache License 2.0</a> 许可协议。转载请注明出处！
+        </li>
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
-        		</li>
-      		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Ubuntu</a>
         		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/01/Mac配置Tunnelblick/" class="archive-article-date">
-        <time datetime="2019-09-01T09:16:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-01</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/01/Mac配置Tunnelblick/" target="_blank">Mac配置Tunnelblick</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
-        		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Mac</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Docker</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+    
 
     
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/04/Ubuntu安装Docker/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2019/09/02/VSCode远程连接开发/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">VSCode远程连接开发</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -326,9 +410,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
