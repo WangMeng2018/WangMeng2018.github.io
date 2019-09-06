@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>Mac安装Docker</title>
+      <link href="/2019/09/06/Mac%E5%AE%89%E8%A3%85Docker/"/>
+      <url>/2019/09/06/Mac%E5%AE%89%E8%A3%85Docker/</url>
+      
+        <content type="html"><![CDATA[<p>Mac上安装Docker比较简单，直接从<a href="https://hub.docker.com/editions/community/docker-ce-desktop-mac" target="_blank" rel="noopener">官网</a>下载安装文件，再安装就可以了。  </p><p>查看是否安装成功：</p><blockquote><p>docker –version</p></blockquote>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Mac </tag>
+            
+            <tag> Docker </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Ubuntu安装Docker</title>
       <link href="/2019/09/04/Ubuntu%E5%AE%89%E8%A3%85Docker/"/>
       <url>/2019/09/04/Ubuntu%E5%AE%89%E8%A3%85Docker/</url>
@@ -14,9 +35,9 @@
       
         <tags>
             
-            <tag> Ubuntu </tag>
-            
             <tag> Docker </tag>
+            
+            <tag> Ubuntu </tag>
             
         </tags>
       
@@ -119,9 +140,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Mac </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
