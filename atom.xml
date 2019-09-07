@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/"/>
-  <updated>2019-09-06T10:55:22.253Z</updated>
+  <updated>2019-09-06T12:16:29.658Z</updated>
   <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Push Docker镜像到远程仓库</title>
+    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/06/Push-Docker%E9%95%9C%E5%83%8F%E5%88%B0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/"/>
+    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/06/Push-Docker镜像到远程仓库/</id>
+    <published>2019-09-06T12:14:21.000Z</published>
+    <updated>2019-09-06T12:16:29.658Z</updated>
+    
+    <content type="html"><![CDATA[<p>将本地Docker镜像Push到远程仓库，命令如下：  </p><blockquote><p>docker tag local-image:tagname new-repo:tagname<br>docker push new-repo:tagname</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;将本地Docker镜像Push到远程仓库，命令如下：  &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;docker tag local-image:tagname new-repo:tagname&lt;br&gt;docker push new-repo:tagname&lt;/p&gt;
+&lt;/bl
+      
+    
+    </summary>
+    
+    
+      <category term="Docker" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Docker/"/>
+    
+  </entry>
   
   <entry>
     <title>Mac安装Docker</title>
@@ -90,9 +116,9 @@
     
       <category term="Mac" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Mac/"/>
     
-      <category term="Ubuntu" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Ubuntu/"/>
-    
       <category term="VSCode" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/VSCode/"/>
+    
+      <category term="Ubuntu" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Ubuntu/"/>
     
   </entry>
   
@@ -196,9 +222,9 @@
     </summary>
     
     
-      <category term="Mac" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Mac/"/>
-    
       <category term="软件" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="Mac" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Mac/"/>
     
   </entry>
   
