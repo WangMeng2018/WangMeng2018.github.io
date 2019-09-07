@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/"/>
-  <updated>2019-09-06T12:16:29.658Z</updated>
+  <updated>2019-09-07T09:35:26.397Z</updated>
   <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Docker命令</title>
+    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/07/Docker%E5%91%BD%E4%BB%A4/"/>
+    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/07/Docker命令/</id>
+    <published>2019-09-07T09:31:34.000Z</published>
+    <updated>2019-09-07T09:35:26.397Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Docker常用命令"><a href="#Docker常用命令" class="headerlink" title="Docker常用命令"></a>Docker常用命令</h1><ol><li>docker run hello-world 启动hello-world容器镜像<br> docker run -t -i ubuntu:18.04 /bin/bash   运行交互式容器<br> -t : 在新容器内指定一个伪终端或者终端<br>  -i : 通过容器内的标准输入STDIN进行交互<br> docker run -d hello-world  运行容器的后台模式<br> -d : 分离模式，在后台运行</li></ol><ol start="2"><li><p>docker –version或者docker version  查看版本信息</p></li><li><p>docker images或者docker image ls   罗列下载的容器镜像信息</p></li><li><p>docker container ls  查看正在运行的容器实例<br> docker container ls -all  查看所有容器实例</p></li><li><p>docker logs Container_ID   查看容器的标准输出</p></li><li><p>docker ps  查看正在运行的容器实例</p></li><li><p>docker stop Container_ID 或者 Ctrl+D 停止容器的运行</p></li><li><p>docker pull Image_name    载入镜像</p></li><li><p>docker port Container_ID   查看指定容器的端口映射<br> -p 主机端口/容器端口   将容器端口映射到主机端口</p></li><li><p>docker top Container_ID   查看容器内部运行的进程</p></li><li><p>docker rm 移除不需要的Docker镜像</p></li><li><p>docker search Name  搜索镜像</p></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Docker常用命令&quot;&gt;&lt;a href=&quot;#Docker常用命令&quot; class=&quot;headerlink&quot; title=&quot;Docker常用命令&quot;&gt;&lt;/a&gt;Docker常用命令&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;docker run hello-world 启动hello-w
+      
+    
+    </summary>
+    
+    
+      <category term="Docker" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Docker/"/>
+    
+  </entry>
   
   <entry>
     <title>Push Docker镜像到远程仓库</title>
@@ -61,9 +85,9 @@
     </summary>
     
     
-      <category term="Mac" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Mac/"/>
-    
       <category term="Docker" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Docker/"/>
+    
+      <category term="Mac" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Mac/"/>
     
   </entry>
   
@@ -116,9 +140,9 @@
     
       <category term="Mac" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Mac/"/>
     
-      <category term="VSCode" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/VSCode/"/>
-    
       <category term="Ubuntu" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Ubuntu/"/>
+    
+      <category term="VSCode" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/VSCode/"/>
     
   </entry>
   
@@ -222,9 +246,9 @@
     </summary>
     
     
-      <category term="软件" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/%E8%BD%AF%E4%BB%B6/"/>
-    
       <category term="Mac" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Mac/"/>
+    
+      <category term="软件" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/%E8%BD%AF%E4%BB%B6/"/>
     
   </entry>
   

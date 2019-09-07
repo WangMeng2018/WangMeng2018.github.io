@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Docker命令</title>
+      <link href="/2019/09/07/Docker%E5%91%BD%E4%BB%A4/"/>
+      <url>/2019/09/07/Docker%E5%91%BD%E4%BB%A4/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Docker常用命令"><a href="#Docker常用命令" class="headerlink" title="Docker常用命令"></a>Docker常用命令</h1><ol><li>docker run hello-world 启动hello-world容器镜像<br> docker run -t -i ubuntu:18.04 /bin/bash   运行交互式容器<br> -t : 在新容器内指定一个伪终端或者终端<br>  -i : 通过容器内的标准输入STDIN进行交互<br> docker run -d hello-world  运行容器的后台模式<br> -d : 分离模式，在后台运行</li></ol><ol start="2"><li><p>docker –version或者docker version  查看版本信息</p></li><li><p>docker images或者docker image ls   罗列下载的容器镜像信息</p></li><li><p>docker container ls  查看正在运行的容器实例<br> docker container ls -all  查看所有容器实例</p></li><li><p>docker logs Container_ID   查看容器的标准输出</p></li><li><p>docker ps  查看正在运行的容器实例</p></li><li><p>docker stop Container_ID 或者 Ctrl+D 停止容器的运行</p></li><li><p>docker pull Image_name    载入镜像</p></li><li><p>docker port Container_ID   查看指定容器的端口映射<br> -p 主机端口/容器端口   将容器端口映射到主机端口</p></li><li><p>docker top Container_ID   查看容器内部运行的进程</p></li><li><p>docker rm 移除不需要的Docker镜像</p></li><li><p>docker search Name  搜索镜像</p></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Docker </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Push Docker镜像到远程仓库</title>
       <link href="/2019/09/06/Push-Docker%E9%95%9C%E5%83%8F%E5%88%B0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/"/>
       <url>/2019/09/06/Push-Docker%E9%95%9C%E5%83%8F%E5%88%B0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</url>
@@ -33,9 +52,9 @@
       
         <tags>
             
-            <tag> Mac </tag>
-            
             <tag> Docker </tag>
+            
+            <tag> Mac </tag>
             
         </tags>
       
@@ -77,9 +96,9 @@
             
             <tag> Mac </tag>
             
-            <tag> VSCode </tag>
-            
             <tag> Ubuntu </tag>
+            
+            <tag> VSCode </tag>
             
         </tags>
       
@@ -159,9 +178,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Mac </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
