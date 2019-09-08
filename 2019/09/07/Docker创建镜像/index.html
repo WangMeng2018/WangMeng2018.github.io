@@ -6,20 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master">
-  <title>Archives | 鱼咸滚酱</title>
+  <title>Docker创建镜像 | 鱼咸滚酱</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="鱼咸滚酱_个人博客">
-<meta name="keywords" content="鱼咸滚酱,个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="鱼咸滚酱">
-<meta property="og:url" content="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/archives/index.html">
+  <meta name="description" content="Docker创建镜像有两种方式:    从已经创建镜像的容器中更新镜像，并且提交这个镜像； 使用Dockerfile指令来创建镜像。  一、已有镜像更新 在更新镜像之前，先用镜像创建一个容器；    docker run -t -i ubuntu:18.04  /bin/bash   执行上述命令之后，会返回一个Container_ID；可以在伪终端中进行修改，比如：apt-get update；">
+<meta name="keywords" content="Docker">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker创建镜像">
+<meta property="og:url" content="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/07/Docker创建镜像/index.html">
 <meta property="og:site_name" content="鱼咸滚酱">
-<meta property="og:description" content="鱼咸滚酱_个人博客">
+<meta property="og:description" content="Docker创建镜像有两种方式:    从已经创建镜像的容器中更新镜像，并且提交这个镜像； 使用Dockerfile指令来创建镜像。  一、已有镜像更新 在更新镜像之前，先用镜像创建一个容器；    docker run -t -i ubuntu:18.04  /bin/bash   执行上述命令之后，会返回一个Container_ID；可以在伪终端中进行修改，比如：apt-get update；">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://github.com/2019/09/07/Docker创建镜像/1.jpg">
+<meta property="og:image" content="https://github.com/2019/09/07/Docker创建镜像/2.jpg">
+<meta property="og:image" content="https://github.com/2019/09/07/Docker创建镜像/3.jpg">
+<meta property="og:image" content="https://github.com/2019/09/07/Docker创建镜像/4.jpg">
+<meta property="og:updated_time" content="2019-09-07T10:02:06.467Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="鱼咸滚酱">
-<meta name="twitter:description" content="鱼咸滚酱_个人博客">
+<meta name="twitter:title" content="Docker创建镜像">
+<meta name="twitter:description" content="Docker创建镜像有两种方式:    从已经创建镜像的容器中更新镜像，并且提交这个镜像； 使用Dockerfile指令来创建镜像。  一、已有镜像更新 在更新镜像之前，先用镜像创建一个容器；    docker run -t -i ubuntu:18.04  /bin/bash   执行上述命令之后，会返回一个Container_ID；可以在伪终端中进行修改，比如：apt-get update；">
+<meta name="twitter:image" content="https://github.com/2019/09/07/Docker创建镜像/1.jpg">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -176,41 +182,120 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Docker创建镜像" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
   
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
+    <h1 class="article-title" itemprop="name">
+      Docker创建镜像
+    </h1>
+  
+
+
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
 <a href="/2019/09/07/Docker创建镜像/" class="archive-article-date">
         <time datetime="2019-09-07T09:38:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-07</time>
 </a>
 
-        </div>
-    	 
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/07/Docker创建镜像/" target="_blank">Docker创建镜像</a>
   
-    </h1>
+  </header>
   
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>Docker创建镜像有两种方式:  </p>
+<ul>
+<li>从已经创建镜像的容器中更新镜像，并且提交这个镜像；</li>
+<li>使用Dockerfile指令来创建镜像。</li>
+</ul>
+<h1 id="一、已有镜像更新"><a href="#一、已有镜像更新" class="headerlink" title="一、已有镜像更新"></a>一、已有镜像更新</h1><ol>
+<li><p>在更新镜像之前，先用镜像创建一个容器；  </p>
+<blockquote>
+<p>docker run -t -i ubuntu:18.04  /bin/bash</p>
+</blockquote>
+</li>
+<li><p>执行上述命令之后，会返回一个Container_ID；可以在伪终端中进行修改，比如：apt-get update； </p>
+</li>
+<li><p>再用exit退出容器；  </p>
+</li>
+<li><p>通过docker commit这个命令来提交修改后的容器副本； </p>
+<blockquote>
+<p>docker   commit   -m=”description”   -a=”author”   Container_ID   author/image:tag</p>
+</blockquote>
+</li>
+<li><p>docker images 就可以查看到这个镜像。</p>
+</li>
+</ol>
+<h1 id="Dockerfile创建镜像"><a href="#Dockerfile创建镜像" class="headerlink" title="Dockerfile创建镜像"></a>Dockerfile创建镜像</h1><ol>
+<li><p>首先需要创建一个Dockerfile文件，包含一组指令，而且每一个指令的前缀必须大写。比如官网示例中填入以下内容：  </p>
+<img src="/2019/09/07/Docker创建镜像/1.jpg" title="avatar">
+<p>FROM 指定使用的镜像源; RUN  告诉docker在镜像中执行的命令。<br>要成功实现该示例，这里还差两个文件：requirement.txt 和 app.py。  </p>
+<img src="/2019/09/07/Docker创建镜像/2.jpg" title="avatar">
+<img src="/2019/09/07/Docker创建镜像/3.jpg" title="avatar">  
+</li>
+<li><p>准备工作完成之后，可以使用docker build命令构建镜像；  </p>
+<blockquote>
+<p>docker   build   –tag=ImageName   .  </p>
+<p>说明：  </p>
+<ul>
+<li>命令最后一个”.”，用来指定创建镜像的资源目录，即Dockerfile的目录。  </li>
+<li>-t指定创建的镜像名。</li>
+</ul>
+</blockquote>
+</li>
+<li><p>docker images 查看创建的镜像信息；</p>
+</li>
+<li><p>启动容器；</p>
+<blockquote>
+<p>docker run -p 4000:80 ImageName</p>
+</blockquote>
+<img src="/2019/09/07/Docker创建镜像/4.jpg" title="avatar">
+</li>
+<li><p>停止容器运行；</p>
+<blockquote>
+<pre><code>docker container stop Conatiner_ID</code></pre></blockquote>
+</li>
+<li><p>使用docker tag命令为镜像添加一个新的标签。</p>
+<blockquote>
+<pre><code>docker tag Container_ID  ImageName:TagName</code></pre></blockquote>
+</li>
+</ol>
 
+    
 
-        <div class="article-info info-on-right">
-          
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          鱼咸滚酱
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/07/Docker创建镜像/" title="Docker创建镜像" target="_blank">https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/07/Docker创建镜像/</a>
+        </li>
+        <li>
+          <strong>版权声明： </strong>
+          本博客所有文章除特别声明外，均采用 <a href="https://www.apache.org/licenses/LICENSE-2.0.html" rel="external nofollow" target="_blank">Apache License 2.0</a> 许可协议。转载请注明出处！
+        </li>
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -222,434 +307,107 @@
 		</ul>
 	</div>
 
-          
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/07/Docker创建镜像/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/07/Docker命令/" class="archive-article-date">
-        <time datetime="2019-09-07T09:31:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-07</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2019/09/07/Docker命令/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Docker命令</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/07/Docker命令/" target="_blank">Docker命令</a>
-  
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Docker</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/06/Push-Docker镜像到远程仓库/" class="archive-article-date">
-        <time datetime="2019-09-06T12:14:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-06</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/06/Push-Docker镜像到远程仓库/" target="_blank">Push Docker镜像到远程仓库</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Docker</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/06/Mac安装Docker/" class="archive-article-date">
-        <time datetime="2019-09-06T10:41:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-06</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/06/Mac安装Docker/" target="_blank">Mac安装Docker</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Docker</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Mac</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/04/Ubuntu安装Docker/" class="archive-article-date">
-        <time datetime="2019-09-04T06:31:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-04</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/04/Ubuntu安装Docker/" target="_blank">Ubuntu安装Docker</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Docker</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Ubuntu</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/02/VSCode远程连接开发/" class="archive-article-date">
-        <time datetime="2019-09-02T07:59:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-02</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/02/VSCode远程连接开发/" target="_blank">VSCode远程连接开发</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Mac</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Ubuntu</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">VSCode</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/02/使用conda安装Python模块/" class="archive-article-date">
-        <time datetime="2019-09-02T07:54:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-02</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/02/使用conda安装Python模块/" target="_blank">使用conda安装Python模块</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Conda</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/02/Python中join问题/" class="archive-article-date">
-        <time datetime="2019-09-02T04:19:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-02</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/02/Python中join问题/" target="_blank">Python中join问题</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/01/Ubuntu-SSR/" class="archive-article-date">
-        <time datetime="2019-09-01T12:05:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-01</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/01/Ubuntu-SSR/" target="_blank">Ubuntu SSR</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Ubuntu</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/01/Mac配置Tunnelblick/" class="archive-article-date">
-        <time datetime="2019-09-01T09:16:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-01</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/01/Mac配置Tunnelblick/" target="_blank">Mac配置Tunnelblick</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Mac</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -690,8 +448,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
