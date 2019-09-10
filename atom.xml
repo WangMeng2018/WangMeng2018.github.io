@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/"/>
-  <updated>2019-09-10T07:33:01.179Z</updated>
+  <updated>2019-09-10T07:35:01.544Z</updated>
   <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/10/Windows%E5%AE%89%E8%A3%85Mysql/"/>
     <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/10/Windows安装Mysql/</id>
     <published>2019-09-10T07:23:26.000Z</published>
-    <updated>2019-09-10T07:33:01.179Z</updated>
+    <updated>2019-09-10T07:35:01.544Z</updated>
     
     <content type="html"><![CDATA[<ol><li><p>下载链接：<a href="https://dev.mysql.com/downloads/mysql/5.7.html#downloads" target="_blank" rel="noopener">https://dev.mysql.com/downloads/mysql/5.7.html#downloads</a><br>本机选择的是Mysql5.7.13 zip版本;  </p></li><li><p>解压mysql-5.7.13-winx64.zip，并移动到安装目录下；</p></li><li><p>添加系统环境变量path，内容为D:\MySQL\mysql-5.7.13-winx64 ;  </p></li><li><p>修改配置文件my-default.ini，添加内容：  </p><blockquote><p>basedir = D:\MySQL\mysql-5.7.13-winx64<br>datadir = D:\MySQL\mysql-5.7.13-winx64\data</p></blockquote></li><li><p>以管理员身份运行cmd，输入cd D:\MySQL\mysql-5.7.13-winx64\bin；</p></li><li><p>输入.\mysqld –initialize-insecure –user=mysql 回车;  </p></li><li><p>输入 .\mysqld install 回车;  </p></li><li><p>输入net start mysql 回车启动mysql服务  管理员权限;  </p></li><li><p>输入.\mysql -u root -p 回车登录mysql数据库，没有密码，直接回车;  </p></li><li><p>测试，输入show databases:  </p><img src="/2019/09/10/Windows安装Mysql/1.jpg" title="avatar">  </li></ol><p>输入quit，退出。  </p><ol start="11"><li>输入net stop mysql，停止mysql程序。</li></ol><p>参考链接:  </p><ul><li><a href="https://www.cnblogs.com/ayyl/p/5978418.html" target="_blank" rel="noopener">https://www.cnblogs.com/ayyl/p/5978418.html</a>  </li><li><a href="https://www.cnblogs.com/reyinever/p/8551977.html" target="_blank" rel="noopener">https://www.cnblogs.com/reyinever/p/8551977.html</a>  </li></ul>]]></content>
     
@@ -38,9 +38,9 @@
     
       <category term="软件" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/%E8%BD%AF%E4%BB%B6/"/>
     
-      <category term="Windows" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Windows/"/>
-    
       <category term="Mysql" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Mysql/"/>
+    
+      <category term="Windows" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Windows/"/>
     
   </entry>
   
@@ -49,12 +49,28 @@
     <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/10/Ubuntu%E5%AE%89%E8%A3%85Mysql/"/>
     <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/10/Ubuntu安装Mysql/</id>
     <published>2019-09-10T07:19:48.000Z</published>
-    <updated>2019-09-10T07:19:48.291Z</updated>
+    <updated>2019-09-10T07:47:11.179Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="安装Mysql"><a href="#安装Mysql" class="headerlink" title="安装Mysql"></a>安装Mysql</h1><ol><li>首先安装服务端、客户端以及其他的依赖库；  </li></ol><blockquote><p>sudo apt-get install mysql-server<br>sudo apt install mysql-client<br>sudo apt install libmysqlclient-dev  </p></blockquote><ol start="2"><li>测试是否安装成功。</li></ol><blockquote><p>sudo netstat -tap | grep mysql  </p></blockquote><h1 id="设置允许远程访问"><a href="#设置允许远程访问" class="headerlink" title="设置允许远程访问"></a>设置允许远程访问</h1><ol><li>修改配置文件mysqld.conf；  </li></ol><blockquote><p>sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf  </p></blockquote><p>将文件中的bind-address = 127.0.0.1这一行注释掉。  </p><ol start="2"><li>进入Mysql数据库；  </li></ol><blockquote><p>mysql -u root -p  </p></blockquote><p>进入MySQL命令行表示安装成功。  </p><ol start="3"><li>执行授权命令；  </li></ol><blockquote><p>GRANT ALL PRIVILEGES ON <em>.</em> TO ‘root’@’%’ IDENTIFIED BY ‘密码’ WITH GRANT OPTION;  </p></blockquote><p>其中，root是数据库的用户，*表示所有IP都可以登录该数据库。  </p><ol start="4"><li>保存设置；  </li></ol><blockquote><p>flush privileges;  </p></blockquote><ol start="5"><li><p>退出Mysql用exit；  </p></li><li><p>重启Mysql。</p></li></ol><blockquote><p>service mysql restart  </p></blockquote><p>参考链接：<br><a href="https://andy6804tw.github.io/2019/01/29/ubuntu-mysql-setting/#2-%E9%80%B2%E5%85%A5-mysql-%E6%9C%8D%E5%8B%99" target="_blank" rel="noopener">https://andy6804tw.github.io/2019/01/29/ubuntu-mysql-setting/#2-%E9%80%B2%E5%85%A5-mysql-%E6%9C%8D%E5%8B%99</a>  </p>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;h1 id=&quot;安装Mysql&quot;&gt;&lt;a href=&quot;#安装Mysql&quot; class=&quot;headerlink&quot; title=&quot;安装Mysql&quot;&gt;&lt;/a&gt;安装Mysql&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;首先安装服务端、客户端以及其他的依赖库；  &lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquot
+      
+    
     </summary>
     
+    
+      <category term="软件" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="Ubuntu" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Ubuntu/"/>
+    
+      <category term="Mysql" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Mysql/"/>
     
   </entry>
   
