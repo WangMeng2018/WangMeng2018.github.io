@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>python自动创建requirements.txt</title>
+      <link href="/2019/09/10/python%E8%87%AA%E5%8A%A8%E5%88%9B%E5%BB%BArequirements-txt/"/>
+      <url>/2019/09/10/python%E8%87%AA%E5%8A%A8%E5%88%9B%E5%BB%BArequirements-txt/</url>
+      
+        <content type="html"><![CDATA[<h2 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h2><p>第一种方法适用于虚拟环境或者Docker中生成requirements.txt。  </p><blockquote><p>pip freeze &gt; requirements.txt  </p></blockquote><p>安装requirements.txt依赖。  </p><blockquote><p>pip install -r requirements.txt  </p></blockquote><h2 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h2><p>推荐第二种方法，使用pipreqs，导出项目代码中导入的模块。  </p><blockquote><p>pip install pipreqs<br>pipreqs ./CRAWLER_Zhihu/  </p></blockquote>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Windows安装Mysql</title>
       <link href="/2019/09/10/Windows%E5%AE%89%E8%A3%85Mysql/"/>
       <url>/2019/09/10/Windows%E5%AE%89%E8%A3%85Mysql/</url>
@@ -16,9 +35,9 @@
             
             <tag> 软件 </tag>
             
-            <tag> Mysql </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> Mysql </tag>
             
         </tags>
       
@@ -243,9 +262,9 @@
       
         <tags>
             
-            <tag> Mac </tag>
-            
             <tag> 软件 </tag>
+            
+            <tag> Mac </tag>
             
         </tags>
       
