@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/"/>
-  <updated>2019-09-10T12:13:09.605Z</updated>
+  <updated>2019-09-11T07:23:44.520Z</updated>
   <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac下Anaconda配置环境变量</title>
+    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/11/Mac%E4%B8%8BAnaconda%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
+    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/11/Mac下Anaconda配置环境变量/</id>
+    <published>2019-09-11T07:10:05.000Z</published>
+    <updated>2019-09-11T07:23:44.520Z</updated>
+    
+    <content type="html"><![CDATA[<p>Anaconda安装成功之后，需要配置环境变量。  </p><blockquote><p>vim ~/.zshrc<br>export PATH=”/Applications/anaconda3/bin:$PATH”<br>source ~/.zshrc<br>conda –version   #测试是否配置成功</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Anaconda安装成功之后，需要配置环境变量。  &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;vim ~/.zshrc&lt;br&gt;export PATH=”/Applications/anaconda3/bin:$PATH”&lt;br&gt;source ~/.zshrc&lt;br&gt;cond
+      
+    
+    </summary>
+    
+    
+      <category term="Mac" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Mac/"/>
+    
+      <category term="Anaconda" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Anaconda/"/>
+    
+  </entry>
   
   <entry>
     <title>python自动创建requirements.txt</title>
@@ -63,9 +90,9 @@
     
       <category term="软件" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/%E8%BD%AF%E4%BB%B6/"/>
     
-      <category term="Windows" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Windows/"/>
-    
       <category term="Mysql" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Mysql/"/>
+    
+      <category term="Windows" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Windows/"/>
     
   </entry>
   
@@ -357,9 +384,9 @@
     </summary>
     
     
-      <category term="软件" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/%E8%BD%AF%E4%BB%B6/"/>
-    
       <category term="Mac" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Mac/"/>
+    
+      <category term="软件" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/%E8%BD%AF%E4%BB%B6/"/>
     
   </entry>
   

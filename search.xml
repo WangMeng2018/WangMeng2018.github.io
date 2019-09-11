@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>Mac下Anaconda配置环境变量</title>
+      <link href="/2019/09/11/Mac%E4%B8%8BAnaconda%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
+      <url>/2019/09/11/Mac%E4%B8%8BAnaconda%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</url>
+      
+        <content type="html"><![CDATA[<p>Anaconda安装成功之后，需要配置环境变量。  </p><blockquote><p>vim ~/.zshrc<br>export PATH=”/Applications/anaconda3/bin:$PATH”<br>source ~/.zshrc<br>conda –version   #测试是否配置成功</p></blockquote>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Mac </tag>
+            
+            <tag> Anaconda </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>python自动创建requirements.txt</title>
       <link href="/2019/09/10/python%E8%87%AA%E5%8A%A8%E5%88%9B%E5%BB%BArequirements-txt/"/>
       <url>/2019/09/10/python%E8%87%AA%E5%8A%A8%E5%88%9B%E5%BB%BArequirements-txt/</url>
@@ -35,9 +56,9 @@
             
             <tag> 软件 </tag>
             
-            <tag> Windows </tag>
-            
             <tag> Mysql </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -262,9 +283,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Mac </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
