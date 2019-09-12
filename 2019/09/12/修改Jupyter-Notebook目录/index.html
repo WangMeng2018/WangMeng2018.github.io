@@ -6,21 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master">
-  <title>python自动创建requirements.txt | 鱼咸滚酱</title>
+  <title>修改Jupyter Notebook目录 | 鱼咸滚酱</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="方法一：第一种方法适用于虚拟环境或者Docker中生成requirements.txt。    pip freeze &amp;gt; requirements.txt    安装requirements.txt依赖。    pip install -r requirements.txt    方法二：推荐第二种方法，使用pipreqs，导出项目代码中导入的模块。    pip install pipre">
-<meta name="keywords" content="Python">
+  <meta name="description" content="打开 Anaconda Prompt ，输入:     jupyter notebook –generate-config     找到 jupyter_notebook_config.py 的路径并打此文件;    找到 c.NotebookApp.notebook_dir 这个变量，赋值为： ‘E:\Code\Jupyter-notebook’;      Ubuntu下的修改方法类似。">
+<meta name="keywords" content="软件">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python自动创建requirements.txt">
-<meta property="og:url" content="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/10/python自动创建requirements-txt/index.html">
+<meta property="og:title" content="修改Jupyter Notebook目录">
+<meta property="og:url" content="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/12/修改Jupyter-Notebook目录/index.html">
 <meta property="og:site_name" content="鱼咸滚酱">
-<meta property="og:description" content="方法一：第一种方法适用于虚拟环境或者Docker中生成requirements.txt。    pip freeze &amp;gt; requirements.txt    安装requirements.txt依赖。    pip install -r requirements.txt    方法二：推荐第二种方法，使用pipreqs，导出项目代码中导入的模块。    pip install pipre">
+<meta property="og:description" content="打开 Anaconda Prompt ，输入:     jupyter notebook –generate-config     找到 jupyter_notebook_config.py 的路径并打此文件;    找到 c.NotebookApp.notebook_dir 这个变量，赋值为： ‘E:\Code\Jupyter-notebook’;      Ubuntu下的修改方法类似。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-10T12:13:09.605Z">
+<meta property="og:updated_time" content="2019-09-12T04:55:00.244Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python自动创建requirements.txt">
-<meta name="twitter:description" content="方法一：第一种方法适用于虚拟环境或者Docker中生成requirements.txt。    pip freeze &amp;gt; requirements.txt    安装requirements.txt依赖。    pip install -r requirements.txt    方法二：推荐第二种方法，使用pipreqs，导出项目代码中导入的模块。    pip install pipre">
+<meta name="twitter:title" content="修改Jupyter Notebook目录">
+<meta name="twitter:description" content="打开 Anaconda Prompt ，输入:     jupyter notebook –generate-config     找到 jupyter_notebook_config.py 的路径并打此文件;    找到 c.NotebookApp.notebook_dir 这个变量，赋值为： ‘E:\Code\Jupyter-notebook’;      Ubuntu下的修改方法类似。">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -177,14 +177,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-python自动创建requirements-txt" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-修改Jupyter-Notebook目录" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      python自动创建requirements.txt
+      修改Jupyter Notebook目录
     </h1>
   
 
@@ -196,8 +196,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2019/09/10/python自动创建requirements-txt/" class="archive-article-date">
-        <time datetime="2019-09-10T12:05:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
+<a href="/2019/09/12/修改Jupyter-Notebook目录/" class="archive-article-date">
+        <time datetime="2019-09-12T04:48:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-12</time>
 </a>
 
   
@@ -206,18 +206,28 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h2 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h2><p>第一种方法适用于虚拟环境或者Docker中生成requirements.txt。  </p>
+    <ol>
+<li><p>打开 Anaconda Prompt ，输入:   </p>
 <blockquote>
-<p>pip freeze &gt; requirements.txt  </p>
+<p>jupyter notebook –generate-config  </p>
 </blockquote>
-<p>安装requirements.txt依赖。  </p>
-<blockquote>
-<p>pip install -r requirements.txt  </p>
-</blockquote>
-<h2 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h2><p>推荐第二种方法，使用pipreqs，导出项目代码中导入的模块。  </p>
-<blockquote>
-<p>pip install pipreqs<br>pipreqs ./CRAWLER_Zhihu/  </p>
-</blockquote>
+</li>
+<li><p>找到 jupyter_notebook_config.py 的路径并打此文件;  </p>
+</li>
+<li><p>找到 c.NotebookApp.notebook_dir 这个变量，赋值为： ‘E:\Code\Jupyter-notebook’;  </p>
+  
+<p>Ubuntu下的修改方法类似。</p>
+</li>
+<li><p>改完后保存，再次通过 Anaconda Navigator 进入 Jupyter Notebook 的时候会发现默认路径已经更改。  </p>
+</li>
+<li><p>如果直接通过 Jupyter Notebook 的快捷方式进入，默认目录还是原来那个。如果需要修改，找到快捷方式，右键打开属性，将“目标” 最后面的 “%USERPROFILE%” 删除就可以了。  </p>
+</li>
+</ol>
+<p>参考链接：  </p>
+<ul>
+<li><a href="https://blog.csdn.net/white_rabbit_2/article/details/83862429" target="_blank" rel="noopener">https://blog.csdn.net/white_rabbit_2/article/details/83862429</a>  </li>
+<li><a href="https://blog.csdn.net/weixin_36292173/article/details/76209839" target="_blank" rel="noopener">https://blog.csdn.net/weixin_36292173/article/details/76209839</a></li>
+</ul>
 
     
 
@@ -232,7 +242,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/10/python自动创建requirements-txt/" title="python自动创建requirements.txt" target="_blank">https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/10/python自动创建requirements-txt/</a>
+          <a href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/12/修改Jupyter-Notebook目录/" title="修改Jupyter Notebook目录" target="_blank">https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/12/修改Jupyter-Notebook目录/</a>
         </li>
         <li>
           <strong>版权声明： </strong>
@@ -251,7 +261,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
         		</li>
       		
 		</ul>
@@ -307,7 +317,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/10/python自动创建requirements-txt/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/12/修改Jupyter-Notebook目录/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -322,18 +332,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2019/09/11/Mac下Anaconda配置环境变量/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Mac下Anaconda配置环境变量
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/09/10/Windows安装Mysql/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Windows安装Mysql</div>
+    <a href="/2019/09/11/Mac下Anaconda配置环境变量/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Mac下Anaconda配置环境变量</div>
       <i class="icon-circle-right"></i>
     </a>
   

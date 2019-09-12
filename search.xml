@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>修改Jupyter Notebook目录</title>
+      <link href="/2019/09/12/%E4%BF%AE%E6%94%B9Jupyter-Notebook%E7%9B%AE%E5%BD%95/"/>
+      <url>/2019/09/12/%E4%BF%AE%E6%94%B9Jupyter-Notebook%E7%9B%AE%E5%BD%95/</url>
+      
+        <content type="html"><![CDATA[<ol><li><p>打开 Anaconda Prompt ，输入:   </p><blockquote><p>jupyter notebook –generate-config  </p></blockquote></li><li><p>找到 jupyter_notebook_config.py 的路径并打此文件;  </p></li><li><p>找到 c.NotebookApp.notebook_dir 这个变量，赋值为： ‘E:\Code\Jupyter-notebook’;  </p>  <p>Ubuntu下的修改方法类似。</p></li><li><p>改完后保存，再次通过 Anaconda Navigator 进入 Jupyter Notebook 的时候会发现默认路径已经更改。  </p></li><li><p>如果直接通过 Jupyter Notebook 的快捷方式进入，默认目录还是原来那个。如果需要修改，找到快捷方式，右键打开属性，将“目标” 最后面的 “%USERPROFILE%” 删除就可以了。  </p></li></ol><p>参考链接：  </p><ul><li><a href="https://blog.csdn.net/white_rabbit_2/article/details/83862429" target="_blank" rel="noopener">https://blog.csdn.net/white_rabbit_2/article/details/83862429</a>  </li><li><a href="https://blog.csdn.net/weixin_36292173/article/details/76209839" target="_blank" rel="noopener">https://blog.csdn.net/weixin_36292173/article/details/76209839</a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 软件 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Mac下Anaconda配置环境变量</title>
       <link href="/2019/09/11/Mac%E4%B8%8BAnaconda%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
       <url>/2019/09/11/Mac%E4%B8%8BAnaconda%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</url>
@@ -157,9 +176,9 @@
       
         <tags>
             
-            <tag> Mac </tag>
-            
             <tag> Docker </tag>
+            
+            <tag> Mac </tag>
             
         </tags>
       
