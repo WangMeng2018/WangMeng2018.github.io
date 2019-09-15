@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>brew安装权限问题</title>
+      <link href="/2019/09/14/brew%E5%AE%89%E8%A3%85%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/"/>
+      <url>/2019/09/14/brew%E5%AE%89%E8%A3%85%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<p>brew install wget 出现类似问题：  </p><img src="/2019/09/14/brew安装权限问题/1.jpg" title="avatar">  <p>解决办法：一个一个文件的赋予权限：  </p><img src="/2019/09/14/brew安装权限问题/2.jpg" title="avatar"> ]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 软件 </tag>
+            
+            <tag> brew </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>不同类型的文献检索</title>
       <link href="/2019/09/12/%E4%B8%8D%E5%90%8C%E7%B1%BB%E5%9E%8B%E7%9A%84%E6%96%87%E7%8C%AE%E6%A3%80%E7%B4%A2/"/>
       <url>/2019/09/12/%E4%B8%8D%E5%90%8C%E7%B1%BB%E5%9E%8B%E7%9A%84%E6%96%87%E7%8C%AE%E6%A3%80%E7%B4%A2/</url>
@@ -321,9 +342,9 @@
       
         <tags>
             
-            <tag> Mac </tag>
-            
             <tag> 软件 </tag>
+            
+            <tag> Mac </tag>
             
         </tags>
       

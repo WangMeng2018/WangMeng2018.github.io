@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/"/>
-  <updated>2019-09-12T05:22:47.870Z</updated>
+  <updated>2019-09-14T04:31:40.741Z</updated>
   <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>brew安装权限问题</title>
+    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/14/brew%E5%AE%89%E8%A3%85%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/"/>
+    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/14/brew安装权限问题/</id>
+    <published>2019-09-14T04:29:14.000Z</published>
+    <updated>2019-09-14T04:31:40.741Z</updated>
+    
+    <content type="html"><![CDATA[<p>brew install wget 出现类似问题：  </p><img src="/2019/09/14/brew安装权限问题/1.jpg" title="avatar">  <p>解决办法：一个一个文件的赋予权限：  </p><img src="/2019/09/14/brew安装权限问题/2.jpg" title="avatar"> ]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;brew install wget 出现类似问题：  &lt;/p&gt;
+&lt;img src=&quot;/2019/09/14/brew安装权限问题/1.jpg&quot; title=&quot;avatar&quot;&gt;  
+
+&lt;p&gt;解决办法：一个一个文件的赋予权限：  &lt;/p&gt;
+&lt;img src=&quot;/2019/09/
+      
+    
+    </summary>
+    
+    
+      <category term="软件" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="brew" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/brew/"/>
+    
+  </entry>
   
   <entry>
     <title>不同类型的文献检索</title>
@@ -437,9 +466,9 @@
     </summary>
     
     
-      <category term="Mac" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Mac/"/>
-    
       <category term="软件" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="Mac" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Mac/"/>
     
   </entry>
   
