@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>Windows安装JDK</title>
+      <link href="/2019/09/16/Windows%E5%AE%89%E8%A3%85JDK/"/>
+      <url>/2019/09/16/Windows%E5%AE%89%E8%A3%85JDK/</url>
+      
+        <content type="html"><![CDATA[<ol><li><p>下载链接：<a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</a>  </p></li><li><p>修改安装目录；  </p><img src="/2019/09/16/Windows安装JDK/1.png" title="avatar">  </li><li><p>配置环境变量  </p></li></ol><ul><li>安装完JDK后配置环境变量  计算机→属性→高级系统设置→高级→环境变量;  </li><li>系统变量→新建 JAVA_HOME 变量，变量值填写jdk的安装目录（本人是 D:\Java\jdk1.8.0_91)；  </li><li>系统变量→寻找 Path 变量→编辑，在变量值最后输入 %JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;（注意原来Path的变量值末尾有没有;号，如果没有，先输入；号再输入上面的代码）；  </li><li>系统变量→新建 CLASSPATH 变量，变量值填写   .;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar（注意最前面有一点）；  </li><li>检验是否配置成功 运行cmd 输入 java -version ，若如图所示 显示版本信息 则说明安装和配置成功。  <img src="/2019/09/16/Windows安装JDK/2.png" title="avatar">  </li></ul><ol start="4"><li>使用手册中文版：<a href="https://github.com/judasn/IntelliJ-IDEA-Tutorial">https://github.com/judasn/IntelliJ-IDEA-Tutorial</a>  </li></ol><p>参考链接：<a href="https://jingyan.baidu.com/article/6dad5075d1dc40a123e36ea3.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/6dad5075d1dc40a123e36ea3.html</a>  </p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>brew安装权限问题</title>
       <link href="/2019/09/14/brew%E5%AE%89%E8%A3%85%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/"/>
       <url>/2019/09/14/brew%E5%AE%89%E8%A3%85%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/</url>
@@ -342,9 +363,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Mac </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       

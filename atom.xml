@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/"/>
-  <updated>2019-09-14T04:31:40.741Z</updated>
+  <updated>2019-09-16T13:40:03.033Z</updated>
   <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows安装JDK</title>
+    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/16/Windows%E5%AE%89%E8%A3%85JDK/"/>
+    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/16/Windows安装JDK/</id>
+    <published>2019-09-16T13:36:18.000Z</published>
+    <updated>2019-09-16T13:40:03.033Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li><p>下载链接：<a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</a>  </p></li><li><p>修改安装目录；  </p><img src="/2019/09/16/Windows安装JDK/1.png" title="avatar">  </li><li><p>配置环境变量  </p></li></ol><ul><li>安装完JDK后配置环境变量  计算机→属性→高级系统设置→高级→环境变量;  </li><li>系统变量→新建 JAVA_HOME 变量，变量值填写jdk的安装目录（本人是 D:\Java\jdk1.8.0_91)；  </li><li>系统变量→寻找 Path 变量→编辑，在变量值最后输入 %JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;（注意原来Path的变量值末尾有没有;号，如果没有，先输入；号再输入上面的代码）；  </li><li>系统变量→新建 CLASSPATH 变量，变量值填写   .;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar（注意最前面有一点）；  </li><li>检验是否配置成功 运行cmd 输入 java -version ，若如图所示 显示版本信息 则说明安装和配置成功。  <img src="/2019/09/16/Windows安装JDK/2.png" title="avatar">  </li></ul><ol start="4"><li>使用手册中文版：<a href="https://github.com/judasn/IntelliJ-IDEA-Tutorial">https://github.com/judasn/IntelliJ-IDEA-Tutorial</a>  </li></ol><p>参考链接：<a href="https://jingyan.baidu.com/article/6dad5075d1dc40a123e36ea3.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/6dad5075d1dc40a123e36ea3.html</a>  </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;下载链接：&lt;a href=&quot;https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html&quot; target=&quot;_blank&quot; rel=&quot;noopene
+      
+    
+    </summary>
+    
+    
+      <category term="Windows" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Windows/"/>
+    
+      <category term="Java" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>brew安装权限问题</title>
@@ -466,9 +492,9 @@
     </summary>
     
     
-      <category term="软件" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/%E8%BD%AF%E4%BB%B6/"/>
-    
       <category term="Mac" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Mac/"/>
+    
+      <category term="软件" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/%E8%BD%AF%E4%BB%B6/"/>
     
   </entry>
   
