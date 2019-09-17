@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/"/>
-  <updated>2019-09-16T13:40:03.033Z</updated>
+  <updated>2019-09-16T14:04:30.692Z</updated>
   <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows下IDEA无法识别JDK</title>
+    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/16/Windows%E4%B8%8BIDEA%E6%97%A0%E6%B3%95%E8%AF%86%E5%88%ABJDK/"/>
+    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/16/Windows下IDEA无法识别JDK/</id>
+    <published>2019-09-16T14:03:30.000Z</published>
+    <updated>2019-09-16T14:04:30.692Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>首先确认已经安装jdk；</li><li>在IDEA菜单栏中选中File或者在初始界面的configuration中选择Project Structure；</li><li>弹出的对话框左边有一个SDK选项，单击；</li><li>点击+号，选择JDK；</li><li>定位到JDK安装目录下，比如：D:\Java\jdk1.8.0_91；<br>然后点击Apply，点击OK。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;首先确认已经安装jdk；&lt;/li&gt;
+&lt;li&gt;在IDEA菜单栏中选中File或者在初始界面的configuration中选择Project Structure；&lt;/li&gt;
+&lt;li&gt;弹出的对话框左边有一个SDK选项，单击；&lt;/li&gt;
+&lt;li&gt;点击+号，选择JDK；&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="Windows" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Windows/"/>
+    
+      <category term="Java" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows安装JDK</title>

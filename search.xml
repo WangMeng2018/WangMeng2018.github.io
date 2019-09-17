@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>Windows下IDEA无法识别JDK</title>
+      <link href="/2019/09/16/Windows%E4%B8%8BIDEA%E6%97%A0%E6%B3%95%E8%AF%86%E5%88%ABJDK/"/>
+      <url>/2019/09/16/Windows%E4%B8%8BIDEA%E6%97%A0%E6%B3%95%E8%AF%86%E5%88%ABJDK/</url>
+      
+        <content type="html"><![CDATA[<ol><li>首先确认已经安装jdk；</li><li>在IDEA菜单栏中选中File或者在初始界面的configuration中选择Project Structure；</li><li>弹出的对话框左边有一个SDK选项，单击；</li><li>点击+号，选择JDK；</li><li>定位到JDK安装目录下，比如：D:\Java\jdk1.8.0_91；<br>然后点击Apply，点击OK。</li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Windows安装JDK</title>
       <link href="/2019/09/16/Windows%E5%AE%89%E8%A3%85JDK/"/>
       <url>/2019/09/16/Windows%E5%AE%89%E8%A3%85JDK/</url>
