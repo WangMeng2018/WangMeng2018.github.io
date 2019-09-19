@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/"/>
-  <updated>2019-09-16T14:04:30.692Z</updated>
+  <updated>2019-09-18T11:40:11.608Z</updated>
   <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>you-get安装</title>
+    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/19/you-get%E5%AE%89%E8%A3%85/"/>
+    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/19/you-get安装/</id>
+    <published>2019-09-19T11:30:31.000Z</published>
+    <updated>2019-09-18T11:40:11.608Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="一、安装"><a href="#一、安装" class="headerlink" title="一、安装"></a>一、安装</h1><p>使用<em>pip install you-get</em>命令安装即可。  </p><h1 id="二、视频下载"><a href="#二、视频下载" class="headerlink" title="二、视频下载"></a>二、视频下载</h1><ol><li><p>下载视频<br>打开cmd，输入”you-get+空格+视频url”即可下载。  </p></li><li><p>暂停  </p></li></ol><p><em>Ctrl+C</em>是中断下载任务。下次下载相同的视频时，默认继续上次未完成的下载（前提时未将上次下载的临时.download文件删除，否则重新下载），如已经完成则会自动跳过。  </p><ol start="3"><li>自定义下载名称和保存路径<br>使用-o（小写的o）设置保存路径，-O(大写的O)设置下载文件的名称。<br>例如：<em>you-get -o ./ -O test.mp4 <a href="https://www.youtube.com/example" target="_blank" rel="noopener">https://www.youtube.com/example</a></em>  </li></ol><h1 id="三、批量下载"><a href="#三、批量下载" class="headerlink" title="三、批量下载"></a>三、批量下载</h1><p>you-get支持批量下载，复制的是视频首页或者简介页的地址。</p><h1 id="四、本地播放"><a href="#四、本地播放" class="headerlink" title="四、本地播放"></a>四、本地播放</h1><p>本地播放器播放网页视频：让网页视频在本地播放，没有任何广告和评论部分。  </p><ol><li>进入视频播放器的安装目录：<em>cd D:\PotPlayer</em>  </li><li>输入以下参数：<em>ou-get -p xxx.exe url</em>  </li><li>比如： <em>you-get -p PotPlayerMini64.exe <a href="https://www.iqiyi.com/example.html" target="_blank" rel="noopener">https://www.iqiyi.com/example.html</a></em>  </li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;一、安装&quot;&gt;&lt;a href=&quot;#一、安装&quot; class=&quot;headerlink&quot; title=&quot;一、安装&quot;&gt;&lt;/a&gt;一、安装&lt;/h1&gt;&lt;p&gt;使用&lt;em&gt;pip install you-get&lt;/em&gt;命令安装即可。  &lt;/p&gt;
+&lt;h1 id=&quot;二、视频下载&quot;&gt;&lt;a
+      
+    
+    </summary>
+    
+    
+      <category term="软件" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows下IDEA无法识别JDK</title>
@@ -227,9 +251,9 @@
     
       <category term="软件" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/%E8%BD%AF%E4%BB%B6/"/>
     
-      <category term="Mysql" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Mysql/"/>
-    
       <category term="Windows" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Windows/"/>
+    
+      <category term="Mysql" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Mysql/"/>
     
   </entry>
   

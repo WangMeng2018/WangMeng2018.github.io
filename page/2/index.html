@@ -182,6 +182,147 @@
             
 
   
+    <article id="post-Docker创建镜像" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2019/09/07/Docker创建镜像/" target="_blank">Docker创建镜像</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2019/09/07/Docker创建镜像/" class="archive-article-date">
+        <time datetime="2019-09-07T09:38:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-07</time>
+</a>
+
+  
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>Docker创建镜像有两种方式:  </p>
+<ul>
+<li>从已经创建镜像的容器中更新镜像，并且提交这个镜像；</li>
+<li>使用Dockerfile指令来创建镜像。</li>
+</ul>
+<h1 id="一、已有镜像更新"><a href="#一、已有镜像更新" class="headerlink" title="一、已有镜像更新"></a>一、已有镜像更新</h1><ol>
+<li><p>在更新镜像之前，先用镜像创建一个容器；  </p>
+<blockquote>
+<p>docker run -t -i ubuntu:18.04  /bin/bash</p>
+</blockquote>
+</li>
+<li><p>执行上述命令之后，会返回一个Container_ID；可以在伪终端中进行修改，比如：apt-get update； </p>
+</li>
+<li><p>再用exit退出容器；  </p>
+</li>
+<li><p>通过docker commit这个命令来提交修改后的容器副本； </p>
+<blockquote>
+<p>docker   commit   -m=”description”   -a=”author”   Container_ID   author/image:tag</p>
+</blockquote>
+</li>
+<li><p>docker images 就可以查看到这个镜像。</p>
+</li>
+</ol>
+<h1 id="Dockerfile创建镜像"><a href="#Dockerfile创建镜像" class="headerlink" title="Dockerfile创建镜像"></a>Dockerfile创建镜像</h1><ol>
+<li><p>首先需要创建一个Dockerfile文件，包含一组指令，而且每一个指令的前缀必须大写。比如官网示例中填入以下内容：  </p>
+<img src="/2019/09/07/Docker创建镜像/1.png" title="avatar">
+<p>FROM 指定使用的镜像源; RUN  告诉docker在镜像中执行的命令。<br>要成功实现该示例，这里还差两个文件：requirement.txt 和 app.py。  </p>
+<img src="/2019/09/07/Docker创建镜像/2.jpg" title="avatar">
+<img src="/2019/09/07/Docker创建镜像/3.jpg" title="avatar">  
+</li>
+<li><p>准备工作完成之后，可以使用docker build命令构建镜像；  </p>
+<blockquote>
+<p>docker   build   –tag=ImageName   .  </p>
+<p>说明：  </p>
+<ul>
+<li>命令最后一个”.”，用来指定创建镜像的资源目录，即Dockerfile的目录。  </li>
+<li>-t指定创建的镜像名。</li>
+</ul>
+</blockquote>
+</li>
+<li><p>docker images 查看创建的镜像信息；</p>
+</li>
+<li><p>启动容器；</p>
+<blockquote>
+<p>docker run -p 4000:80 ImageName</p>
+</blockquote>
+<img src="/2019/09/07/Docker创建镜像/4.jpg" title="avatar">
+</li>
+<li><p>停止容器运行；</p>
+<blockquote>
+<p> docker container stop Conatiner_ID</p>
+</blockquote>
+</li>
+<li><p>使用docker tag命令为镜像添加一个新的标签。</p>
+<blockquote>
+<p> docker tag Container_ID  ImageName:TagName</p>
+</blockquote>
+</li>
+</ol>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Docker</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2019/09/07/Docker创建镜像/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Docker命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1206,23 +1347,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">软件</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">软件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Ubuntu</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">VSCode</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1231,6 +1364,14 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">VSCode</a>
               </li>
              
               <li class="article-tag-list-item">
