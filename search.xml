@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>Git上传100MB限制</title>
+      <link href="/2019/09/21/Git%E4%B8%8A%E4%BC%A0100MB%E9%99%90%E5%88%B6/"/>
+      <url>/2019/09/21/Git%E4%B8%8A%E4%BC%A0100MB%E9%99%90%E5%88%B6/</url>
+      
+        <content type="html"><![CDATA[<p>Github只允许上传100MB的文件，如果超过，服务器会直接拒绝。</p><p>解决办法：  </p><ol><li>sudo git rm –cached 文件路径；</li><li>sudo git commit –amend -CHEAD;</li><li>sudo push -u origin master.</li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Git </tag>
+            
+            <tag> 软件 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>you-get安装</title>
       <link href="/2019/09/19/you-get%E5%AE%89%E8%A3%85/"/>
       <url>/2019/09/19/you-get%E5%AE%89%E8%A3%85/</url>
@@ -176,9 +197,9 @@
             
             <tag> 软件 </tag>
             
-            <tag> Windows </tag>
-            
             <tag> Mysql </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -403,9 +424,9 @@
       
         <tags>
             
-            <tag> Mac </tag>
-            
             <tag> 软件 </tag>
+            
+            <tag> Mac </tag>
             
         </tags>
       

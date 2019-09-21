@@ -6,23 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master">
-  <title>鱼咸滚酱</title>
+  <title>Git上传100MB限制 | 鱼咸滚酱</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-    
-    <meta name="keywords" content="鱼咸滚酱_个人博客">
-  
-  <meta name="description" content="鱼咸滚酱_个人博客">
-<meta name="keywords" content="鱼咸滚酱,个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="鱼咸滚酱">
-<meta property="og:url" content="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/page/2/index.html">
+  <meta name="description" content="Github只允许上传100MB的文件，如果超过，服务器会直接拒绝。 解决办法：    sudo git rm –cached 文件路径； sudo git commit –amend -CHEAD; sudo push -u origin master.">
+<meta name="keywords" content="Git,软件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git上传100MB限制">
+<meta property="og:url" content="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/21/Git上传100MB限制/index.html">
 <meta property="og:site_name" content="鱼咸滚酱">
-<meta property="og:description" content="鱼咸滚酱_个人博客">
+<meta property="og:description" content="Github只允许上传100MB的文件，如果超过，服务器会直接拒绝。 解决办法：    sudo git rm –cached 文件路径； sudo git commit –amend -CHEAD; sudo push -u origin master.">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-09-21T06:08:50.947Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="鱼咸滚酱">
-<meta name="twitter:description" content="鱼咸滚酱_个人博客">
+<meta name="twitter:title" content="Git上传100MB限制">
+<meta name="twitter:description" content="Github只允许上传100MB的文件，如果超过，服务器会直接拒绝。 解决办法：    sudo git rm –cached 文件路径； sudo git commit –amend -CHEAD; sudo push -u origin master.">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -179,27 +177,27 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-
-  
-    <article id="post-Ubuntu安装Mysql" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Git上传100MB限制" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/09/10/Ubuntu安装Mysql/" target="_blank">Ubuntu安装Mysql</a>
-  
+    <h1 class="article-title" itemprop="name">
+      Git上传100MB限制
     </h1>
   
 
 
   
   
-<a href="/2019/09/10/Ubuntu安装Mysql/" class="archive-article-date">
-        <time datetime="2019-09-10T07:19:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2019/09/21/Git上传100MB限制/" class="archive-article-date">
+        <time datetime="2019-09-21T06:07:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-21</time>
 </a>
 
   
@@ -208,998 +206,35 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="安装Mysql"><a href="#安装Mysql" class="headerlink" title="安装Mysql"></a>安装Mysql</h1><ol>
-<li>首先安装服务端、客户端以及其他的依赖库；  </li>
-</ol>
-<blockquote>
-<p>sudo apt-get install mysql-server<br>sudo apt install mysql-client<br>sudo apt install libmysqlclient-dev  </p>
-</blockquote>
-<ol start="2">
-<li>测试是否安装成功。</li>
-</ol>
-<blockquote>
-<p>sudo netstat -tap | grep mysql  </p>
-</blockquote>
-<h1 id="设置允许远程访问"><a href="#设置允许远程访问" class="headerlink" title="设置允许远程访问"></a>设置允许远程访问</h1><ol>
-<li>修改配置文件mysqld.conf；  </li>
-</ol>
-<blockquote>
-<p>sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf  </p>
-</blockquote>
-<p>将文件中的bind-address = 127.0.0.1这一行注释掉。  </p>
-<ol start="2">
-<li>进入Mysql数据库；  </li>
-</ol>
-<blockquote>
-<p>mysql -u root -p  </p>
-</blockquote>
-<p>进入MySQL命令行表示安装成功。  </p>
-<ol start="3">
-<li>执行授权命令；  </li>
-</ol>
-<blockquote>
-<p>GRANT ALL PRIVILEGES ON <em>.</em> TO ‘root’@’%’ IDENTIFIED BY ‘密码’ WITH GRANT OPTION;  </p>
-</blockquote>
-<p>其中，root是数据库的用户，*表示所有IP都可以登录该数据库。  </p>
-<ol start="4">
-<li>保存设置；  </li>
-</ol>
-<blockquote>
-<p>flush privileges;  </p>
-</blockquote>
-<ol start="5">
-<li><p>退出Mysql用exit；  </p>
-</li>
-<li><p>重启Mysql。</p>
-</li>
-</ol>
-<blockquote>
-<p>service mysql restart  </p>
-</blockquote>
-<p>参考链接：<br><a href="https://andy6804tw.github.io/2019/01/29/ubuntu-mysql-setting/#2-%E9%80%B2%E5%85%A5-mysql-%E6%9C%8D%E5%8B%99" target="_blank" rel="noopener">https://andy6804tw.github.io/2019/01/29/ubuntu-mysql-setting/#2-%E9%80%B2%E5%85%A5-mysql-%E6%9C%8D%E5%8B%99</a>  </p>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Ubuntu</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Mysql</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/09/10/Ubuntu安装Mysql/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Docker创建镜像" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/09/07/Docker创建镜像/" target="_blank">Docker创建镜像</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/09/07/Docker创建镜像/" class="archive-article-date">
-        <time datetime="2019-09-07T09:38:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-07</time>
-</a>
-
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>Docker创建镜像有两种方式:  </p>
-<ul>
-<li>从已经创建镜像的容器中更新镜像，并且提交这个镜像；</li>
-<li>使用Dockerfile指令来创建镜像。</li>
-</ul>
-<h1 id="一、已有镜像更新"><a href="#一、已有镜像更新" class="headerlink" title="一、已有镜像更新"></a>一、已有镜像更新</h1><ol>
-<li><p>在更新镜像之前，先用镜像创建一个容器；  </p>
-<blockquote>
-<p>docker run -t -i ubuntu:18.04  /bin/bash</p>
-</blockquote>
-</li>
-<li><p>执行上述命令之后，会返回一个Container_ID；可以在伪终端中进行修改，比如：apt-get update； </p>
-</li>
-<li><p>再用exit退出容器；  </p>
-</li>
-<li><p>通过docker commit这个命令来提交修改后的容器副本； </p>
-<blockquote>
-<p>docker   commit   -m=”description”   -a=”author”   Container_ID   author/image:tag</p>
-</blockquote>
-</li>
-<li><p>docker images 就可以查看到这个镜像。</p>
-</li>
-</ol>
-<h1 id="Dockerfile创建镜像"><a href="#Dockerfile创建镜像" class="headerlink" title="Dockerfile创建镜像"></a>Dockerfile创建镜像</h1><ol>
-<li><p>首先需要创建一个Dockerfile文件，包含一组指令，而且每一个指令的前缀必须大写。比如官网示例中填入以下内容：  </p>
-<img src="/2019/09/07/Docker创建镜像/1.png" title="avatar">
-<p>FROM 指定使用的镜像源; RUN  告诉docker在镜像中执行的命令。<br>要成功实现该示例，这里还差两个文件：requirement.txt 和 app.py。  </p>
-<img src="/2019/09/07/Docker创建镜像/2.jpg" title="avatar">
-<img src="/2019/09/07/Docker创建镜像/3.jpg" title="avatar">  
-</li>
-<li><p>准备工作完成之后，可以使用docker build命令构建镜像；  </p>
-<blockquote>
-<p>docker   build   –tag=ImageName   .  </p>
-<p>说明：  </p>
-<ul>
-<li>命令最后一个”.”，用来指定创建镜像的资源目录，即Dockerfile的目录。  </li>
-<li>-t指定创建的镜像名。</li>
-</ul>
-</blockquote>
-</li>
-<li><p>docker images 查看创建的镜像信息；</p>
-</li>
-<li><p>启动容器；</p>
-<blockquote>
-<p>docker run -p 4000:80 ImageName</p>
-</blockquote>
-<img src="/2019/09/07/Docker创建镜像/4.jpg" title="avatar">
-</li>
-<li><p>停止容器运行；</p>
-<blockquote>
-<p> docker container stop Conatiner_ID</p>
-</blockquote>
-</li>
-<li><p>使用docker tag命令为镜像添加一个新的标签。</p>
-<blockquote>
-<p> docker tag Container_ID  ImageName:TagName</p>
-</blockquote>
-</li>
-</ol>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Docker</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/09/07/Docker创建镜像/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Docker命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/09/07/Docker命令/" target="_blank">Docker命令</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/09/07/Docker命令/" class="archive-article-date">
-        <time datetime="2019-09-07T09:31:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-07</time>
-</a>
-
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="Docker常用命令"><a href="#Docker常用命令" class="headerlink" title="Docker常用命令"></a>Docker常用命令</h1><ol>
-<li>docker run hello-world 启动hello-world容器镜像<br> docker run -t -i ubuntu:18.04 /bin/bash   运行交互式容器<br> -t : 在新容器内指定一个伪终端或者终端<br>  -i : 通过容器内的标准输入STDIN进行交互<br> docker run -d hello-world  运行容器的后台模式<br> -d : 分离模式，在后台运行</li>
-</ol>
-<ol start="2">
-<li><p>docker –version或者docker version  查看版本信息</p>
-</li>
-<li><p>docker images或者docker image ls   罗列下载的容器镜像信息</p>
-</li>
-<li><p>docker container ls  查看正在运行的容器实例<br> docker container ls -all  查看所有容器实例</p>
-</li>
-<li><p>docker logs Container_ID   查看容器的标准输出</p>
-</li>
-<li><p>docker ps  查看正在运行的容器实例</p>
-</li>
-<li><p>docker stop Container_ID 或者 Ctrl+D 停止容器的运行</p>
-</li>
-<li><p>docker pull Image_name    载入镜像</p>
-</li>
-<li><p>docker port Container_ID   查看指定容器的端口映射<br> -p 主机端口/容器端口   将容器端口映射到主机端口</p>
-</li>
-<li><p>docker top Container_ID   查看容器内部运行的进程</p>
-</li>
-<li><p>docker rm 移除不需要的Docker镜像</p>
-</li>
-<li><p>docker search Name  搜索镜像</p>
-</li>
-</ol>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Docker</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/09/07/Docker命令/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Push-Docker镜像到远程仓库" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/09/06/Push-Docker镜像到远程仓库/" target="_blank">Push Docker镜像到远程仓库</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/09/06/Push-Docker镜像到远程仓库/" class="archive-article-date">
-        <time datetime="2019-09-06T12:14:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-06</time>
-</a>
-
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>将本地Docker镜像Push到远程仓库，命令如下：  </p>
-<blockquote>
-<p>docker tag local-image:tagname new-repo:tagname<br>docker push new-repo:tagname</p>
-</blockquote>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Docker</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/09/06/Push-Docker镜像到远程仓库/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Mac安装Docker" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/09/06/Mac安装Docker/" target="_blank">Mac安装Docker</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/09/06/Mac安装Docker/" class="archive-article-date">
-        <time datetime="2019-09-06T10:41:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-06</time>
-</a>
-
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>Mac上安装Docker比较简单，直接从<a href="https://hub.docker.com/editions/community/docker-ce-desktop-mac" target="_blank" rel="noopener">官网</a>下载安装文件，再安装就可以了。  </p>
-<p>查看是否安装成功：</p>
-<blockquote>
-<p>docker –version</p>
-</blockquote>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Docker</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Mac</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/09/06/Mac安装Docker/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Ubuntu安装Docker" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/09/04/Ubuntu安装Docker/" target="_blank">Ubuntu安装Docker</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/09/04/Ubuntu安装Docker/" class="archive-article-date">
-        <time datetime="2019-09-04T06:31:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-04</time>
-</a>
-
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <ol>
-<li>从Docker仓库下载安装，首先确保能够访问Docker仓库地址:<a href="https://download.docker.com/linux/ubuntu，" target="_blank" rel="noopener">https://download.docker.com/linux/ubuntu，</a> 如果能够访问，按照下面的操作步骤进行安装。  <blockquote>
-<p>sudo apt update<br>sudo apt install apt-transport-https ca-certificates curl software-properties-common</p>
-</blockquote>
-</li>
-<li>在/etc/apt/sources.list.d/docker.list文件中添加下面内容；  <blockquote>
-<p>deb [arch=amd64] <a href="https://download.docker.com/linux/ubuntu" target="_blank" rel="noopener">https://download.docker.com/linux/ubuntu</a> bionic stable</p>
-</blockquote>
-</li>
-<li>添加秘钥；  <blockquote>
-<p>curl -fsSL <a href="https://download.docker.com/linux/ubuntu/gpg" target="_blank" rel="noopener">https://download.docker.com/linux/ubuntu/gpg</a> | sudo apt-key add -</p>
-</blockquote>
-</li>
-<li>安装docker-ce；  <blockquote>
-<p>sudo apt install docker-ce</p>
-</blockquote>
-</li>
-<li>查看是否安装成功。  <blockquote>
-<p>docker –version<br>输出结果： Docker version 19.03.2, build 6a30dfc</p>
-</blockquote>
-</li>
-</ol>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Docker</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Ubuntu</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/09/04/Ubuntu安装Docker/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-VSCode远程连接开发" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/09/02/VSCode远程连接开发/" target="_blank">VSCode远程连接开发</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/09/02/VSCode远程连接开发/" class="archive-article-date">
-        <time datetime="2019-09-02T07:59:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-02</time>
-</a>
-
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>说明： 示例是Mac上的VSCode连接远程Ubuntu服务器。</p>
-<h2 id="一、-服务器配置"><a href="#一、-服务器配置" class="headerlink" title="一、 服务器配置"></a>一、 服务器配置</h2><ol>
-<li>首先，给Ubuntu安装openssh-server；  <blockquote>
-<p>sudo apt-get install openssh-server</p>
-</blockquote>
-</li>
-<li>其次，启动ssh；  <blockquote>
-<p>sudo service ssh start</p>
-</blockquote>
-</li>
-<li>检查ssh是否开启。<blockquote>
-<p>ps -e | grep ssh</p>
-</blockquote>
-</li>
-</ol>
-<h2 id="二、-本地配置"><a href="#二、-本地配置" class="headerlink" title="二、 本地配置"></a>二、 本地配置</h2><ol>
-<li>Mac本身自带了ssh，不必安装；  </li>
-<li>查看是否存在ssh密钥: ~/.ssh/id_rsa_pub；  </li>
-<li>不存在的话，输入命令： ssh-keygen -t rsa -b 4096 ，生成两个文件；  <img src="/2019/09/02/VSCode远程连接开发/key.jpg" title="avatar"></li>
-<li>将本地的公共密钥发送到服务器。  <blockquote>
-<p>ssh-copy-id <a href="mailto:wangmeng@10.61.3.212" target="_blank" rel="noopener">wangmeng@10.61.3.212</a>  </p>
-</blockquote>
-</li>
-</ol>
-<h2 id="三、-VSCode配置"><a href="#三、-VSCode配置" class="headerlink" title="三、 VSCode配置"></a>三、 VSCode配置</h2><ol>
-<li>首先安装VSCode Remote SSH，安装完左侧会显示新图标；  </li>
-<li>点击CONNECTIONS后面的设置图标，再点击第一项进行配置； <img src="/2019/09/02/VSCode远程连接开发/1.jpg" title="avatar"></li>
-<li>设置连接名、服务器地址、服务器上的用户名。  <img src="/2019/09/02/VSCode远程连接开发/2.jpg" title="avatar">
-<img src="/2019/09/02/VSCode远程连接开发/3.jpg" title="avatar">
-</li>
-</ol>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Mac</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Ubuntu</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">VSCode</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/09/02/VSCode远程连接开发/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-使用conda安装Python模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/09/02/使用conda安装Python模块/" target="_blank">使用conda安装Python模块</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/09/02/使用conda安装Python模块/" class="archive-article-date">
-        <time datetime="2019-09-02T07:54:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-02</time>
-</a>
-
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>问题：在终端中pip成功安装的模块，在<em>Jupyter-Notebook</em>中<em>import</em>失败，原因在于终端和Jupyter-Notebook使用的Python内核位置不同。  </p>
-<p>如何解决：在Anaconda的bin目录下，使用pip重新安装，conda list查看是否安装成功。  </p>
-<img src="/2019/09/02/使用conda安装Python模块/eg.jpg" title="avatar">
-
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Conda</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/09/02/使用conda安装Python模块/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Python中join问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/09/02/Python中join问题/" target="_blank">Python中join问题</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/09/02/Python中join问题/" class="archive-article-date">
-        <time datetime="2019-09-02T04:19:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-02</time>
-</a>
-
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>以<em>‘ ‘.join()</em>的方式将列表转为字符串，要求list中的元素都是字符串，否则需要<em>map(str, list)</em>进行转换。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = [&#123;<span class="string">"a"</span>:<span class="number">1</span>&#125;, &#123;<span class="string">"b"</span>:<span class="number">2</span>&#125;]  </span><br><span class="line"><span class="string">','</span>.join(map(str, a))</span><br></pre></td></tr></table></figure>
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/09/02/Python中join问题/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Ubuntu-SSR" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/09/01/Ubuntu-SSR/" target="_blank">Ubuntu SSR</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/09/01/Ubuntu-SSR/" class="archive-article-date">
-        <time datetime="2019-09-01T12:05:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-01</time>
-</a>
-
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="Ubuntu安装ssr客户端"><a href="#Ubuntu安装ssr客户端" class="headerlink" title="Ubuntu安装ssr客户端"></a>Ubuntu安装ssr客户端</h2><blockquote>
-<ul>
-<li>wget <a href="http://www.djangoz.com/ssr" target="_blank" rel="noopener">http://www.djangoz.com/ssr</a>  </li>
-<li>sudo mv ssr /usr/local/bin  </li>
-<li>sudo chmod 766 /usr/local/bin/ssr  </li>
-<li>ssr install  </li>
-<li>ssr config  </li>
-</ul>
-</blockquote>
-<p>最后一步ssr config，将找的有效节点信息的配置导入，比如用下图中的内容替换config中的内容。<br>有效节点可以在youtube吾爱分享频道、yassuo.xyz、woocloud.online等等的站点获取。  </p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"server"</span>: <span class="string">"jp1.ssrnode.top"</span>,</span><br><span class="line">    <span class="attr">"local_address"</span>: <span class="string">"127.0.0.1"</span>,</span><br><span class="line">    <span class="attr">"local_port"</span>: <span class="number">1080</span>,</span><br><span class="line">    <span class="attr">"timeout"</span>: <span class="number">300</span>,</span><br><span class="line">    <span class="attr">"workers"</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">"server_port"</span>: <span class="number">61536</span>,</span><br><span class="line">    <span class="attr">"password"</span>: <span class="string">"8ELIWb"</span>,</span><br><span class="line">    <span class="attr">"method"</span>: <span class="string">"rc4-md5"</span>,</span><br><span class="line">    <span class="attr">"obfs"</span>: <span class="string">"http_simple"</span>,</span><br><span class="line">    <span class="attr">"obfs_param"</span>: <span class="string">"3027117564.microsoft.com"</span>,</span><br><span class="line">    <span class="attr">"protocol"</span>: <span class="string">"auth_aes128_sha1"</span>,</span><br><span class="line">    <span class="attr">"protocol_param"</span>: <span class="string">"17564:7vdNqp"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>如果没有git，需要安装： <em>sudo apt-get install git</em></p>
-<h2 id="Ubuntu代理设置"><a href="#Ubuntu代理设置" class="headerlink" title="Ubuntu代理设置"></a>Ubuntu代理设置</h2><p>Ubuntu与Mac和Windows不同，浏览器需要手动设置代理。  </p>
+    <p>Github只允许上传100MB的文件，如果超过，服务器会直接拒绝。</p>
+<p>解决办法：  </p>
 <ol>
-<li>首先安装SwitchyOmega插件，如果安装Google拒绝安装离线插件，可以先将crx文件改成zip或者rar文件，再加载已解压文件，可以成功安装。  </li>
-<li>安装成功后，再进行配置。新建情景模式或者直接在默认的proxy中按图所示进行修改，主要是代理协议、服务器和代理端口。<img src="/2019/09/01/Ubuntu-SSR/proxy.jpg" title="avatar"></li>
-<li>可以安装一些规则，填完规则列表格式和网址之后，点击立即更新情景模式。  <img src="/2019/09/01/Ubuntu-SSR/principle.jpg" title="avatar"></li>
+<li>sudo git rm –cached 文件路径；</li>
+<li>sudo git commit –amend -CHEAD;</li>
+<li>sudo push -u origin master.</li>
 </ol>
 
     
 
     
 
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          鱼咸滚酱
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/21/Git上传100MB限制/" title="Git上传100MB限制" target="_blank">https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/21/Git上传100MB限制/</a>
+        </li>
+        <li>
+          <strong>版权声明： </strong>
+          本博客所有文章除特别声明外，均采用 <a href="https://www.apache.org/licenses/LICENSE-2.0.html" rel="external nofollow" target="_blank">Apache License 2.0</a> 许可协议。转载请注明出处！
+        </li>
+      </ul>
+    </div>
     
 
   </div>
@@ -1211,11 +246,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Ubuntu</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
         		</li>
       		
 		</ul>
@@ -1224,16 +259,76 @@
     
 
     
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/09/01/Ubuntu-SSR/">展开全文 >></a>
-    </p>
+
     
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/21/Git上传100MB限制/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
 
     
     <div class="clearfix"></div>
   </div>
   </div>
 </article>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2019/09/19/you-get安装/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">you-get安装</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -1254,12 +349,14 @@
 
 
 
-  
-  
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
-    </nav>
-  
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -1299,8 +396,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
