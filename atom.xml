@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/"/>
-  <updated>2019-09-21T06:08:50.947Z</updated>
+  <updated>2019-09-21T06:20:10.885Z</updated>
   <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Ubuntu下安装和使用GLPK</title>
+    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/21/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8GLPK/"/>
+    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/21/Ubuntu下安装和使用GLPK/</id>
+    <published>2019-09-21T06:12:46.000Z</published>
+    <updated>2019-09-21T06:20:10.885Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="一、安装"><a href="#一、安装" class="headerlink" title="一、安装"></a>一、安装</h1><blockquote><ul><li>wget <a href="http://ftp.gnu.org/gnu/glpk/glpk-4.65.tar.gz" target="_blank" rel="noopener">http://ftp.gnu.org/gnu/glpk/glpk-4.65.tar.gz</a></li><li>tar -xzvf glpk-4.65.tar.gz</li><li>./configure</li><li>make</li><li>sudo make install</li></ul></blockquote><p>使用前可能还需要修改一下/etc/ld.so.conf.d/libc.conf文件</p><blockquote><ul><li>udo vim /etc/ld.so.conf.d/libc.conf</li><li>/usr/local/lib/  需要有/号在lib后面</li><li>sudo ldconfig /etc/ld.so.conf.d/lib.conf</li><li>sudo ldconfig /etc/ld.so.conf</li></ul></blockquote><h1 id="二、使用："><a href="#二、使用：" class="headerlink" title="二、使用："></a>二、使用：</h1><ol><li>编辑glpsolEx.mod文件： vim glpsolEx.mod</li><li>执行 glpsol -m glpsolEx.mod -o glpsolEx.sol ，将结果输出到 glpsolEx.sol中。</li><li>说明：glpsolEx.mod文件内容如下：  </li></ol><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Variables */</span>  </span><br><span class="line"><span class="keyword">var</span> x1 &gt;= <span class="number">0</span>;  </span><br><span class="line"><span class="keyword">var</span> x2 &gt;= <span class="number">0</span>;</span><br><span class="line"><span class="keyword">var</span> x3 &gt;= <span class="number">0</span>;  </span><br><span class="line"><span class="comment">/* Object function */</span>  </span><br><span class="line">maximize z: x1 + <span class="number">14</span>*x2 + <span class="number">6</span>*x3;  </span><br><span class="line"><span class="comment">/* Constrains */</span>  </span><br><span class="line">s.t. con1: x1 + x2 + x3 &lt;= <span class="number">4</span>;  </span><br><span class="line">s.t. con2: x1  &lt;= <span class="number">2</span>;  </span><br><span class="line">s.t. con3: x3  &lt;= <span class="number">3</span>;  </span><br><span class="line">s.t. con4: <span class="number">3</span>*x2 + x3  &lt;= <span class="number">6</span>;  </span><br><span class="line">end;</span><br></pre></td></tr></table></figure><p>参考链接:  </p><ul><li><a href="http://www.cnblogs.com/jostree/p/4156204.html" target="_blank" rel="noopener">http://www.cnblogs.com/jostree/p/4156204.html</a></li><li><a href="https://blog.csdn.net/danwuxie/article/details/80981169" target="_blank" rel="noopener">https://blog.csdn.net/danwuxie/article/details/80981169</a></li><li><a href="https://blog.csdn.net/zhuoyuezai/article/details/78844549" target="_blank" rel="noopener">https://blog.csdn.net/zhuoyuezai/article/details/78844549</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;一、安装&quot;&gt;&lt;a href=&quot;#一、安装&quot; class=&quot;headerlink&quot; title=&quot;一、安装&quot;&gt;&lt;/a&gt;一、安装&lt;/h1&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;wget &lt;a href=&quot;http://ftp.gnu.org/gnu/glpk/g
+      
+    
+    </summary>
+    
+    
+      <category term="Ubuntu" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Ubuntu/"/>
+    
+      <category term="GLPK" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/GLPK/"/>
+    
+  </entry>
   
   <entry>
     <title>Git上传100MB限制</title>
@@ -522,33 +549,6 @@
     
     
       <category term="Python" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ubuntu SSR</title>
-    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/01/Ubuntu-SSR/"/>
-    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/01/Ubuntu-SSR/</id>
-    <published>2019-09-01T12:05:02.000Z</published>
-    <updated>2019-09-01T13:35:43.892Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Ubuntu安装ssr客户端"><a href="#Ubuntu安装ssr客户端" class="headerlink" title="Ubuntu安装ssr客户端"></a>Ubuntu安装ssr客户端</h2><blockquote><ul><li>wget <a href="http://www.djangoz.com/ssr" target="_blank" rel="noopener">http://www.djangoz.com/ssr</a>  </li><li>sudo mv ssr /usr/local/bin  </li><li>sudo chmod 766 /usr/local/bin/ssr  </li><li>ssr install  </li><li>ssr config  </li></ul></blockquote><p>最后一步ssr config，将找的有效节点信息的配置导入，比如用下图中的内容替换config中的内容。<br>有效节点可以在youtube吾爱分享频道、yassuo.xyz、woocloud.online等等的站点获取。  </p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"server"</span>: <span class="string">"jp1.ssrnode.top"</span>,</span><br><span class="line">    <span class="attr">"local_address"</span>: <span class="string">"127.0.0.1"</span>,</span><br><span class="line">    <span class="attr">"local_port"</span>: <span class="number">1080</span>,</span><br><span class="line">    <span class="attr">"timeout"</span>: <span class="number">300</span>,</span><br><span class="line">    <span class="attr">"workers"</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">"server_port"</span>: <span class="number">61536</span>,</span><br><span class="line">    <span class="attr">"password"</span>: <span class="string">"8ELIWb"</span>,</span><br><span class="line">    <span class="attr">"method"</span>: <span class="string">"rc4-md5"</span>,</span><br><span class="line">    <span class="attr">"obfs"</span>: <span class="string">"http_simple"</span>,</span><br><span class="line">    <span class="attr">"obfs_param"</span>: <span class="string">"3027117564.microsoft.com"</span>,</span><br><span class="line">    <span class="attr">"protocol"</span>: <span class="string">"auth_aes128_sha1"</span>,</span><br><span class="line">    <span class="attr">"protocol_param"</span>: <span class="string">"17564:7vdNqp"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>如果没有git，需要安装： <em>sudo apt-get install git</em></p><h2 id="Ubuntu代理设置"><a href="#Ubuntu代理设置" class="headerlink" title="Ubuntu代理设置"></a>Ubuntu代理设置</h2><p>Ubuntu与Mac和Windows不同，浏览器需要手动设置代理。  </p><ol><li>首先安装SwitchyOmega插件，如果安装Google拒绝安装离线插件，可以先将crx文件改成zip或者rar文件，再加载已解压文件，可以成功安装。  </li><li>安装成功后，再进行配置。新建情景模式或者直接在默认的proxy中按图所示进行修改，主要是代理协议、服务器和代理端口。<img src="/2019/09/01/Ubuntu-SSR/proxy.jpg" title="avatar"></li><li>可以安装一些规则，填完规则列表格式和网址之后，点击立即更新情景模式。  <img src="/2019/09/01/Ubuntu-SSR/principle.jpg" title="avatar"></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Ubuntu安装ssr客户端&quot;&gt;&lt;a href=&quot;#Ubuntu安装ssr客户端&quot; class=&quot;headerlink&quot; title=&quot;Ubuntu安装ssr客户端&quot;&gt;&lt;/a&gt;Ubuntu安装ssr客户端&lt;/h2&gt;&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;wge
-      
-    
-    </summary>
-    
-    
-      <category term="软件" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/%E8%BD%AF%E4%BB%B6/"/>
-    
-      <category term="Ubuntu" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Ubuntu/"/>
     
   </entry>
   

@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>Ubuntu下安装和使用GLPK</title>
+      <link href="/2019/09/21/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8GLPK/"/>
+      <url>/2019/09/21/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8GLPK/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一、安装"><a href="#一、安装" class="headerlink" title="一、安装"></a>一、安装</h1><blockquote><ul><li>wget <a href="http://ftp.gnu.org/gnu/glpk/glpk-4.65.tar.gz" target="_blank" rel="noopener">http://ftp.gnu.org/gnu/glpk/glpk-4.65.tar.gz</a></li><li>tar -xzvf glpk-4.65.tar.gz</li><li>./configure</li><li>make</li><li>sudo make install</li></ul></blockquote><p>使用前可能还需要修改一下/etc/ld.so.conf.d/libc.conf文件</p><blockquote><ul><li>udo vim /etc/ld.so.conf.d/libc.conf</li><li>/usr/local/lib/  需要有/号在lib后面</li><li>sudo ldconfig /etc/ld.so.conf.d/lib.conf</li><li>sudo ldconfig /etc/ld.so.conf</li></ul></blockquote><h1 id="二、使用："><a href="#二、使用：" class="headerlink" title="二、使用："></a>二、使用：</h1><ol><li>编辑glpsolEx.mod文件： vim glpsolEx.mod</li><li>执行 glpsol -m glpsolEx.mod -o glpsolEx.sol ，将结果输出到 glpsolEx.sol中。</li><li>说明：glpsolEx.mod文件内容如下：  </li></ol><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Variables */</span>  </span><br><span class="line"><span class="keyword">var</span> x1 &gt;= <span class="number">0</span>;  </span><br><span class="line"><span class="keyword">var</span> x2 &gt;= <span class="number">0</span>;</span><br><span class="line"><span class="keyword">var</span> x3 &gt;= <span class="number">0</span>;  </span><br><span class="line"><span class="comment">/* Object function */</span>  </span><br><span class="line">maximize z: x1 + <span class="number">14</span>*x2 + <span class="number">6</span>*x3;  </span><br><span class="line"><span class="comment">/* Constrains */</span>  </span><br><span class="line">s.t. con1: x1 + x2 + x3 &lt;= <span class="number">4</span>;  </span><br><span class="line">s.t. con2: x1  &lt;= <span class="number">2</span>;  </span><br><span class="line">s.t. con3: x3  &lt;= <span class="number">3</span>;  </span><br><span class="line">s.t. con4: <span class="number">3</span>*x2 + x3  &lt;= <span class="number">6</span>;  </span><br><span class="line">end;</span><br></pre></td></tr></table></figure><p>参考链接:  </p><ul><li><a href="http://www.cnblogs.com/jostree/p/4156204.html" target="_blank" rel="noopener">http://www.cnblogs.com/jostree/p/4156204.html</a></li><li><a href="https://blog.csdn.net/danwuxie/article/details/80981169" target="_blank" rel="noopener">https://blog.csdn.net/danwuxie/article/details/80981169</a></li><li><a href="https://blog.csdn.net/zhuoyuezai/article/details/78844549" target="_blank" rel="noopener">https://blog.csdn.net/zhuoyuezai/article/details/78844549</a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Ubuntu </tag>
+            
+            <tag> GLPK </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Git上传100MB限制</title>
       <link href="/2019/09/21/Git%E4%B8%8A%E4%BC%A0100MB%E9%99%90%E5%88%B6/"/>
       <url>/2019/09/21/Git%E4%B8%8A%E4%BC%A0100MB%E9%99%90%E5%88%B6/</url>

@@ -6,23 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master">
-  <title>使用conda安装Python模块 | 鱼咸滚酱</title>
+  <title>Ubuntu下安装和使用GLPK | 鱼咸滚酱</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="问题：在终端中pip成功安装的模块，在Jupyter-Notebook中import失败，原因在于终端和Jupyter-Notebook使用的Python内核位置不同。   如何解决：在Anaconda的bin目录下，使用pip重新安装，conda list查看是否安装成功。">
-<meta name="keywords" content="Python,Conda">
+  <meta name="description" content="一、安装  wget http://ftp.gnu.org/gnu/glpk/glpk-4.65.tar.gz tar -xzvf glpk-4.65.tar.gz ./configure make sudo make install   使用前可能还需要修改一下/etc/ld.so.conf.d/libc.conf文件   udo vim /etc/ld.so.conf.d/libc.conf">
+<meta name="keywords" content="Ubuntu,GLPK">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用conda安装Python模块">
-<meta property="og:url" content="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/02/使用conda安装Python模块/index.html">
+<meta property="og:title" content="Ubuntu下安装和使用GLPK">
+<meta property="og:url" content="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/21/Ubuntu下安装和使用GLPK/index.html">
 <meta property="og:site_name" content="鱼咸滚酱">
-<meta property="og:description" content="问题：在终端中pip成功安装的模块，在Jupyter-Notebook中import失败，原因在于终端和Jupyter-Notebook使用的Python内核位置不同。   如何解决：在Anaconda的bin目录下，使用pip重新安装，conda list查看是否安装成功。">
+<meta property="og:description" content="一、安装  wget http://ftp.gnu.org/gnu/glpk/glpk-4.65.tar.gz tar -xzvf glpk-4.65.tar.gz ./configure make sudo make install   使用前可能还需要修改一下/etc/ld.so.conf.d/libc.conf文件   udo vim /etc/ld.so.conf.d/libc.conf">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://github.com/2019/09/02/使用conda安装Python模块/eg.jpg">
-<meta property="og:updated_time" content="2019-09-02T07:58:08.187Z">
+<meta property="og:updated_time" content="2019-09-21T06:20:10.885Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用conda安装Python模块">
-<meta name="twitter:description" content="问题：在终端中pip成功安装的模块，在Jupyter-Notebook中import失败，原因在于终端和Jupyter-Notebook使用的Python内核位置不同。   如何解决：在Anaconda的bin目录下，使用pip重新安装，conda list查看是否安装成功。">
-<meta name="twitter:image" content="https://github.com/2019/09/02/使用conda安装Python模块/eg.jpg">
+<meta name="twitter:title" content="Ubuntu下安装和使用GLPK">
+<meta name="twitter:description" content="一、安装  wget http://ftp.gnu.org/gnu/glpk/glpk-4.65.tar.gz tar -xzvf glpk-4.65.tar.gz ./configure make sudo make install   使用前可能还需要修改一下/etc/ld.so.conf.d/libc.conf文件   udo vim /etc/ld.so.conf.d/libc.conf">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -179,14 +177,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-使用conda安装Python模块" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Ubuntu下安装和使用GLPK" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      使用conda安装Python模块
+      Ubuntu下安装和使用GLPK
     </h1>
   
 
@@ -198,8 +196,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2019/09/02/使用conda安装Python模块/" class="archive-article-date">
-        <time datetime="2019-09-02T07:54:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-02</time>
+<a href="/2019/09/21/Ubuntu下安装和使用GLPK/" class="archive-article-date">
+        <time datetime="2019-09-21T06:12:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-21</time>
 </a>
 
   
@@ -208,10 +206,37 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>问题：在终端中pip成功安装的模块，在<em>Jupyter-Notebook</em>中<em>import</em>失败，原因在于终端和Jupyter-Notebook使用的Python内核位置不同。  </p>
-<p>如何解决：在Anaconda的bin目录下，使用pip重新安装，conda list查看是否安装成功。  </p>
-<img src="/2019/09/02/使用conda安装Python模块/eg.jpg" title="avatar">
+    <h1 id="一、安装"><a href="#一、安装" class="headerlink" title="一、安装"></a>一、安装</h1><blockquote>
+<ul>
+<li>wget <a href="http://ftp.gnu.org/gnu/glpk/glpk-4.65.tar.gz" target="_blank" rel="noopener">http://ftp.gnu.org/gnu/glpk/glpk-4.65.tar.gz</a></li>
+<li>tar -xzvf glpk-4.65.tar.gz</li>
+<li>./configure</li>
+<li>make</li>
+<li>sudo make install</li>
+</ul>
+</blockquote>
+<p>使用前可能还需要修改一下/etc/ld.so.conf.d/libc.conf文件</p>
+<blockquote>
+<ul>
+<li>udo vim /etc/ld.so.conf.d/libc.conf</li>
+<li>/usr/local/lib/  需要有/号在lib后面</li>
+<li>sudo ldconfig /etc/ld.so.conf.d/lib.conf</li>
+<li>sudo ldconfig /etc/ld.so.conf</li>
+</ul>
+</blockquote>
+<h1 id="二、使用："><a href="#二、使用：" class="headerlink" title="二、使用："></a>二、使用：</h1><ol>
+<li>编辑glpsolEx.mod文件： vim glpsolEx.mod</li>
+<li>执行 glpsol -m glpsolEx.mod -o glpsolEx.sol ，将结果输出到 glpsolEx.sol中。</li>
+<li>说明：glpsolEx.mod文件内容如下：  </li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Variables */</span>  </span><br><span class="line"><span class="keyword">var</span> x1 &gt;= <span class="number">0</span>;  </span><br><span class="line"><span class="keyword">var</span> x2 &gt;= <span class="number">0</span>;</span><br><span class="line"><span class="keyword">var</span> x3 &gt;= <span class="number">0</span>;  </span><br><span class="line"><span class="comment">/* Object function */</span>  </span><br><span class="line">maximize z: x1 + <span class="number">14</span>*x2 + <span class="number">6</span>*x3;  </span><br><span class="line"><span class="comment">/* Constrains */</span>  </span><br><span class="line">s.t. con1: x1 + x2 + x3 &lt;= <span class="number">4</span>;  </span><br><span class="line">s.t. con2: x1  &lt;= <span class="number">2</span>;  </span><br><span class="line">s.t. con3: x3  &lt;= <span class="number">3</span>;  </span><br><span class="line">s.t. con4: <span class="number">3</span>*x2 + x3  &lt;= <span class="number">6</span>;  </span><br><span class="line">end;</span><br></pre></td></tr></table></figure>
 
+<p>参考链接:  </p>
+<ul>
+<li><a href="http://www.cnblogs.com/jostree/p/4156204.html" target="_blank" rel="noopener">http://www.cnblogs.com/jostree/p/4156204.html</a></li>
+<li><a href="https://blog.csdn.net/danwuxie/article/details/80981169" target="_blank" rel="noopener">https://blog.csdn.net/danwuxie/article/details/80981169</a></li>
+<li><a href="https://blog.csdn.net/zhuoyuezai/article/details/78844549" target="_blank" rel="noopener">https://blog.csdn.net/zhuoyuezai/article/details/78844549</a></li>
+</ul>
 
     
 
@@ -226,7 +251,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/02/使用conda安装Python模块/" title="使用conda安装Python模块" target="_blank">https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/02/使用conda安装Python模块/</a>
+          <a href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/21/Ubuntu下安装和使用GLPK/" title="Ubuntu下安装和使用GLPK" target="_blank">https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/21/Ubuntu下安装和使用GLPK/</a>
         </li>
         <li>
           <strong>版权声明： </strong>
@@ -245,11 +270,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Ubuntu</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Conda</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">GLPK</a>
         		</li>
       		
 		</ul>
@@ -305,7 +330,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/02/使用conda安装Python模块/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/21/Ubuntu下安装和使用GLPK/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -320,18 +345,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2019/09/02/VSCode远程连接开发/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          VSCode远程连接开发
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/09/02/Python中join问题/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Python中join问题</div>
+    <a href="/2019/09/21/Git上传100MB限制/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Git上传100MB限制</div>
       <i class="icon-circle-right"></i>
     </a>
   
