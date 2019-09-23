@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>Windows安装XShell</title>
+      <link href="/2019/09/22/Windows%E5%AE%89%E8%A3%85XShell/"/>
+      <url>/2019/09/22/Windows%E5%AE%89%E8%A3%85XShell/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一、下载安装"><a href="#一、下载安装" class="headerlink" title="一、下载安装"></a>一、下载安装</h1><p>可直接从官网下载免费版：<a href="https://www.netsarang.com/zh/" target="_blank" rel="noopener">https://www.netsarang.com/zh/</a>  </p><p>使用邮箱接受下载链接，直接安装。</p><h1 id="二、问题解决"><a href="#二、问题解决" class="headerlink" title="二、问题解决"></a>二、问题解决</h1><p>如果遇到问题，类似只能对当前安装的产品有效，说明之前安装版本没有删除干净，可以到到C盘，C:\Program Files (x86)\InstallShield Installation Information，删掉{F3FDFD5A-A201-407B-887F-399484764ECA}这个文件夹就可以，不一定是那个。可以备份全删，重新安装后在粘贴回去。  </p><p>参考链接：<br><a href="https://blog.csdn.net/qq_17758709/article/details/78920641" target="_blank" rel="noopener">https://blog.csdn.net/qq_17758709/article/details/78920641</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 软件 </tag>
+            
+            <tag> Windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Ubuntu下安装和使用GLPK</title>
       <link href="/2019/09/21/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8GLPK/"/>
       <url>/2019/09/21/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8GLPK/</url>

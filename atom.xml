@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/"/>
-  <updated>2019-09-21T06:20:10.885Z</updated>
+  <updated>2019-09-22T06:37:49.404Z</updated>
   <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Windows安装XShell</title>
+    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/22/Windows%E5%AE%89%E8%A3%85XShell/"/>
+    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/22/Windows安装XShell/</id>
+    <published>2019-09-22T06:36:09.000Z</published>
+    <updated>2019-09-22T06:37:49.404Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="一、下载安装"><a href="#一、下载安装" class="headerlink" title="一、下载安装"></a>一、下载安装</h1><p>可直接从官网下载免费版：<a href="https://www.netsarang.com/zh/" target="_blank" rel="noopener">https://www.netsarang.com/zh/</a>  </p><p>使用邮箱接受下载链接，直接安装。</p><h1 id="二、问题解决"><a href="#二、问题解决" class="headerlink" title="二、问题解决"></a>二、问题解决</h1><p>如果遇到问题，类似只能对当前安装的产品有效，说明之前安装版本没有删除干净，可以到到C盘，C:\Program Files (x86)\InstallShield Installation Information，删掉{F3FDFD5A-A201-407B-887F-399484764ECA}这个文件夹就可以，不一定是那个。可以备份全删，重新安装后在粘贴回去。  </p><p>参考链接：<br><a href="https://blog.csdn.net/qq_17758709/article/details/78920641" target="_blank" rel="noopener">https://blog.csdn.net/qq_17758709/article/details/78920641</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;一、下载安装&quot;&gt;&lt;a href=&quot;#一、下载安装&quot; class=&quot;headerlink&quot; title=&quot;一、下载安装&quot;&gt;&lt;/a&gt;一、下载安装&lt;/h1&gt;&lt;p&gt;可直接从官网下载免费版：&lt;a href=&quot;https://www.netsarang.com/zh/&quot; ta
+      
+    
+    </summary>
+    
+    
+      <category term="软件" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="Windows" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Ubuntu下安装和使用GLPK</title>
     <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/21/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8GLPK/"/>
     <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/21/Ubuntu下安装和使用GLPK/</id>
     <published>2019-09-21T06:12:46.000Z</published>
-    <updated>2019-09-21T06:20:10.885Z</updated>
+    <updated>2019-09-22T12:51:49.990Z</updated>
     
     <content type="html"><![CDATA[<h1 id="一、安装"><a href="#一、安装" class="headerlink" title="一、安装"></a>一、安装</h1><blockquote><ul><li>wget <a href="http://ftp.gnu.org/gnu/glpk/glpk-4.65.tar.gz" target="_blank" rel="noopener">http://ftp.gnu.org/gnu/glpk/glpk-4.65.tar.gz</a></li><li>tar -xzvf glpk-4.65.tar.gz</li><li>./configure</li><li>make</li><li>sudo make install</li></ul></blockquote><p>使用前可能还需要修改一下/etc/ld.so.conf.d/libc.conf文件</p><blockquote><ul><li>udo vim /etc/ld.so.conf.d/libc.conf</li><li>/usr/local/lib/  需要有/号在lib后面</li><li>sudo ldconfig /etc/ld.so.conf.d/lib.conf</li><li>sudo ldconfig /etc/ld.so.conf</li></ul></blockquote><h1 id="二、使用："><a href="#二、使用：" class="headerlink" title="二、使用："></a>二、使用：</h1><ol><li>编辑glpsolEx.mod文件： vim glpsolEx.mod</li><li>执行 glpsol -m glpsolEx.mod -o glpsolEx.sol ，将结果输出到 glpsolEx.sol中。</li><li>说明：glpsolEx.mod文件内容如下：  </li></ol><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Variables */</span>  </span><br><span class="line"><span class="keyword">var</span> x1 &gt;= <span class="number">0</span>;  </span><br><span class="line"><span class="keyword">var</span> x2 &gt;= <span class="number">0</span>;</span><br><span class="line"><span class="keyword">var</span> x3 &gt;= <span class="number">0</span>;  </span><br><span class="line"><span class="comment">/* Object function */</span>  </span><br><span class="line">maximize z: x1 + <span class="number">14</span>*x2 + <span class="number">6</span>*x3;  </span><br><span class="line"><span class="comment">/* Constrains */</span>  </span><br><span class="line">s.t. con1: x1 + x2 + x3 &lt;= <span class="number">4</span>;  </span><br><span class="line">s.t. con2: x1  &lt;= <span class="number">2</span>;  </span><br><span class="line">s.t. con3: x3  &lt;= <span class="number">3</span>;  </span><br><span class="line">s.t. con4: <span class="number">3</span>*x2 + x3  &lt;= <span class="number">6</span>;  </span><br><span class="line">end;</span><br></pre></td></tr></table></figure><p>参考链接:  </p><ul><li><a href="http://www.cnblogs.com/jostree/p/4156204.html" target="_blank" rel="noopener">http://www.cnblogs.com/jostree/p/4156204.html</a></li><li><a href="https://blog.csdn.net/danwuxie/article/details/80981169" target="_blank" rel="noopener">https://blog.csdn.net/danwuxie/article/details/80981169</a></li><li><a href="https://blog.csdn.net/zhuoyuezai/article/details/78844549" target="_blank" rel="noopener">https://blog.csdn.net/zhuoyuezai/article/details/78844549</a></li></ul>]]></content>
     
@@ -525,30 +550,6 @@
       <category term="Python" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Python/"/>
     
       <category term="Conda" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Conda/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python中join问题</title>
-    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/02/Python%E4%B8%ADjoin%E9%97%AE%E9%A2%98/"/>
-    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/02/Python中join问题/</id>
-    <published>2019-09-02T04:19:07.000Z</published>
-    <updated>2019-09-02T04:32:59.453Z</updated>
-    
-    <content type="html"><![CDATA[<p>以<em>‘ ‘.join()</em>的方式将列表转为字符串，要求list中的元素都是字符串，否则需要<em>map(str, list)</em>进行转换。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = [&#123;<span class="string">"a"</span>:<span class="number">1</span>&#125;, &#123;<span class="string">"b"</span>:<span class="number">2</span>&#125;]  </span><br><span class="line"><span class="string">','</span>.join(map(str, a))</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;以&lt;em&gt;‘ ‘.join()&lt;/em&gt;的方式将列表转为字符串，要求list中的元素都是字符串，否则需要&lt;em&gt;map(str, list)&lt;/em&gt;进行转换。&lt;/p&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td clas
-      
-    
-    </summary>
-    
-    
-      <category term="Python" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Python/"/>
     
   </entry>
   
