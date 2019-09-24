@@ -6,20 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master">
-  <title>Archives | 鱼咸滚酱</title>
+  <title>Windows设置Notepad++为txt的默认打开方式 | 鱼咸滚酱</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="鱼咸滚酱_个人博客">
-<meta name="keywords" content="鱼咸滚酱,个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="鱼咸滚酱">
-<meta property="og:url" content="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/archives/index.html">
+  <meta name="description" content="win+R，输入regedit打开注册表编辑器； 定位到 HKEY_LOCAL_MACHINE\SOFTWARE\Classes\txtfile\shell\Open\command 这个注册表下面； 右边有一个REG_SZ类型数据点右键修改为你的NotePad++安装目录； 修改数值数据为 (“D:\Notepad++\notepad++.exe %1”)； 系统默认为自带的NotePad打开">
+<meta name="keywords" content="软件,Windows">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows设置Notepad++为txt的默认打开方式">
+<meta property="og:url" content="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/23/Windows设置Notepad-为txt的默认打开方式/index.html">
 <meta property="og:site_name" content="鱼咸滚酱">
-<meta property="og:description" content="鱼咸滚酱_个人博客">
+<meta property="og:description" content="win+R，输入regedit打开注册表编辑器； 定位到 HKEY_LOCAL_MACHINE\SOFTWARE\Classes\txtfile\shell\Open\command 这个注册表下面； 右边有一个REG_SZ类型数据点右键修改为你的NotePad++安装目录； 修改数值数据为 (“D:\Notepad++\notepad++.exe %1”)； 系统默认为自带的NotePad打开">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-09-23T03:27:21.740Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="鱼咸滚酱">
-<meta name="twitter:description" content="鱼咸滚酱_个人博客">
+<meta name="twitter:title" content="Windows设置Notepad++为txt的默认打开方式">
+<meta name="twitter:description" content="win+R，输入regedit打开注册表编辑器； 定位到 HKEY_LOCAL_MACHINE\SOFTWARE\Classes\txtfile\shell\Open\command 这个注册表下面； 右边有一个REG_SZ类型数据点右键修改为你的NotePad++安装目录； 修改数值数据为 (“D:\Notepad++\notepad++.exe %1”)； 系统默认为自带的NotePad打开">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -176,41 +177,70 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Windows设置Notepad-为txt的默认打开方式" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
   
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
+    <h1 class="article-title" itemprop="name">
+      Windows设置Notepad++为txt的默认打开方式
+    </h1>
+  
+
+
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
 <a href="/2019/09/23/Windows设置Notepad-为txt的默认打开方式/" class="archive-article-date">
         <time datetime="2019-09-23T03:25:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-23</time>
 </a>
 
-        </div>
-    	 
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/23/Windows设置Notepad-为txt的默认打开方式/" target="_blank">Windows设置Notepad++为txt的默认打开方式</a>
   
-    </h1>
+  </header>
   
+  <div class="article-entry" itemprop="articleBody">
+    
+    <ol>
+<li>win+R，输入regedit打开注册表编辑器；</li>
+<li>定位到 <em>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\txtfile\shell\Open\command</em> 这个注册表下面；</li>
+<li>右边有一个REG_SZ类型数据点右键修改为你的NotePad++安装目录；</li>
+<li>修改数值数据为 (“D:\Notepad++\notepad++.exe %1”)；</li>
+<li>系统默认为自带的NotePad打开<br>%SystemRoot%\system32\NOTEPAD.EXE %1，这个是默认的地址，如果想恢复系统默认情况，修改为此值。</li>
+</ol>
 
+    
 
-        <div class="article-info info-on-right">
-          
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          鱼咸滚酱
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/23/Windows设置Notepad-为txt的默认打开方式/" title="Windows设置Notepad++为txt的默认打开方式" target="_blank">https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/23/Windows设置Notepad-为txt的默认打开方式/</a>
+        </li>
+        <li>
+          <strong>版权声明： </strong>
+          本博客所有文章除特别声明外，均采用 <a href="https://www.apache.org/licenses/LICENSE-2.0.html" rel="external nofollow" target="_blank">Apache License 2.0</a> 许可协议。转载请注明出处！
+        </li>
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -226,434 +256,107 @@
 		</ul>
 	</div>
 
-          
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/23/Windows设置Notepad-为txt的默认打开方式/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/22/Windows安装XShell/" class="archive-article-date">
-        <time datetime="2019-09-22T06:36:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-22</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2019/09/22/Windows安装XShell/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Windows安装XShell</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/22/Windows安装XShell/" target="_blank">Windows安装XShell</a>
-  
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Windows</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/21/Ubuntu下安装和使用GLPK/" class="archive-article-date">
-        <time datetime="2019-09-21T06:12:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-21</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/21/Ubuntu下安装和使用GLPK/" target="_blank">Ubuntu下安装和使用GLPK</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Ubuntu</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">GLPK</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/21/Git上传100MB限制/" class="archive-article-date">
-        <time datetime="2019-09-21T06:07:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-21</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/21/Git上传100MB限制/" target="_blank">Git上传100MB限制</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/19/you-get安装/" class="archive-article-date">
-        <time datetime="2019-09-19T11:30:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-19</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/19/you-get安装/" target="_blank">you-get安装</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/16/Windows下IDEA无法识别JDK/" class="archive-article-date">
-        <time datetime="2019-09-16T14:03:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-16</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/16/Windows下IDEA无法识别JDK/" target="_blank">Windows下IDEA无法识别JDK</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Windows</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/16/Windows安装JDK/" class="archive-article-date">
-        <time datetime="2019-09-16T13:36:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-16</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/16/Windows安装JDK/" target="_blank">Windows安装JDK</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Windows</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/14/brew安装权限问题/" class="archive-article-date">
-        <time datetime="2019-09-14T04:29:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-14</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/14/brew安装权限问题/" target="_blank">brew安装权限问题</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">brew</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/12/不同类型的文献检索/" class="archive-article-date">
-        <time datetime="2019-09-12T05:02:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-12</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/12/不同类型的文献检索/" target="_blank">不同类型的文献检索</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">文献检索</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/12/修改Jupyter-Notebook目录/" class="archive-article-date">
-        <time datetime="2019-09-12T04:48:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-12</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/12/修改Jupyter-Notebook目录/" target="_blank">修改Jupyter Notebook目录</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -694,8 +397,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,

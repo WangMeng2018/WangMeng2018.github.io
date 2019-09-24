@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/"/>
-  <updated>2019-09-22T06:37:49.404Z</updated>
+  <updated>2019-09-23T03:27:21.740Z</updated>
   <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows设置Notepad++为txt的默认打开方式</title>
+    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/23/Windows%E8%AE%BE%E7%BD%AENotepad-%E4%B8%BAtxt%E7%9A%84%E9%BB%98%E8%AE%A4%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F/"/>
+    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/23/Windows设置Notepad-为txt的默认打开方式/</id>
+    <published>2019-09-23T03:25:18.000Z</published>
+    <updated>2019-09-23T03:27:21.740Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>win+R，输入regedit打开注册表编辑器；</li><li>定位到 <em>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\txtfile\shell\Open\command</em> 这个注册表下面；</li><li>右边有一个REG_SZ类型数据点右键修改为你的NotePad++安装目录；</li><li>修改数值数据为 (“D:\Notepad++\notepad++.exe %1”)；</li><li>系统默认为自带的NotePad打开<br>%SystemRoot%\system32\NOTEPAD.EXE %1，这个是默认的地址，如果想恢复系统默认情况，修改为此值。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;win+R，输入regedit打开注册表编辑器；&lt;/li&gt;
+&lt;li&gt;定位到 &lt;em&gt;HKEY_LOCAL_MACHINE\SOFTWARE\Classes\txtfile\shell\Open\command&lt;/em&gt; 这个注册表下面；&lt;/li&gt;
+&lt;li&gt;右边有
+      
+    
+    </summary>
+    
+    
+      <category term="软件" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="Windows" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Windows/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows安装XShell</title>
@@ -524,32 +552,6 @@
       <category term="Ubuntu" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Ubuntu/"/>
     
       <category term="VSCode" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/VSCode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用conda安装Python模块</title>
-    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/02/%E4%BD%BF%E7%94%A8conda%E5%AE%89%E8%A3%85Python%E6%A8%A1%E5%9D%97/"/>
-    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/02/使用conda安装Python模块/</id>
-    <published>2019-09-02T07:54:46.000Z</published>
-    <updated>2019-09-02T07:58:08.187Z</updated>
-    
-    <content type="html"><![CDATA[<p>问题：在终端中pip成功安装的模块，在<em>Jupyter-Notebook</em>中<em>import</em>失败，原因在于终端和Jupyter-Notebook使用的Python内核位置不同。  </p><p>如何解决：在Anaconda的bin目录下，使用pip重新安装，conda list查看是否安装成功。  </p><img src="/2019/09/02/使用conda安装Python模块/eg.jpg" title="avatar">]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;问题：在终端中pip成功安装的模块，在&lt;em&gt;Jupyter-Notebook&lt;/em&gt;中&lt;em&gt;import&lt;/em&gt;失败，原因在于终端和Jupyter-Notebook使用的Python内核位置不同。  &lt;/p&gt;
-&lt;p&gt;如何解决：在Anaconda的bin目录下，使用p
-      
-    
-    </summary>
-    
-    
-      <category term="Python" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Python/"/>
-    
-      <category term="Conda" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Conda/"/>
     
   </entry>
   

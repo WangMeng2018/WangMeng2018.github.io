@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>Windows设置Notepad++为txt的默认打开方式</title>
+      <link href="/2019/09/23/Windows%E8%AE%BE%E7%BD%AENotepad-%E4%B8%BAtxt%E7%9A%84%E9%BB%98%E8%AE%A4%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F/"/>
+      <url>/2019/09/23/Windows%E8%AE%BE%E7%BD%AENotepad-%E4%B8%BAtxt%E7%9A%84%E9%BB%98%E8%AE%A4%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F/</url>
+      
+        <content type="html"><![CDATA[<ol><li>win+R，输入regedit打开注册表编辑器；</li><li>定位到 <em>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\txtfile\shell\Open\command</em> 这个注册表下面；</li><li>右边有一个REG_SZ类型数据点右键修改为你的NotePad++安装目录；</li><li>修改数值数据为 (“D:\Notepad++\notepad++.exe %1”)；</li><li>系统默认为自带的NotePad打开<br>%SystemRoot%\system32\NOTEPAD.EXE %1，这个是默认的地址，如果想恢复系统默认情况，修改为此值。</li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 软件 </tag>
+            
+            <tag> Windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Windows安装XShell</title>
       <link href="/2019/09/22/Windows%E5%AE%89%E8%A3%85XShell/"/>
       <url>/2019/09/22/Windows%E5%AE%89%E8%A3%85XShell/</url>
@@ -466,9 +487,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Mac </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
