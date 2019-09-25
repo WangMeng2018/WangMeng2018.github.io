@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>WinEdt打开tex文件Reading Error</title>
+      <link href="/2019/09/24/WinEdt%E6%89%93%E5%BC%80tex%E6%96%87%E4%BB%B6Reading-Error/"/>
+      <url>/2019/09/24/WinEdt%E6%89%93%E5%BC%80tex%E6%96%87%E4%BB%B6Reading-Error/</url>
+      
+        <content type="html"><![CDATA[<p>错误：WinEdt打开tex文件Reading Error。  </p><p>原因：因为.tex文件中包含了utf-8字符，而在打开的时候并没有指明utf-8打开方式。  </p><p>解决方案：  </p><img src="/2019/09/24/WinEdt打开tex文件Reading-Error/1.png" title="avatar"><p>参考链接：<br><a href="https://blog.csdn.net/garfielder007/article/details/51619821" target="_blank" rel="noopener">https://blog.csdn.net/garfielder007/article/details/51619821</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+            <tag> Tex </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Windows设置Notepad++为txt的默认打开方式</title>
       <link href="/2019/09/23/Windows%E8%AE%BE%E7%BD%AENotepad-%E4%B8%BAtxt%E7%9A%84%E9%BB%98%E8%AE%A4%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F/"/>
       <url>/2019/09/23/Windows%E8%AE%BE%E7%BD%AENotepad-%E4%B8%BAtxt%E7%9A%84%E9%BB%98%E8%AE%A4%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F/</url>
@@ -487,9 +508,9 @@
       
         <tags>
             
-            <tag> Mac </tag>
-            
             <tag> 软件 </tag>
+            
+            <tag> Mac </tag>
             
         </tags>
       

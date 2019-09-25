@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/"/>
-  <updated>2019-09-23T03:27:21.740Z</updated>
+  <updated>2019-09-24T06:44:48.814Z</updated>
   <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WinEdt打开tex文件Reading Error</title>
+    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/24/WinEdt%E6%89%93%E5%BC%80tex%E6%96%87%E4%BB%B6Reading-Error/"/>
+    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/24/WinEdt打开tex文件Reading-Error/</id>
+    <published>2019-09-24T06:41:19.000Z</published>
+    <updated>2019-09-24T06:44:48.814Z</updated>
+    
+    <content type="html"><![CDATA[<p>错误：WinEdt打开tex文件Reading Error。  </p><p>原因：因为.tex文件中包含了utf-8字符，而在打开的时候并没有指明utf-8打开方式。  </p><p>解决方案：  </p><img src="/2019/09/24/WinEdt打开tex文件Reading-Error/1.png" title="avatar"><p>参考链接：<br><a href="https://blog.csdn.net/garfielder007/article/details/51619821" target="_blank" rel="noopener">https://blog.csdn.net/garfielder007/article/details/51619821</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;错误：WinEdt打开tex文件Reading Error。  &lt;/p&gt;
+&lt;p&gt;原因：因为.tex文件中包含了utf-8字符，而在打开的时候并没有指明utf-8打开方式。  &lt;/p&gt;
+&lt;p&gt;解决方案：  &lt;/p&gt;
+&lt;img src=&quot;/2019/09/24/WinEdt打开
+      
+    
+    </summary>
+    
+    
+      <category term="Windows" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Windows/"/>
+    
+      <category term="Tex" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Tex/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows设置Notepad++为txt的默认打开方式</title>
@@ -344,7 +372,7 @@
     <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/10/Windows%E5%AE%89%E8%A3%85Mysql/"/>
     <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/10/Windows安装Mysql/</id>
     <published>2019-09-10T07:23:26.000Z</published>
-    <updated>2019-09-10T07:35:01.544Z</updated>
+    <updated>2019-09-24T06:43:42.569Z</updated>
     
     <content type="html"><![CDATA[<ol><li><p>下载链接：<a href="https://dev.mysql.com/downloads/mysql/5.7.html#downloads" target="_blank" rel="noopener">https://dev.mysql.com/downloads/mysql/5.7.html#downloads</a><br>本机选择的是Mysql5.7.13 zip版本;  </p></li><li><p>解压mysql-5.7.13-winx64.zip，并移动到安装目录下；</p></li><li><p>添加系统环境变量path，内容为D:\MySQL\mysql-5.7.13-winx64 ;  </p></li><li><p>修改配置文件my-default.ini，添加内容：  </p><blockquote><p>basedir = D:\MySQL\mysql-5.7.13-winx64<br>datadir = D:\MySQL\mysql-5.7.13-winx64\data</p></blockquote></li><li><p>以管理员身份运行cmd，输入cd D:\MySQL\mysql-5.7.13-winx64\bin；</p></li><li><p>输入.\mysqld –initialize-insecure –user=mysql 回车;  </p></li><li><p>输入 .\mysqld install 回车;  </p></li><li><p>输入net start mysql 回车启动mysql服务  管理员权限;  </p></li><li><p>输入.\mysql -u root -p 回车登录mysql数据库，没有密码，直接回车;  </p></li><li><p>测试，输入show databases:  </p><img src="/2019/09/10/Windows安装Mysql/1.jpg" title="avatar">  </li></ol><p>输入quit，退出。  </p><ol start="11"><li>输入net stop mysql，停止mysql程序。</li></ol><p>参考链接:  </p><ul><li><a href="https://www.cnblogs.com/ayyl/p/5978418.html" target="_blank" rel="noopener">https://www.cnblogs.com/ayyl/p/5978418.html</a>  </li><li><a href="https://www.cnblogs.com/reyinever/p/8551977.html" target="_blank" rel="noopener">https://www.cnblogs.com/reyinever/p/8551977.html</a>  </li></ul>]]></content>
     
@@ -523,35 +551,6 @@
       <category term="Docker" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Docker/"/>
     
       <category term="Ubuntu" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Ubuntu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VSCode远程连接开发</title>
-    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/02/VSCode%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E5%BC%80%E5%8F%91/"/>
-    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/02/VSCode远程连接开发/</id>
-    <published>2019-09-02T07:59:51.000Z</published>
-    <updated>2019-09-02T08:23:25.515Z</updated>
-    
-    <content type="html"><![CDATA[<p>说明： 示例是Mac上的VSCode连接远程Ubuntu服务器。</p><h2 id="一、-服务器配置"><a href="#一、-服务器配置" class="headerlink" title="一、 服务器配置"></a>一、 服务器配置</h2><ol><li>首先，给Ubuntu安装openssh-server；  <blockquote><p>sudo apt-get install openssh-server</p></blockquote></li><li>其次，启动ssh；  <blockquote><p>sudo service ssh start</p></blockquote></li><li>检查ssh是否开启。<blockquote><p>ps -e | grep ssh</p></blockquote></li></ol><h2 id="二、-本地配置"><a href="#二、-本地配置" class="headerlink" title="二、 本地配置"></a>二、 本地配置</h2><ol><li>Mac本身自带了ssh，不必安装；  </li><li>查看是否存在ssh密钥: ~/.ssh/id_rsa_pub；  </li><li>不存在的话，输入命令： ssh-keygen -t rsa -b 4096 ，生成两个文件；  <img src="/2019/09/02/VSCode远程连接开发/key.jpg" title="avatar"></li><li>将本地的公共密钥发送到服务器。  <blockquote><p>ssh-copy-id <a href="mailto:wangmeng@10.61.3.212" target="_blank" rel="noopener">wangmeng@10.61.3.212</a>  </p></blockquote></li></ol><h2 id="三、-VSCode配置"><a href="#三、-VSCode配置" class="headerlink" title="三、 VSCode配置"></a>三、 VSCode配置</h2><ol><li>首先安装VSCode Remote SSH，安装完左侧会显示新图标；  </li><li>点击CONNECTIONS后面的设置图标，再点击第一项进行配置； <img src="/2019/09/02/VSCode远程连接开发/1.jpg" title="avatar"></li><li>设置连接名、服务器地址、服务器上的用户名。  <img src="/2019/09/02/VSCode远程连接开发/2.jpg" title="avatar"><img src="/2019/09/02/VSCode远程连接开发/3.jpg" title="avatar"></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;说明： 示例是Mac上的VSCode连接远程Ubuntu服务器。&lt;/p&gt;
-&lt;h2 id=&quot;一、-服务器配置&quot;&gt;&lt;a href=&quot;#一、-服务器配置&quot; class=&quot;headerlink&quot; title=&quot;一、 服务器配置&quot;&gt;&lt;/a&gt;一、 服务器配置&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;
-      
-    
-    </summary>
-    
-    
-      <category term="Mac" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Mac/"/>
-    
-      <category term="Ubuntu" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Ubuntu/"/>
-    
-      <category term="VSCode" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/VSCode/"/>
     
   </entry>
   
