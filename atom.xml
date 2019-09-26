@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/"/>
-  <updated>2019-09-24T06:44:48.814Z</updated>
+  <updated>2019-09-25T03:05:19.997Z</updated>
   <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Tex中找不到.sty文件</title>
+    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/25/Tex%E4%B8%AD%E6%89%BE%E4%B8%8D%E5%88%B0-sty%E6%96%87%E4%BB%B6/"/>
+    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/25/Tex中找不到-sty文件/</id>
+    <published>2019-09-25T03:01:52.000Z</published>
+    <updated>2019-09-25T03:05:19.997Z</updated>
+    
+    <content type="html"><![CDATA[<p>问题：Tex编译报错，找不到指定的.sty文件。  </p><p>解决办法：从网上下载对应的sty文件，并拷贝到当前.tex目录下。  </p><p>下载链接：<a href="https://searchcode.com/codesearch/view/31207532/#" target="_blank" rel="noopener">https://searchcode.com/codesearch/view/31207532/#</a>  </p><p>可以在View File Tree中搜索。  </p><img src="/2019/09/25/Tex中找不到-sty文件/1.png" title="avatar">]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;问题：Tex编译报错，找不到指定的.sty文件。  &lt;/p&gt;
+&lt;p&gt;解决办法：从网上下载对应的sty文件，并拷贝到当前.tex目录下。  &lt;/p&gt;
+&lt;p&gt;下载链接：&lt;a href=&quot;https://searchcode.com/codesearch/view/3120753
+      
+    
+    </summary>
+    
+    
+      <category term="Windows" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Windows/"/>
+    
+      <category term="Tex" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Tex/"/>
+    
+  </entry>
   
   <entry>
     <title>WinEdt打开tex文件Reading Error</title>
@@ -389,9 +416,9 @@
     
       <category term="软件" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/%E8%BD%AF%E4%BB%B6/"/>
     
-      <category term="Mysql" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Mysql/"/>
-    
       <category term="Windows" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Windows/"/>
+    
+      <category term="Mysql" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Mysql/"/>
     
   </entry>
   
@@ -525,32 +552,6 @@
       <category term="Docker" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Docker/"/>
     
       <category term="Mac" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Mac/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ubuntu安装Docker</title>
-    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/04/Ubuntu%E5%AE%89%E8%A3%85Docker/"/>
-    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/04/Ubuntu安装Docker/</id>
-    <published>2019-09-04T06:31:33.000Z</published>
-    <updated>2019-09-05T00:54:51.622Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li>从Docker仓库下载安装，首先确保能够访问Docker仓库地址:<a href="https://download.docker.com/linux/ubuntu，" target="_blank" rel="noopener">https://download.docker.com/linux/ubuntu，</a> 如果能够访问，按照下面的操作步骤进行安装。  <blockquote><p>sudo apt update<br>sudo apt install apt-transport-https ca-certificates curl software-properties-common</p></blockquote></li><li>在/etc/apt/sources.list.d/docker.list文件中添加下面内容；  <blockquote><p>deb [arch=amd64] <a href="https://download.docker.com/linux/ubuntu" target="_blank" rel="noopener">https://download.docker.com/linux/ubuntu</a> bionic stable</p></blockquote></li><li>添加秘钥；  <blockquote><p>curl -fsSL <a href="https://download.docker.com/linux/ubuntu/gpg" target="_blank" rel="noopener">https://download.docker.com/linux/ubuntu/gpg</a> | sudo apt-key add -</p></blockquote></li><li>安装docker-ce；  <blockquote><p>sudo apt install docker-ce</p></blockquote></li><li>查看是否安装成功。  <blockquote><p>docker –version<br>输出结果： Docker version 19.03.2, build 6a30dfc</p></blockquote></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ol&gt;
-&lt;li&gt;从Docker仓库下载安装，首先确保能够访问Docker仓库地址:&lt;a href=&quot;https://download.docker.com/linux/ubuntu，&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://downloa
-      
-    
-    </summary>
-    
-    
-      <category term="Docker" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Docker/"/>
-    
-      <category term="Ubuntu" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Ubuntu/"/>
     
   </entry>
   
