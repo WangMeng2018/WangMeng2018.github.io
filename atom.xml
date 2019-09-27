@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/"/>
-  <updated>2019-09-25T03:05:19.997Z</updated>
+  <updated>2019-09-26T01:46:55.363Z</updated>
   <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Tex中文乱码</title>
+    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/26/Tex%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/"/>
+    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/26/Tex中文乱码/</id>
+    <published>2019-09-26T01:44:02.000Z</published>
+    <updated>2019-09-26T01:46:55.363Z</updated>
+    
+    <content type="html"><![CDATA[<p>加上带注释的语句：  </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">\documentclass&#123;article&#125;</span><br><span class="line">\usepackage&#123;amsmath,amssymb&#125;</span><br><span class="line">\usepackage&#123;latexsym&#125;</span><br><span class="line">\usepackage&#123;CJK&#125;</span><br><span class="line"></span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">\begin&#123;CJK*&#125;&#123;GBK&#125;&#123;gsbn&#125;       # 需要添加</span><br><span class="line">文本内容</span><br><span class="line"></span><br><span class="line">\end&#123;CJK*&#125;                    # 需要添加</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;加上带注释的语句：  &lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/s
+      
+    
+    </summary>
+    
+    
+      <category term="Windows" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Windows/"/>
+    
+      <category term="Tex" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Tex/"/>
+    
+  </entry>
   
   <entry>
     <title>Tex中找不到.sty文件</title>
@@ -527,31 +553,6 @@
     
     
       <category term="Docker" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mac安装Docker</title>
-    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/06/Mac%E5%AE%89%E8%A3%85Docker/"/>
-    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/06/Mac安装Docker/</id>
-    <published>2019-09-06T10:41:45.000Z</published>
-    <updated>2019-09-06T10:55:22.253Z</updated>
-    
-    <content type="html"><![CDATA[<p>Mac上安装Docker比较简单，直接从<a href="https://hub.docker.com/editions/community/docker-ce-desktop-mac" target="_blank" rel="noopener">官网</a>下载安装文件，再安装就可以了。  </p><p>查看是否安装成功：</p><blockquote><p>docker –version</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Mac上安装Docker比较简单，直接从&lt;a href=&quot;https://hub.docker.com/editions/community/docker-ce-desktop-mac&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;官网&lt;/a&gt;下载安装文件
-      
-    
-    </summary>
-    
-    
-      <category term="Docker" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Docker/"/>
-    
-      <category term="Mac" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Mac/"/>
     
   </entry>
   
