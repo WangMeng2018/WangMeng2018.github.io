@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Visual Studio中C++使用Scanf报错</title>
+      <link href="/2019/09/27/Visual-Studio%E4%B8%ADC-%E4%BD%BF%E7%94%A8Scanf%E6%8A%A5%E9%94%99/"/>
+      <url>/2019/09/27/Visual-Studio%E4%B8%ADC-%E4%BD%BF%E7%94%A8Scanf%E6%8A%A5%E9%94%99/</url>
+      
+        <content type="html"><![CDATA[<p>解决办法：  </p><ol><li><p>在新建项目时，取消SDL前的勾号；  </p><img src="/2019/09/27/Visual-Studio中C-使用Scanf报错/1.png" title="avatar"></li><li><p>项目属性;<br>预处理器定义 编辑：增加首项：_CRT_SECURE_NO_WARNINGS  </p><img src="/2019/09/27/Visual-Studio中C-使用Scanf报错/2.png" title="avatar"></li><li><p>可以在代码生成中关闭安全检查。  </p><img src="/2019/09/27/Visual-Studio中C-使用Scanf报错/3.png" title="avatar"></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Tex中文乱码</title>
       <link href="/2019/09/26/Tex%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/"/>
       <url>/2019/09/26/Tex%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/</url>
