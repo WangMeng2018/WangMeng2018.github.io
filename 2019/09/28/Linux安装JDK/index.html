@@ -6,23 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master">
-  <title>鱼咸滚酱</title>
+  <title>Linux安装JDK | 鱼咸滚酱</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-    
-    <meta name="keywords" content="鱼咸滚酱_个人博客">
-  
-  <meta name="description" content="鱼咸滚酱_个人博客">
-<meta name="keywords" content="鱼咸滚酱,个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="鱼咸滚酱">
-<meta property="og:url" content="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/page/2/index.html">
+  <meta name="description" content="先将jdk1.7的安装包下载到本地，在上传到Linux；  tar zxvf  jdk-7u80-linux-x64.tar.gz  vim ~/.bashrc  export JAVA_HOME=/home/wangmeng/jdk1.7.0_80export CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_H">
+<meta name="keywords" content="Java,Ubuntu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux安装JDK">
+<meta property="og:url" content="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/28/Linux安装JDK/index.html">
 <meta property="og:site_name" content="鱼咸滚酱">
-<meta property="og:description" content="鱼咸滚酱_个人博客">
+<meta property="og:description" content="先将jdk1.7的安装包下载到本地，在上传到Linux；  tar zxvf  jdk-7u80-linux-x64.tar.gz  vim ~/.bashrc  export JAVA_HOME=/home/wangmeng/jdk1.7.0_80export CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_H">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-09-28T06:00:58.772Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="鱼咸滚酱">
-<meta name="twitter:description" content="鱼咸滚酱_个人博客">
+<meta name="twitter:title" content="Linux安装JDK">
+<meta name="twitter:description" content="先将jdk1.7的安装包下载到本地，在上传到Linux；  tar zxvf  jdk-7u80-linux-x64.tar.gz  vim ~/.bashrc  export JAVA_HOME=/home/wangmeng/jdk1.7.0_80export CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_H">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -179,27 +177,27 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-
-  
-    <article id="post-Windows下IDEA无法识别JDK" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Linux安装JDK" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/09/16/Windows下IDEA无法识别JDK/" target="_blank">Windows下IDEA无法识别JDK</a>
-  
+    <h1 class="article-title" itemprop="name">
+      Linux安装JDK
     </h1>
   
 
 
   
   
-<a href="/2019/09/16/Windows下IDEA无法识别JDK/" class="archive-article-date">
-        <time datetime="2019-09-16T14:03:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-16</time>
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2019/09/28/Linux安装JDK/" class="archive-article-date">
+        <time datetime="2019-09-28T05:58:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-28</time>
 </a>
 
   
@@ -209,17 +207,41 @@
   <div class="article-entry" itemprop="articleBody">
     
     <ol>
-<li>首先确认已经安装jdk；</li>
-<li>在IDEA菜单栏中选中File或者在初始界面的configuration中选择Project Structure；</li>
-<li>弹出的对话框左边有一个SDK选项，单击；</li>
-<li>点击+号，选择JDK；</li>
-<li>定位到JDK安装目录下，比如：D:\Java\jdk1.8.0_91；<br>然后点击Apply，点击OK。</li>
+<li><p>先将jdk1.7的安装包下载到本地，在上传到Linux；</p>
+</li>
+<li><p>tar zxvf  jdk-7u80-linux-x64.tar.gz</p>
+</li>
+<li><p>vim ~/.bashrc</p>
+</li>
+<li><p>export JAVA_HOME=/home/wangmeng/jdk1.7.0_80<br>export CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:<br>$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar<br>export PATH=$PATH:$JAVA_HOME/bin</p>
+</li>
+<li><p>source ~/.bashrc</p>
+</li>
+<li><p>java -version</p>
+</li>
 </ol>
 
     
 
     
 
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          鱼咸滚酱
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/28/Linux安装JDK/" title="Linux安装JDK" target="_blank">https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/28/Linux安装JDK/</a>
+        </li>
+        <li>
+          <strong>版权声明： </strong>
+          本博客所有文章除特别声明外，均采用 <a href="https://www.apache.org/licenses/LICENSE-2.0.html" rel="external nofollow" target="_blank">Apache License 2.0</a> 许可协议。转载请注明出处！
+        </li>
+      </ul>
+    </div>
     
 
   </div>
@@ -232,896 +254,11 @@
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Windows</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/09/16/Windows下IDEA无法识别JDK/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Windows安装JDK" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/09/16/Windows安装JDK/" target="_blank">Windows安装JDK</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/09/16/Windows安装JDK/" class="archive-article-date">
-        <time datetime="2019-09-16T13:36:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-16</time>
-</a>
-
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <ol>
-<li><p>下载链接：<a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</a>  </p>
-</li>
-<li><p>修改安装目录；  </p>
-<img src="/2019/09/16/Windows安装JDK/1.png" title="avatar">  
-</li>
-<li><p>配置环境变量  </p>
-</li>
-</ol>
-<ul>
-<li>安装完JDK后配置环境变量  计算机→属性→高级系统设置→高级→环境变量;  </li>
-<li>系统变量→新建 JAVA_HOME 变量，变量值填写jdk的安装目录（本人是 D:\Java\jdk1.8.0_91)；  </li>
-<li>系统变量→寻找 Path 变量→编辑，在变量值最后输入 %JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;（注意原来Path的变量值末尾有没有;号，如果没有，先输入；号再输入上面的代码）；  </li>
-<li>系统变量→新建 CLASSPATH 变量，变量值填写   .;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar（注意最前面有一点）；  </li>
-<li>检验是否配置成功 运行cmd 输入 java -version ，若如图所示 显示版本信息 则说明安装和配置成功。  <img src="/2019/09/16/Windows安装JDK/2.png" title="avatar">  
-</li>
-</ul>
-<ol start="4">
-<li>使用手册中文版：<a href="https://github.com/judasn/IntelliJ-IDEA-Tutorial">https://github.com/judasn/IntelliJ-IDEA-Tutorial</a>  </li>
-</ol>
-<p>参考链接：<a href="https://jingyan.baidu.com/article/6dad5075d1dc40a123e36ea3.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/6dad5075d1dc40a123e36ea3.html</a>  </p>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Windows</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/09/16/Windows安装JDK/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-brew安装权限问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/09/14/brew安装权限问题/" target="_blank">brew安装权限问题</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/09/14/brew安装权限问题/" class="archive-article-date">
-        <time datetime="2019-09-14T04:29:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-14</time>
-</a>
-
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>brew install wget 出现类似问题：  </p>
-<img src="/2019/09/14/brew安装权限问题/1.jpg" title="avatar">  
-
-<p>解决办法：一个一个文件的赋予权限：  </p>
-<img src="/2019/09/14/brew安装权限问题/2.jpg" title="avatar"> 
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">brew</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/09/14/brew安装权限问题/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-不同类型的文献检索" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/09/12/不同类型的文献检索/" target="_blank">不同类型的文献检索</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/09/12/不同类型的文献检索/" class="archive-article-date">
-        <time datetime="2019-09-12T05:02:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-12</time>
-</a>
-
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="一、图书类检索"><a href="#一、图书类检索" class="headerlink" title="一、图书类检索"></a>一、图书类检索</h1><ol>
-<li>大英百科全书电子版  <a href="http://academic.eb.com/" target="_blank" rel="noopener">http://academic.eb.com/</a></li>
-<li>Knovel电子工具书  <a href="http://app.knovel.com/web/" target="_blank" rel="noopener">http://app.knovel.com/web/</a></li>
-<li>Springer电子书    <a href="http://link.springer.com/" target="_blank" rel="noopener">http://link.springer.com/</a></li>
-<li>OECD ilibrary</li>
-<li>美国国家学术出版社电子图书   <a href="http://www.nap.edu" target="_blank" rel="noopener">http://www.nap.edu</a></li>
-<li>方正电子图书&amp;方正年鉴工具书  <a href="http://159.226.100.31/usp/" target="_blank" rel="noopener">http://159.226.100.31/usp/</a></li>
-<li>超星电子图书  <a href="http://www.sslibrary.com/home/index" target="_blank" rel="noopener">http://www.sslibrary.com/home/index</a></li>
-</ol>
-<h1 id="二、学位论文"><a href="#二、学位论文" class="headerlink" title="二、学位论文"></a>二、学位论文</h1><ol>
-<li>中国学位论文库 <a href="http://www.wanfangdata.com.cn" target="_blank" rel="noopener">http://www.wanfangdata.com.cn</a>  万方</li>
-<li>中国学位馆藏检索  <a href="http://www.istic.ac.cn/" target="_blank" rel="noopener">http://www.istic.ac.cn/</a></li>
-<li>中国科学院学位论文检索 <a href="http://sdb.las.ac.cn/paper/search_pap.jsp" target="_blank" rel="noopener">http://sdb.las.ac.cn/paper/search_pap.jsp</a></li>
-<li>国家科技图书文献中心（NSTL）学位论文库  <a href="http://www.nstl.gov.cn" target="_blank" rel="noopener">http://www.nstl.gov.cn</a> </li>
-<li>中国优秀博硕士论文全文数据库  <a href="http://www.cnki.net" target="_blank" rel="noopener">http://www.cnki.net</a></li>
-<li>国家图书馆学位论文检索系统   <a href="http://www.nlc.gov.cn" target="_blank" rel="noopener">http://www.nlc.gov.cn</a></li>
-<li>CALIS高校学位论文数据库  <a href="http://etd.calis.edu.cn" target="_blank" rel="noopener">http://etd.calis.edu.cn</a></li>
-<li>CETD中文电子学位论文服务 <a href="http://www.airitilibrary.com/" target="_blank" rel="noopener">http://www.airitilibrary.com/</a></li>
-</ol>
-<h1 id="三、专利"><a href="#三、专利" class="headerlink" title="三、专利"></a>三、专利</h1><ol>
-<li>国家知识产权局   <a href="http://www.sipo.gov.cn/sipo/" target="_blank" rel="noopener">http://www.sipo.gov.cn/sipo/</a></li>
-<li>Derwent Innovation Index(ISI DII) </li>
-<li>欧洲专利局专利数据库  <a href="http://ep.espacenet.com/?locale=en_EP" target="_blank" rel="noopener">http://ep.espacenet.com/?locale=en_EP</a> </li>
-<li>美国专利与商标局专利全文数据库   <a href="http://www.uspto.gov/patft/index.html" target="_blank" rel="noopener">http://www.uspto.gov/patft/index.html</a> </li>
-<li>世界知识产权组织专利检索  <a href="http://www.wipo.int/pctdb/en/" target="_blank" rel="noopener">http://www.wipo.int/pctdb/en/</a></li>
-</ol>
-<h1 id="四、标准"><a href="#四、标准" class="headerlink" title="四、标准"></a>四、标准</h1><h3 id="国内标准检索"><a href="#国内标准检索" class="headerlink" title="国内标准检索"></a>国内标准检索</h3><ol>
-<li>NSTL 中外标准数据库  <a href="http://www.nstl.gov.cn" target="_blank" rel="noopener">http://www.nstl.gov.cn</a> </li>
-<li>国家科学图书馆标准信息检索系统  <a href="http://www.las.ac.cn/standard/standard.jsp" target="_blank" rel="noopener">http://www.las.ac.cn/standard/standard.jsp</a></li>
-<li>万方数据资源系统  <a href="http://www.wanfangdata.com.cn/" target="_blank" rel="noopener">http://www.wanfangdata.com.cn/</a></li>
-<li>中国标准服务网  <a href="http://www.cssn.net.cn" target="_blank" rel="noopener">www.cssn.net.cn</a></li>
-<li>标准网  <a href="http://www.standardcn.com" target="_blank" rel="noopener">www.standardcn.com</a></li>
-<li>国家标准化管理委员会  <a href="http://www.sac.gov.cn/" target="_blank" rel="noopener">http://www.sac.gov.cn/</a> </li>
-<li>国家军用标准化信息网  <a href="http://www.gjb.com.cn/" target="_blank" rel="noopener">http://www.gjb.com.cn/</a> </li>
-</ol>
-<h3 id="国外标准检索"><a href="#国外标准检索" class="headerlink" title="国外标准检索"></a>国外标准检索</h3><ol>
-<li><a href="http://ieeexplore.ieee.org/" target="_blank" rel="noopener">http://ieeexplore.ieee.org/</a></li>
-<li><a href="http://www.iso.org/" target="_blank" rel="noopener">http://www.iso.org/</a></li>
-<li><a href="http://webstore.ansi.org/" target="_blank" rel="noopener">http://webstore.ansi.org/</a></li>
-</ol>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ol>
-<li>NSTL 中外标准数据库  <a href="http://www.nstl.gov.cn/index.html" target="_blank" rel="noopener">http://www.nstl.gov.cn/index.html</a></li>
-</ol>
-<h1 id="五、科技报告"><a href="#五、科技报告" class="headerlink" title="五、科技报告"></a>五、科技报告</h1><ol>
-<li>中国国家科技报告服务系统   <a href="http://www.nstrs.cn/" target="_blank" rel="noopener">http://www.nstrs.cn/</a></li>
-<li>中国报告大厅   <a href="http://www.chinabgao.com" target="_blank" rel="noopener">http://www.chinabgao.com</a></li>
-</ol>
-<h1 id="六、数值数据"><a href="#六、数值数据" class="headerlink" title="六、数值数据"></a>六、数值数据</h1><ol>
-<li>国务院发展研究中心信息网  <a href="http://drcnet.las.ac.cn" target="_blank" rel="noopener">http://drcnet.las.ac.cn</a></li>
-<li>中国经济网产业数据库  <a href="http://ceicy.las.ac.cn" target="_blank" rel="noopener">http://ceicy.las.ac.cn</a></li>
-<li>中国经济统计数据库  <a href="http://ceitj.las.ac.cn" target="_blank" rel="noopener">http://ceitj.las.ac.cn</a></li>
-<li>中国资讯行搜数网   <a href="http://soshoo.las.ac.cn/" target="_blank" rel="noopener">http://soshoo.las.ac.cn/</a></li>
-</ol>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">文献检索</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/09/12/不同类型的文献检索/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-修改Jupyter-Notebook目录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/09/12/修改Jupyter-Notebook目录/" target="_blank">修改Jupyter Notebook目录</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/09/12/修改Jupyter-Notebook目录/" class="archive-article-date">
-        <time datetime="2019-09-12T04:48:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-12</time>
-</a>
-
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <ol>
-<li><p>打开 Anaconda Prompt ，输入:   </p>
-<blockquote>
-<p>jupyter notebook –generate-config  </p>
-</blockquote>
-</li>
-<li><p>找到 jupyter_notebook_config.py 的路径并打此文件;  </p>
-</li>
-<li><p>找到 c.NotebookApp.notebook_dir 这个变量，赋值为： ‘E:\Code\Jupyter-notebook’;  </p>
-<img src="/2019/09/12/修改Jupyter-Notebook目录/1.jpg" title="avatar">  
-<p>Ubuntu下的修改方法类似。</p>
-</li>
-<li><p>改完后保存，再次通过 Anaconda Navigator 进入 Jupyter Notebook 的时候会发现默认路径已经更改。  </p>
-</li>
-<li><p>如果直接通过 Jupyter Notebook 的快捷方式进入，默认目录还是原来那个。如果需要修改，找到快捷方式，右键打开属性，将“目标” 最后面的 “%USERPROFILE%” 删除就可以了。  </p>
-</li>
-</ol>
-<p>参考链接：  </p>
-<ul>
-<li><a href="https://blog.csdn.net/white_rabbit_2/article/details/83862429" target="_blank" rel="noopener">https://blog.csdn.net/white_rabbit_2/article/details/83862429</a>  </li>
-<li><a href="https://blog.csdn.net/weixin_36292173/article/details/76209839" target="_blank" rel="noopener">https://blog.csdn.net/weixin_36292173/article/details/76209839</a></li>
-</ul>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/09/12/修改Jupyter-Notebook目录/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Mac下Anaconda配置环境变量" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/09/11/Mac下Anaconda配置环境变量/" target="_blank">Mac下Anaconda配置环境变量</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/09/11/Mac下Anaconda配置环境变量/" class="archive-article-date">
-        <time datetime="2019-09-11T07:10:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-11</time>
-</a>
-
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>Anaconda安装成功之后，需要配置环境变量。  </p>
-<blockquote>
-<p>vim ~/.zshrc<br>export PATH=”/Applications/anaconda3/bin:$PATH”<br>source ~/.zshrc<br>conda –version   #测试是否配置成功</p>
-</blockquote>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Mac</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Anaconda</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/09/11/Mac下Anaconda配置环境变量/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-python自动创建requirements-txt" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/09/10/python自动创建requirements-txt/" target="_blank">python自动创建requirements.txt</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/09/10/python自动创建requirements-txt/" class="archive-article-date">
-        <time datetime="2019-09-10T12:05:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
-</a>
-
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h2><p>第一种方法适用于虚拟环境或者Docker中生成requirements.txt。  </p>
-<blockquote>
-<p>pip freeze &gt; requirements.txt  </p>
-</blockquote>
-<p>安装requirements.txt依赖。  </p>
-<blockquote>
-<p>pip install -r requirements.txt  </p>
-</blockquote>
-<h2 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h2><p>推荐第二种方法，使用pipreqs，导出项目代码中导入的模块。  </p>
-<blockquote>
-<p>pip install pipreqs<br>pipreqs ./CRAWLER_Zhihu/  </p>
-</blockquote>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/09/10/python自动创建requirements-txt/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Windows安装Mysql" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/09/10/Windows安装Mysql/" target="_blank">Windows安装Mysql</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/09/10/Windows安装Mysql/" class="archive-article-date">
-        <time datetime="2019-09-10T07:23:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
-</a>
-
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <ol>
-<li><p>下载链接：<a href="https://dev.mysql.com/downloads/mysql/5.7.html#downloads" target="_blank" rel="noopener">https://dev.mysql.com/downloads/mysql/5.7.html#downloads</a><br>本机选择的是Mysql5.7.13 zip版本;  </p>
-</li>
-<li><p>解压mysql-5.7.13-winx64.zip，并移动到安装目录下；</p>
-</li>
-<li><p>添加系统环境变量path，内容为D:\MySQL\mysql-5.7.13-winx64 ;  </p>
-</li>
-<li><p>修改配置文件my-default.ini，添加内容：  </p>
-<blockquote>
-<p>basedir = D:\MySQL\mysql-5.7.13-winx64<br>datadir = D:\MySQL\mysql-5.7.13-winx64\data</p>
-</blockquote>
-</li>
-<li><p>以管理员身份运行cmd，输入cd D:\MySQL\mysql-5.7.13-winx64\bin；</p>
-</li>
-<li><p>输入.\mysqld –initialize-insecure –user=mysql 回车;  </p>
-</li>
-<li><p>输入 .\mysqld install 回车;  </p>
-</li>
-<li><p>输入net start mysql 回车启动mysql服务  管理员权限;  </p>
-</li>
-<li><p>输入.\mysql -u root -p 回车登录mysql数据库，没有密码，直接回车;  </p>
-</li>
-<li><p>测试，输入show databases:  </p>
-<img src="/2019/09/10/Windows安装Mysql/1.jpg" title="avatar">  
-
-</li>
-</ol>
-<p>输入quit，退出。  </p>
-<ol start="11">
-<li>输入net stop mysql，停止mysql程序。</li>
-</ol>
-<p>参考链接:  </p>
-<ul>
-<li><a href="https://www.cnblogs.com/ayyl/p/5978418.html" target="_blank" rel="noopener">https://www.cnblogs.com/ayyl/p/5978418.html</a>  </li>
-<li><a href="https://www.cnblogs.com/reyinever/p/8551977.html" target="_blank" rel="noopener">https://www.cnblogs.com/reyinever/p/8551977.html</a>  </li>
-</ul>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Windows</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Mysql</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/09/10/Windows安装Mysql/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Ubuntu安装Mysql" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/09/10/Ubuntu安装Mysql/" target="_blank">Ubuntu安装Mysql</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/09/10/Ubuntu安装Mysql/" class="archive-article-date">
-        <time datetime="2019-09-10T07:19:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
-</a>
-
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="安装Mysql"><a href="#安装Mysql" class="headerlink" title="安装Mysql"></a>安装Mysql</h1><ol>
-<li>首先安装服务端、客户端以及其他的依赖库；  </li>
-</ol>
-<blockquote>
-<p>sudo apt-get install mysql-server<br>sudo apt install mysql-client<br>sudo apt install libmysqlclient-dev  </p>
-</blockquote>
-<ol start="2">
-<li>测试是否安装成功。</li>
-</ol>
-<blockquote>
-<p>sudo netstat -tap | grep mysql  </p>
-</blockquote>
-<h1 id="设置允许远程访问"><a href="#设置允许远程访问" class="headerlink" title="设置允许远程访问"></a>设置允许远程访问</h1><ol>
-<li>修改配置文件mysqld.conf；  </li>
-</ol>
-<blockquote>
-<p>sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf  </p>
-</blockquote>
-<p>将文件中的bind-address = 127.0.0.1这一行注释掉。  </p>
-<ol start="2">
-<li>进入Mysql数据库；  </li>
-</ol>
-<blockquote>
-<p>mysql -u root -p  </p>
-</blockquote>
-<p>进入MySQL命令行表示安装成功。  </p>
-<ol start="3">
-<li>执行授权命令；  </li>
-</ol>
-<blockquote>
-<p>GRANT ALL PRIVILEGES ON <em>.</em> TO ‘root’@’%’ IDENTIFIED BY ‘密码’ WITH GRANT OPTION;  </p>
-</blockquote>
-<p>其中，root是数据库的用户，*表示所有IP都可以登录该数据库。  </p>
-<ol start="4">
-<li>保存设置；  </li>
-</ol>
-<blockquote>
-<p>flush privileges;  </p>
-</blockquote>
-<ol start="5">
-<li><p>退出Mysql用exit；  </p>
-</li>
-<li><p>重启Mysql。</p>
-</li>
-</ol>
-<blockquote>
-<p>service mysql restart  </p>
-</blockquote>
-<p>参考链接：<br><a href="https://andy6804tw.github.io/2019/01/29/ubuntu-mysql-setting/#2-%E9%80%B2%E5%85%A5-mysql-%E6%9C%8D%E5%8B%99" target="_blank" rel="noopener">https://andy6804tw.github.io/2019/01/29/ubuntu-mysql-setting/#2-%E9%80%B2%E5%85%A5-mysql-%E6%9C%8D%E5%8B%99</a>  </p>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Ubuntu</a>
         		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Mysql</a>
-        		</li>
       		
 		</ul>
 	</div>
@@ -1129,16 +266,76 @@
     
 
     
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/09/10/Ubuntu安装Mysql/">展开全文 >></a>
-    </p>
+
     
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/28/Linux安装JDK/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
 
     
     <div class="clearfix"></div>
   </div>
   </div>
 </article>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2019/09/27/Visual-Studio中C-使用Scanf报错/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Visual Studio中C++使用Scanf报错</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -1159,153 +356,14 @@
 
 
 
-  
-    <article id="post-Docker创建镜像" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/09/07/Docker创建镜像/" target="_blank">Docker创建镜像</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/09/07/Docker创建镜像/" class="archive-article-date">
-        <time datetime="2019-09-07T09:38:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-07</time>
-</a>
-
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>Docker创建镜像有两种方式:  </p>
-<ul>
-<li>从已经创建镜像的容器中更新镜像，并且提交这个镜像；</li>
-<li>使用Dockerfile指令来创建镜像。</li>
-</ul>
-<h1 id="一、已有镜像更新"><a href="#一、已有镜像更新" class="headerlink" title="一、已有镜像更新"></a>一、已有镜像更新</h1><ol>
-<li><p>在更新镜像之前，先用镜像创建一个容器；  </p>
-<blockquote>
-<p>docker run -t -i ubuntu:18.04  /bin/bash</p>
-</blockquote>
-</li>
-<li><p>执行上述命令之后，会返回一个Container_ID；可以在伪终端中进行修改，比如：apt-get update； </p>
-</li>
-<li><p>再用exit退出容器；  </p>
-</li>
-<li><p>通过docker commit这个命令来提交修改后的容器副本； </p>
-<blockquote>
-<p>docker   commit   -m=”description”   -a=”author”   Container_ID   author/image:tag</p>
-</blockquote>
-</li>
-<li><p>docker images 就可以查看到这个镜像。</p>
-</li>
-</ol>
-<h1 id="Dockerfile创建镜像"><a href="#Dockerfile创建镜像" class="headerlink" title="Dockerfile创建镜像"></a>Dockerfile创建镜像</h1><ol>
-<li><p>首先需要创建一个Dockerfile文件，包含一组指令，而且每一个指令的前缀必须大写。比如官网示例中填入以下内容：  </p>
-<img src="/2019/09/07/Docker创建镜像/1.png" title="avatar">
-<p>FROM 指定使用的镜像源; RUN  告诉docker在镜像中执行的命令。<br>要成功实现该示例，这里还差两个文件：requirement.txt 和 app.py。  </p>
-<img src="/2019/09/07/Docker创建镜像/2.jpg" title="avatar">
-<img src="/2019/09/07/Docker创建镜像/3.jpg" title="avatar">  
-</li>
-<li><p>准备工作完成之后，可以使用docker build命令构建镜像；  </p>
-<blockquote>
-<p>docker   build   –tag=ImageName   .  </p>
-<p>说明：  </p>
-<ul>
-<li>命令最后一个”.”，用来指定创建镜像的资源目录，即Dockerfile的目录。  </li>
-<li>-t指定创建的镜像名。</li>
-</ul>
-</blockquote>
-</li>
-<li><p>docker images 查看创建的镜像信息；</p>
-</li>
-<li><p>启动容器；</p>
-<blockquote>
-<p>docker run -p 4000:80 ImageName</p>
-</blockquote>
-<img src="/2019/09/07/Docker创建镜像/4.jpg" title="avatar">
-</li>
-<li><p>停止容器运行；</p>
-<blockquote>
-<p> docker container stop Conatiner_ID</p>
-</blockquote>
-</li>
-<li><p>使用docker tag命令为镜像添加一个新的标签。</p>
-<blockquote>
-<p> docker tag Container_ID  ImageName:TagName</p>
-</blockquote>
-</li>
-</ol>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Docker</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/09/07/Docker创建镜像/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
 
 
 
 
-  
-  
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
-    </nav>
-  
+
+
+
+
 
 
           </div>
@@ -1345,8 +403,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

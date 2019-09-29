@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>Linux安装JDK</title>
+      <link href="/2019/09/28/Linux%E5%AE%89%E8%A3%85JDK/"/>
+      <url>/2019/09/28/Linux%E5%AE%89%E8%A3%85JDK/</url>
+      
+        <content type="html"><![CDATA[<ol><li><p>先将jdk1.7的安装包下载到本地，在上传到Linux；</p></li><li><p>tar zxvf  jdk-7u80-linux-x64.tar.gz</p></li><li><p>vim ~/.bashrc</p></li><li><p>export JAVA_HOME=/home/wangmeng/jdk1.7.0_80<br>export CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:<br>$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar<br>export PATH=$PATH:$JAVA_HOME/bin</p></li><li><p>source ~/.bashrc</p></li><li><p>java -version</p></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> Ubuntu </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Visual Studio中C++使用Scanf报错</title>
       <link href="/2019/09/27/Visual-Studio%E4%B8%ADC-%E4%BD%BF%E7%94%A8Scanf%E6%8A%A5%E9%94%99/"/>
       <url>/2019/09/27/Visual-Studio%E4%B8%ADC-%E4%BD%BF%E7%94%A8Scanf%E6%8A%A5%E9%94%99/</url>
@@ -199,9 +220,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> Java </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -220,9 +241,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> Java </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -485,9 +506,9 @@
       
         <tags>
             
-            <tag> Mac </tag>
-            
             <tag> Ubuntu </tag>
+            
+            <tag> Mac </tag>
             
             <tag> VSCode </tag>
             
