@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/"/>
-  <updated>2019-09-28T06:00:58.772Z</updated>
+  <updated>2019-10-10T12:33:11.101Z</updated>
   <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python使用json.dump的中文编码问题</title>
+    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/10/10/python%E4%BD%BF%E7%94%A8json-dump%E7%9A%84%E4%B8%AD%E6%96%87%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/"/>
+    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/10/10/python使用json-dump的中文编码问题/</id>
+    <published>2019-10-10T12:27:18.000Z</published>
+    <updated>2019-10-10T12:33:11.101Z</updated>
+    
+    <content type="html"><![CDATA[<p>当json中有中文字符串时，直接<em>dump</em>会出错，需要在<em>open</em>函数中加上<em>encoding=‘utf-8’</em>，<em>dump</em>函数中加上<em>ensure_ascii=False</em>。  </p><img src="/2019/10/10/python使用json-dump的中文编码问题/1.png" title="avatar">]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;当json中有中文字符串时，直接&lt;em&gt;dump&lt;/em&gt;会出错，需要在&lt;em&gt;open&lt;/em&gt;函数中加上&lt;em&gt;encoding=‘utf-8’&lt;/em&gt;，&lt;em&gt;dump&lt;/em&gt;函数中加上&lt;em&gt;ensure_ascii=False&lt;/em&gt;。  &lt;/p&gt;
+&lt;img
+      
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux安装JDK</title>
@@ -530,39 +554,11 @@
     </summary>
     
     
-      <category term="软件" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/%E8%BD%AF%E4%BB%B6/"/>
-    
       <category term="Ubuntu" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Ubuntu/"/>
     
+      <category term="软件" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
       <category term="Mysql" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Mysql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Docker创建镜像</title>
-    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/07/Docker%E5%88%9B%E5%BB%BA%E9%95%9C%E5%83%8F/"/>
-    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/07/Docker创建镜像/</id>
-    <published>2019-09-07T09:38:03.000Z</published>
-    <updated>2019-09-16T13:44:21.521Z</updated>
-    
-    <content type="html"><![CDATA[<p>Docker创建镜像有两种方式:  </p><ul><li>从已经创建镜像的容器中更新镜像，并且提交这个镜像；</li><li>使用Dockerfile指令来创建镜像。</li></ul><h1 id="一、已有镜像更新"><a href="#一、已有镜像更新" class="headerlink" title="一、已有镜像更新"></a>一、已有镜像更新</h1><ol><li><p>在更新镜像之前，先用镜像创建一个容器；  </p><blockquote><p>docker run -t -i ubuntu:18.04  /bin/bash</p></blockquote></li><li><p>执行上述命令之后，会返回一个Container_ID；可以在伪终端中进行修改，比如：apt-get update； </p></li><li><p>再用exit退出容器；  </p></li><li><p>通过docker commit这个命令来提交修改后的容器副本； </p><blockquote><p>docker   commit   -m=”description”   -a=”author”   Container_ID   author/image:tag</p></blockquote></li><li><p>docker images 就可以查看到这个镜像。</p></li></ol><h1 id="Dockerfile创建镜像"><a href="#Dockerfile创建镜像" class="headerlink" title="Dockerfile创建镜像"></a>Dockerfile创建镜像</h1><ol><li><p>首先需要创建一个Dockerfile文件，包含一组指令，而且每一个指令的前缀必须大写。比如官网示例中填入以下内容：  </p><img src="/2019/09/07/Docker创建镜像/1.png" title="avatar"><p>FROM 指定使用的镜像源; RUN  告诉docker在镜像中执行的命令。<br>要成功实现该示例，这里还差两个文件：requirement.txt 和 app.py。  </p><img src="/2019/09/07/Docker创建镜像/2.jpg" title="avatar"><img src="/2019/09/07/Docker创建镜像/3.jpg" title="avatar">  </li><li><p>准备工作完成之后，可以使用docker build命令构建镜像；  </p><blockquote><p>docker   build   –tag=ImageName   .  </p><p>说明：  </p><ul><li>命令最后一个”.”，用来指定创建镜像的资源目录，即Dockerfile的目录。  </li><li>-t指定创建的镜像名。</li></ul></blockquote></li><li><p>docker images 查看创建的镜像信息；</p></li><li><p>启动容器；</p><blockquote><p>docker run -p 4000:80 ImageName</p></blockquote><img src="/2019/09/07/Docker创建镜像/4.jpg" title="avatar"></li><li><p>停止容器运行；</p><blockquote><p> docker container stop Conatiner_ID</p></blockquote></li><li><p>使用docker tag命令为镜像添加一个新的标签。</p><blockquote><p> docker tag Container_ID  ImageName:TagName</p></blockquote></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Docker创建镜像有两种方式:  &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;从已经创建镜像的容器中更新镜像，并且提交这个镜像；&lt;/li&gt;
-&lt;li&gt;使用Dockerfile指令来创建镜像。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;一、已有镜像更新&quot;&gt;&lt;a href=&quot;#一、已有镜像更新&quot; 
-      
-    
-    </summary>
-    
-    
-      <category term="Docker" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Docker/"/>
     
   </entry>
   

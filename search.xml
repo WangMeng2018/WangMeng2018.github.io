@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>python使用json.dump的中文编码问题</title>
+      <link href="/2019/10/10/python%E4%BD%BF%E7%94%A8json-dump%E7%9A%84%E4%B8%AD%E6%96%87%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/"/>
+      <url>/2019/10/10/python%E4%BD%BF%E7%94%A8json-dump%E7%9A%84%E4%B8%AD%E6%96%87%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<p>当json中有中文字符串时，直接<em>dump</em>会出错，需要在<em>open</em>函数中加上<em>encoding=‘utf-8’</em>，<em>dump</em>函数中加上<em>ensure_ascii=False</em>。  </p><img src="/2019/10/10/python使用json-dump的中文编码问题/1.png" title="avatar">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Linux安装JDK</title>
       <link href="/2019/09/28/Linux%E5%AE%89%E8%A3%85JDK/"/>
       <url>/2019/09/28/Linux%E5%AE%89%E8%A3%85JDK/</url>
@@ -384,9 +403,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Ubuntu </tag>
+            
+            <tag> 软件 </tag>
             
             <tag> Mysql </tag>
             
@@ -569,9 +588,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Ubuntu </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -590,9 +609,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Mac </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
