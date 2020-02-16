@@ -182,6 +182,99 @@
             
 
   
+    <article id="post-Git上传100MB限制" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2019/09/21/Git上传100MB限制/" target="_blank">Git上传100MB限制</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2019/09/21/Git上传100MB限制/" class="archive-article-date">
+        <time datetime="2019-09-21T06:07:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-21</time>
+</a>
+
+  
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>Github只允许上传100MB的文件，如果超过，服务器会直接拒绝。</p>
+<p>解决办法：  </p>
+<ol>
+<li>sudo git rm –cached 文件路径；</li>
+<li>sudo git commit –amend -CHEAD;</li>
+<li>sudo push -u origin master.</li>
+</ol>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2019/09/21/Git上传100MB限制/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-you-get安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1121,148 +1214,9 @@
 
 
   
-    <article id="post-Ubuntu安装Mysql" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/09/10/Ubuntu安装Mysql/" target="_blank">Ubuntu安装Mysql</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/09/10/Ubuntu安装Mysql/" class="archive-article-date">
-        <time datetime="2019-09-10T07:19:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
-</a>
-
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="安装Mysql"><a href="#安装Mysql" class="headerlink" title="安装Mysql"></a>安装Mysql</h1><ol>
-<li>首先安装服务端、客户端以及其他的依赖库；  </li>
-</ol>
-<blockquote>
-<p>sudo apt-get install mysql-server<br>sudo apt install mysql-client<br>sudo apt install libmysqlclient-dev  </p>
-</blockquote>
-<ol start="2">
-<li>测试是否安装成功。</li>
-</ol>
-<blockquote>
-<p>sudo netstat -tap | grep mysql  </p>
-</blockquote>
-<h1 id="设置允许远程访问"><a href="#设置允许远程访问" class="headerlink" title="设置允许远程访问"></a>设置允许远程访问</h1><ol>
-<li>修改配置文件mysqld.conf；  </li>
-</ol>
-<blockquote>
-<p>sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf  </p>
-</blockquote>
-<p>将文件中的bind-address = 127.0.0.1这一行注释掉。  </p>
-<ol start="2">
-<li>进入Mysql数据库；  </li>
-</ol>
-<blockquote>
-<p>mysql -u root -p  </p>
-</blockquote>
-<p>进入MySQL命令行表示安装成功。  </p>
-<ol start="3">
-<li>执行授权命令；  </li>
-</ol>
-<blockquote>
-<p>GRANT ALL PRIVILEGES ON <em>.</em> TO ‘root’@’%’ IDENTIFIED BY ‘密码’ WITH GRANT OPTION;  </p>
-</blockquote>
-<p>其中，root是数据库的用户，*表示所有IP都可以登录该数据库。  </p>
-<ol start="4">
-<li>保存设置；  </li>
-</ol>
-<blockquote>
-<p>flush privileges;  </p>
-</blockquote>
-<ol start="5">
-<li><p>退出Mysql用exit；  </p>
-</li>
-<li><p>重启Mysql。</p>
-</li>
-</ol>
-<blockquote>
-<p>service mysql restart  </p>
-</blockquote>
-<p>参考链接：<br><a href="https://andy6804tw.github.io/2019/01/29/ubuntu-mysql-setting/#2-%E9%80%B2%E5%85%A5-mysql-%E6%9C%8D%E5%8B%99" target="_blank" rel="noopener">https://andy6804tw.github.io/2019/01/29/ubuntu-mysql-setting/#2-%E9%80%B2%E5%85%A5-mysql-%E6%9C%8D%E5%8B%99</a>  </p>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Ubuntu</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Mysql</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/09/10/Ubuntu安装Mysql/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 
@@ -1274,7 +1228,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 鱼咸滚酱
+    		&copy; 2019-2020 鱼咸滚酱
     	</div>
       	<div class="footer-right">
 			
@@ -1385,10 +1339,6 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Docker</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
@@ -1397,11 +1347,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Mac</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Anaconda</a>
+                <a href="javascript:void(0)" class="js-tag color2">Docker</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1410,6 +1356,14 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">软件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Mac</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Anaconda</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1425,7 +1379,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
+                <a href="javascript:void(0)" class="js-tag color1">Paper</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Text Summarization</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1434,6 +1392,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">VSCode</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
               </li>
              
               <li class="article-tag-list-item">

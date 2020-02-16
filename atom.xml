@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/"/>
-  <updated>2019-10-10T12:33:11.101Z</updated>
+  <updated>2020-02-16T12:01:48.704Z</updated>
   <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Report:A Study of Human Summaries of Scientific Articles</title>
+    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2020/02/16/Report-A-Study-of-Human-Summaries-of-Scientific-Articles/"/>
+    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2020/02/16/Report-A-Study-of-Human-Summaries-of-Scientific-Articles/</id>
+    <published>2020-02-16T11:58:24.000Z</published>
+    <updated>2020-02-16T12:01:48.704Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="A-Study-of-Human-Summaries-of-Scientific-Articles"><a href="#A-Study-of-Human-Summaries-of-Scientific-Articles" class="headerlink" title="A Study of Human Summaries of Scientific Articles"></a>A Study of Human Summaries of Scientific Articles</h1><h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h2><p>What the differences between human summaries and automatic summarizations?</p><ol><li><p>Human summaries have deeper insights, which can be used to imporve and adapt existing automatic summarization systems to the domian of scientific papers.</p></li><li><p>Human summaries tend to be long, detailed and contain headlines and figures from the origin papers.</p></li></ol><p>​Automatic summarization focuses on:</p><ol><li>automatic generation of relatively short summaries(150 - 200 words);</li><li>have an abstract-like structure, lacking other summarization constructs used by humans such as headlines and figures.;</li><li>most existing summarization methods of scientific papers rely on citations in order to pinpoint the import parts, but the citations volume of newly published papers is not enough to perform a similar analysis.</li></ol><p>Dataset for automatic scientific summarization: Scisumm, ScisummNet.</p><p>To solve the above problems, this paper studies a dataset for scientific summarizations, based on long human summaries authored by ShortScience.org users. The goal is to study the characteristics of human scientific summaries and propose to use the summaries published on blogs as a potential benchmark for automation. </p><h2 id="2-Dataset"><a href="#2-Dataset" class="headerlink" title="2. Dataset"></a>2. Dataset</h2><p>ShortScience is an open platform for publishing summaries of scientific papers in the domains of Computer Science, Physics and Biology. The website provides minimal instructions on how to write a summary and there is a large variation in summary length and structure.</p><p>How to process?</p><ol><li>Fetch 561 summaries associated with 491 papers;</li><li>Papers are from Arxiv, NeurIPS, ACL, Springer;</li><li>Utilize NLTK for word tokenization and sentence segmentation;</li><li>Use <a href="https://github.com/allenai/science-parse">Science-Parse</a> to extract the PDF text and outputs a Json record containing abstract text, metadata(such as authors and year), and a flat llist of the article sections;</li><li>Disregard sentences less than 20 characters, to minimize effect of parsing errors;</li><li>The mean summary length is 447 words, and the median is 312 words;</li><li>The average number of sentences per summary is 22.</li></ol><h2 id="3-Human-Summaries-Analysis"><a href="#3-Human-Summaries-Analysis" class="headerlink" title="3. Human Summaries Analysis"></a>3. Human Summaries Analysis</h2><h3 id="3-1-Summary-subjectivity"><a href="#3-1-Summary-subjectivity" class="headerlink" title="3.1 Summary subjectivity"></a>3.1 Summary subjectivity</h3><p>For assessing to what extent the summaries represent a subjective account of the origin scientific work:</p><ol><li>extract all sentences containing terms “i” or “my”;</li><li>130 summaries out of 561 summaries include such sentences;</li><li>5 cases errorneous, 53% neutral, 32% positive, 15% negative.</li></ol><p>When decide to publicly express their opinion on scientific work, they tend to present a positive or balanced view and not to criticize. People choose to summarize papers they deem valuable.</p><h3 id="3-2-Summary-coverage"><a href="#3-2-Summary-coverage" class="headerlink" title="3.2 Summary coverage"></a>3.2 Summary coverage</h3><p>To asses to what extent human summaries cover logical aspects of the papers:</p><ol><li><p>align each summary sentence to the sentence in the original paper most similar to it and with the category of that sentence;</p></li><li><p>paper sections hierarchy was restored and sub-section are merged into their containing high level section;</p></li><li><p>high level sections are as follows: Introduction, Related work, Method, Results, Experiments, Discussion, Conclusions, Future work, Unknown; (2051 out of 3421 article sections were assighed with a category while the rest were classified as Unknown)</p></li><li><p>section sentences inhert their containing section title;</p></li><li><p>experiment with three similarity methods: </p><ul><li>ROUGE-L</li><li>average of F1, ROUGE-1, ROUGE21 and ROUGE-L</li><li>cosine similarity over word vectors</li></ul><p>![image-20200213110249435](/Users/wm/Library/Application Support/typora-user-images/image-20200213110249435.png)</p></li></ol><p>The weights are quite stable when using different similarities. A summarization algorithm can aim at assigning higher focus to more salient logical sections, reﬂecting how humans attend different sections in their summary.</p><h3 id="3-3-Summary-style"><a href="#3-3-Summary-style" class="headerlink" title="3.3 Summary style"></a>3.3 Summary style</h3><h4 id="3-3-1-Figures-inclusion"><a href="#3-3-1-Figures-inclusion" class="headerlink" title="3.3.1 Figures inclusion"></a>3.3.1 Figures inclusion</h4><p>Some human summaries include ﬁgures from the original paper including image captures of equations or tables. About 31% of the summaries include at least one such ﬁgure, with an average of 2 ﬁgures per summary.</p><p>We need to consider multi-modal summarization and no work now.</p><h4 id="3-3-2-Summary-Itemization"><a href="#3-3-2-Summary-Itemization" class="headerlink" title="3.3.2 Summary Itemization"></a>3.3.2 Summary Itemization</h4><p>Almost half of the summaries utilized some form of structuring using itemization (i.e., bullets or numbering)(编号或符号，代表逐条记录):</p><ol><li>with an average of 15 items per summary;</li><li>The average size of an item is 2 sentences. </li></ol><h4 id="3-3-3-Headlines"><a href="#3-3-3-Headlines" class="headerlink" title="3.3.3 Headlines"></a>3.3.3 Headlines</h4><p>About 35% of the summaries contain lines that start with “#”, which act as summary “headlines”.</p><p>![image-20200213112517531](/Users/wm/Library/Application Support/typora-user-images/image-20200213112517531.png)</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;A-Study-of-Human-Summaries-of-Scientific-Articles&quot;&gt;&lt;a href=&quot;#A-Study-of-Human-Summaries-of-Scientific-Articles&quot; class=&quot;headerlink&quot; t
+      
+    
+    </summary>
+    
+    
+      <category term="Paper" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Paper/"/>
+    
+      <category term="Text Summarization" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Text-Summarization/"/>
+    
+  </entry>
+  
+  <entry>
     <title>python使用json.dump的中文编码问题</title>
     <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/10/10/python%E4%BD%BF%E7%94%A8json-dump%E7%9A%84%E4%B8%AD%E6%96%87%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/"/>
     <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/10/10/python使用json-dump的中文编码问题/</id>
     <published>2019-10-10T12:27:18.000Z</published>
-    <updated>2019-10-10T12:33:11.101Z</updated>
+    <updated>2019-10-10T12:34:42.148Z</updated>
     
     <content type="html"><![CDATA[<p>当json中有中文字符串时，直接<em>dump</em>会出错，需要在<em>open</em>函数中加上<em>encoding=‘utf-8’</em>，<em>dump</em>函数中加上<em>ensure_ascii=False</em>。  </p><img src="/2019/10/10/python使用json-dump的中文编码问题/1.png" title="avatar">]]></content>
     
@@ -527,36 +552,6 @@
       <category term="软件" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/%E8%BD%AF%E4%BB%B6/"/>
     
       <category term="Windows" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Windows/"/>
-    
-      <category term="Mysql" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Mysql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ubuntu安装Mysql</title>
-    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/10/Ubuntu%E5%AE%89%E8%A3%85Mysql/"/>
-    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/10/Ubuntu安装Mysql/</id>
-    <published>2019-09-10T07:19:48.000Z</published>
-    <updated>2019-09-10T07:55:41.402Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="安装Mysql"><a href="#安装Mysql" class="headerlink" title="安装Mysql"></a>安装Mysql</h1><ol><li>首先安装服务端、客户端以及其他的依赖库；  </li></ol><blockquote><p>sudo apt-get install mysql-server<br>sudo apt install mysql-client<br>sudo apt install libmysqlclient-dev  </p></blockquote><ol start="2"><li>测试是否安装成功。</li></ol><blockquote><p>sudo netstat -tap | grep mysql  </p></blockquote><h1 id="设置允许远程访问"><a href="#设置允许远程访问" class="headerlink" title="设置允许远程访问"></a>设置允许远程访问</h1><ol><li>修改配置文件mysqld.conf；  </li></ol><blockquote><p>sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf  </p></blockquote><p>将文件中的bind-address = 127.0.0.1这一行注释掉。  </p><ol start="2"><li>进入Mysql数据库；  </li></ol><blockquote><p>mysql -u root -p  </p></blockquote><p>进入MySQL命令行表示安装成功。  </p><ol start="3"><li>执行授权命令；  </li></ol><blockquote><p>GRANT ALL PRIVILEGES ON <em>.</em> TO ‘root’@’%’ IDENTIFIED BY ‘密码’ WITH GRANT OPTION;  </p></blockquote><p>其中，root是数据库的用户，*表示所有IP都可以登录该数据库。  </p><ol start="4"><li>保存设置；  </li></ol><blockquote><p>flush privileges;  </p></blockquote><ol start="5"><li><p>退出Mysql用exit；  </p></li><li><p>重启Mysql。</p></li></ol><blockquote><p>service mysql restart  </p></blockquote><p>参考链接：<br><a href="https://andy6804tw.github.io/2019/01/29/ubuntu-mysql-setting/#2-%E9%80%B2%E5%85%A5-mysql-%E6%9C%8D%E5%8B%99" target="_blank" rel="noopener">https://andy6804tw.github.io/2019/01/29/ubuntu-mysql-setting/#2-%E9%80%B2%E5%85%A5-mysql-%E6%9C%8D%E5%8B%99</a>  </p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;安装Mysql&quot;&gt;&lt;a href=&quot;#安装Mysql&quot; class=&quot;headerlink&quot; title=&quot;安装Mysql&quot;&gt;&lt;/a&gt;安装Mysql&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;首先安装服务端、客户端以及其他的依赖库；  &lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquot
-      
-    
-    </summary>
-    
-    
-      <category term="Ubuntu" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Ubuntu/"/>
-    
-      <category term="软件" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/%E8%BD%AF%E4%BB%B6/"/>
     
       <category term="Mysql" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Mysql/"/>
     

@@ -182,6 +182,154 @@
             
 
   
+    <article id="post-Report-A-Study-of-Human-Summaries-of-Scientific-Articles" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/02/16/Report-A-Study-of-Human-Summaries-of-Scientific-Articles/" target="_blank">Report:A Study of Human Summaries of Scientific Articles</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/02/16/Report-A-Study-of-Human-Summaries-of-Scientific-Articles/" class="archive-article-date">
+        <time datetime="2020-02-16T11:58:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-16</time>
+</a>
+
+  
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="A-Study-of-Human-Summaries-of-Scientific-Articles"><a href="#A-Study-of-Human-Summaries-of-Scientific-Articles" class="headerlink" title="A Study of Human Summaries of Scientific Articles"></a>A Study of Human Summaries of Scientific Articles</h1><h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h2><p>What the differences between human summaries and automatic summarizations?</p>
+<ol>
+<li><p>Human summaries have deeper insights, which can be used to imporve and adapt existing automatic summarization systems to the domian of scientific papers.</p>
+</li>
+<li><p>Human summaries tend to be long, detailed and contain headlines and figures from the origin papers.</p>
+</li>
+</ol>
+<p>​Automatic summarization focuses on:</p>
+<ol>
+<li>automatic generation of relatively short summaries(150 - 200 words);</li>
+<li>have an abstract-like structure, lacking other summarization constructs used by humans such as headlines and figures.;</li>
+<li>most existing summarization methods of scientific papers rely on citations in order to pinpoint the import parts, but the citations volume of newly published papers is not enough to perform a similar analysis.</li>
+</ol>
+<p>Dataset for automatic scientific summarization: Scisumm, ScisummNet.</p>
+<p>To solve the above problems, this paper studies a dataset for scientific summarizations, based on long human summaries authored by ShortScience.org users. The goal is to study the characteristics of human scientific summaries and propose to use the summaries published on blogs as a potential benchmark for automation. </p>
+<h2 id="2-Dataset"><a href="#2-Dataset" class="headerlink" title="2. Dataset"></a>2. Dataset</h2><p>ShortScience is an open platform for publishing summaries of scientific papers in the domains of Computer Science, Physics and Biology. The website provides minimal instructions on how to write a summary and there is a large variation in summary length and structure.</p>
+<p>How to process?</p>
+<ol>
+<li>Fetch 561 summaries associated with 491 papers;</li>
+<li>Papers are from Arxiv, NeurIPS, ACL, Springer;</li>
+<li>Utilize NLTK for word tokenization and sentence segmentation;</li>
+<li>Use <a href="https://github.com/allenai/science-parse">Science-Parse</a> to extract the PDF text and outputs a Json record containing abstract text, metadata(such as authors and year), and a flat llist of the article sections;</li>
+<li>Disregard sentences less than 20 characters, to minimize effect of parsing errors;</li>
+<li>The mean summary length is 447 words, and the median is 312 words;</li>
+<li>The average number of sentences per summary is 22.</li>
+</ol>
+<h2 id="3-Human-Summaries-Analysis"><a href="#3-Human-Summaries-Analysis" class="headerlink" title="3. Human Summaries Analysis"></a>3. Human Summaries Analysis</h2><h3 id="3-1-Summary-subjectivity"><a href="#3-1-Summary-subjectivity" class="headerlink" title="3.1 Summary subjectivity"></a>3.1 Summary subjectivity</h3><p>For assessing to what extent the summaries represent a subjective account of the origin scientific work:</p>
+<ol>
+<li>extract all sentences containing terms “i” or “my”;</li>
+<li>130 summaries out of 561 summaries include such sentences;</li>
+<li>5 cases errorneous, 53% neutral, 32% positive, 15% negative.</li>
+</ol>
+<p>When decide to publicly express their opinion on scientific work, they tend to present a positive or balanced view and not to criticize. People choose to summarize papers they deem valuable.</p>
+<h3 id="3-2-Summary-coverage"><a href="#3-2-Summary-coverage" class="headerlink" title="3.2 Summary coverage"></a>3.2 Summary coverage</h3><p>To asses to what extent human summaries cover logical aspects of the papers:</p>
+<ol>
+<li><p>align each summary sentence to the sentence in the original paper most similar to it and with the category of that sentence;</p>
+</li>
+<li><p>paper sections hierarchy was restored and sub-section are merged into their containing high level section;</p>
+</li>
+<li><p>high level sections are as follows: Introduction, Related work, Method, Results, Experiments, Discussion, Conclusions, Future work, Unknown; (2051 out of 3421 article sections were assighed with a category while the rest were classified as Unknown)</p>
+</li>
+<li><p>section sentences inhert their containing section title;</p>
+</li>
+<li><p>experiment with three similarity methods: </p>
+<ul>
+<li>ROUGE-L</li>
+<li>average of F1, ROUGE-1, ROUGE21 and ROUGE-L</li>
+<li>cosine similarity over word vectors</li>
+</ul>
+<p>![image-20200213110249435](/Users/wm/Library/Application Support/typora-user-images/image-20200213110249435.png)</p>
+</li>
+</ol>
+<p>The weights are quite stable when using different similarities. A summarization algorithm can aim at assigning higher focus to more salient logical sections, reﬂecting how humans attend different sections in their summary.</p>
+<h3 id="3-3-Summary-style"><a href="#3-3-Summary-style" class="headerlink" title="3.3 Summary style"></a>3.3 Summary style</h3><h4 id="3-3-1-Figures-inclusion"><a href="#3-3-1-Figures-inclusion" class="headerlink" title="3.3.1 Figures inclusion"></a>3.3.1 Figures inclusion</h4><p>Some human summaries include ﬁgures from the original paper including image captures of equations or tables. About 31% of the summaries include at least one such ﬁgure, with an average of 2 ﬁgures per summary.</p>
+<p>We need to consider multi-modal summarization and no work now.</p>
+<h4 id="3-3-2-Summary-Itemization"><a href="#3-3-2-Summary-Itemization" class="headerlink" title="3.3.2 Summary Itemization"></a>3.3.2 Summary Itemization</h4><p>Almost half of the summaries utilized some form of structuring using itemization (i.e., bullets or numbering)(编号或符号，代表逐条记录):</p>
+<ol>
+<li>with an average of 15 items per summary;</li>
+<li>The average size of an item is 2 sentences. </li>
+</ol>
+<h4 id="3-3-3-Headlines"><a href="#3-3-3-Headlines" class="headerlink" title="3.3.3 Headlines"></a>3.3.3 Headlines</h4><p>About 35% of the summaries contain lines that start with “#”, which act as summary “headlines”.</p>
+<p>![image-20200213112517531](/Users/wm/Library/Application Support/typora-user-images/image-20200213112517531.png)</p>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Paper</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Text Summarization</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/02/16/Report-A-Study-of-Human-Summaries-of-Scientific-Articles/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-python使用json-dump的中文编码问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1029,102 +1177,9 @@
 
 
   
-    <article id="post-Git上传100MB限制" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/09/21/Git上传100MB限制/" target="_blank">Git上传100MB限制</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/09/21/Git上传100MB限制/" class="archive-article-date">
-        <time datetime="2019-09-21T06:07:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-21</time>
-</a>
-
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>Github只允许上传100MB的文件，如果超过，服务器会直接拒绝。</p>
-<p>解决办法：  </p>
-<ol>
-<li>sudo git rm –cached 文件路径；</li>
-<li>sudo git commit –amend -CHEAD;</li>
-<li>sudo push -u origin master.</li>
-</ol>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/09/21/Git上传100MB限制/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
@@ -1136,7 +1191,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 鱼咸滚酱
+    		&copy; 2019-2020 鱼咸滚酱
     	</div>
       	<div class="footer-right">
 			
@@ -1247,10 +1302,6 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Docker</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
@@ -1259,11 +1310,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Mac</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Anaconda</a>
+                <a href="javascript:void(0)" class="js-tag color2">Docker</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1272,6 +1319,14 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">软件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Mac</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Anaconda</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1287,7 +1342,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
+                <a href="javascript:void(0)" class="js-tag color1">Paper</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Text Summarization</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1296,6 +1355,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">VSCode</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
               </li>
              
               <li class="article-tag-list-item">
