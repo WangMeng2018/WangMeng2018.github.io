@@ -182,6 +182,99 @@
             
 
   
+    <article id="post-Windows设置Notepad-为txt的默认打开方式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2019/09/23/Windows设置Notepad-为txt的默认打开方式/" target="_blank">Windows设置Notepad++为txt的默认打开方式</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2019/09/23/Windows设置Notepad-为txt的默认打开方式/" class="archive-article-date">
+        <time datetime="2019-09-23T03:25:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-23</time>
+</a>
+
+  
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <ol>
+<li>win+R，输入regedit打开注册表编辑器；</li>
+<li>定位到 <em>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\txtfile\shell\Open\command</em> 这个注册表下面；</li>
+<li>右边有一个REG_SZ类型数据点右键修改为你的NotePad++安装目录；</li>
+<li>修改数值数据为 (“D:\Notepad++\notepad++.exe %1”)；</li>
+<li>系统默认为自带的NotePad打开<br>%SystemRoot%\system32\NOTEPAD.EXE %1，这个是默认的地址，如果想恢复系统默认情况，修改为此值。</li>
+</ol>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Windows</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2019/09/23/Windows设置Notepad-为txt的默认打开方式/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Windows安装XShell" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1111,96 +1204,6 @@
 
 
   
-    <article id="post-Mac下Anaconda配置环境变量" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/09/11/Mac下Anaconda配置环境变量/" target="_blank">Mac下Anaconda配置环境变量</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/09/11/Mac下Anaconda配置环境变量/" class="archive-article-date">
-        <time datetime="2019-09-11T07:10:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-11</time>
-</a>
-
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>Anaconda安装成功之后，需要配置环境变量。  </p>
-<blockquote>
-<p>vim ~/.zshrc<br>export PATH=”/Applications/anaconda3/bin:$PATH”<br>source ~/.zshrc<br>conda –version   #测试是否配置成功</p>
-</blockquote>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Mac</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Anaconda</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/09/11/Mac下Anaconda配置环境变量/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
@@ -1382,11 +1385,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">GLPK</a>
+                <a href="javascript:void(0)" class="js-tag color2">VSCode</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">VSCode</a>
+                <a href="javascript:void(0)" class="js-tag color5">GLPK</a>
               </li>
              
               <li class="article-tag-list-item">

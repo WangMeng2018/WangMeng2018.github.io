@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/"/>
-  <updated>2020-02-17T06:41:07.625Z</updated>
+  <updated>2020-02-17T06:56:21.329Z</updated>
   <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Report: Self-Supervised Learning for Contextualized Extractive Summarization</title>
+    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2020/02/17/Report-Self-Supervised-Learning-for-Contextualized-Extractive-Summarization/"/>
+    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2020/02/17/Report-Self-Supervised-Learning-for-Contextualized-Extractive-Summarization/</id>
+    <published>2020-02-17T06:46:50.000Z</published>
+    <updated>2020-02-17T06:56:21.329Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Self-Supervised-Learning-for-Contextualized-Extractive-Summarization"><a href="#Self-Supervised-Learning-for-Contextualized-Extractive-Summarization" class="headerlink" title="Self-Supervised Learning for Contextualized Extractive Summarization"></a>Self-Supervised Learning for Contextualized Extractive Summarization</h1><h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>​        引入三个辅助预训练方法Mask、Replace、Switch，以自监督的方式来捕获文档级的上下文信息，属于抽取式摘要方式。</p><p>​        代码：https:// github.com/hongwang600/Summarization</p><h2 id="二、模型"><a href="#二、模型" class="headerlink" title="二、模型"></a>二、模型</h2><p>​        这里使用了一个基础模型：一个句子编码器和一个文档级的自注意力机制。句子编码器是一个双向的LSTM，输入是句子序列的Embedding，输出是句子表示；再经过Self-Attention层，输出学习了全局上下文信息的句子表示；再通过线性层判断是否选择该句子。</p><h2 id="三、预训练方法"><a href="#三、预训练方法" class="headerlink" title="三、预训练方法"></a>三、预训练方法</h2><ol><li><p>Mask</p><p>​        Mask任务就是从候选池中预测Masked的句子。首先，以一定的概率Mask文档中的句子，并将Masked句子存入候选池。其次，用相同的句子编码器获取候选池中句子的表示。接着，模型需要预测每一个Mask位置缺失的句子，会先将Masked句子用<unk>代替，并计算其结合上下文信息的表示。最后，再计算两个表示的余弦相似度。</unk></p><p>​        为了训练模型，使用排序的损失函数来最大化预测句子与其他句子的边距。</p></li><li><p>Replace</p><p>​        以一定的概率用其他文档的句子替换本文档中的句子，并使用一个线性层来预测句子是否被替换。</p></li><li><p>Switch</p><p>​        与Replace类似，只不过是与同一文档中的句子进行交换。</p></li></ol><h2 id="四、实验结果"><a href="#四、实验结果" class="headerlink" title="四、实验结果"></a>四、实验结果</h2><p>​        效果的确提升了，而且收敛速度更快。Switch方法的表现最好，但是感觉没有达到读者预想的目标。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Self-Supervised-Learning-for-Contextualized-Extractive-Summarization&quot;&gt;&lt;a href=&quot;#Self-Supervised-Learning-for-Contextualized-Extracti
+      
+    
+    </summary>
+    
+    
+      <category term="Paper" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Paper/"/>
+    
+      <category term="Text Summarization" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Text-Summarization/"/>
+    
+  </entry>
   
   <entry>
     <title>Report:Video Skimming: Taxonomy and Comprehensive Survey</title>
@@ -524,33 +549,6 @@
     
     
       <category term="软件" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/%E8%BD%AF%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mac下Anaconda配置环境变量</title>
-    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/11/Mac%E4%B8%8BAnaconda%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
-    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/11/Mac下Anaconda配置环境变量/</id>
-    <published>2019-09-11T07:10:05.000Z</published>
-    <updated>2019-09-11T07:23:44.520Z</updated>
-    
-    <content type="html"><![CDATA[<p>Anaconda安装成功之后，需要配置环境变量。  </p><blockquote><p>vim ~/.zshrc<br>export PATH=”/Applications/anaconda3/bin:$PATH”<br>source ~/.zshrc<br>conda –version   #测试是否配置成功</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Anaconda安装成功之后，需要配置环境变量。  &lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;vim ~/.zshrc&lt;br&gt;export PATH=”/Applications/anaconda3/bin:$PATH”&lt;br&gt;source ~/.zshrc&lt;br&gt;cond
-      
-    
-    </summary>
-    
-    
-      <category term="Mac" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Mac/"/>
-    
-      <category term="Anaconda" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Anaconda/"/>
     
   </entry>
   

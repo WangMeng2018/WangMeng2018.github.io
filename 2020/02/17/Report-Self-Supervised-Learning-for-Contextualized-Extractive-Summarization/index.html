@@ -6,21 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master">
-  <title>Mac下Anaconda配置环境变量 | 鱼咸滚酱</title>
+  <title>Report: Self-Supervised Learning for Contextualized Extractive Summarization | 鱼咸滚酱</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="Anaconda安装成功之后，需要配置环境变量。    vim ~/.zshrcexport PATH=”/Applications/anaconda3/bin:$PATH”source ~/.zshrcconda –version   #测试是否配置成功">
-<meta name="keywords" content="Mac,Anaconda">
+  <meta name="description" content="Self-Supervised Learning for Contextualized Extractive Summarization一、概述​        引入三个辅助预训练方法Mask、Replace、Switch，以自监督的方式来捕获文档级的上下文信息，属于抽取式摘要方式。 ​        代码：https:// github.com/hongwang600/Summarization">
+<meta name="keywords" content="Paper,Text Summarization">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mac下Anaconda配置环境变量">
-<meta property="og:url" content="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/11/Mac下Anaconda配置环境变量/index.html">
+<meta property="og:title" content="Report: Self-Supervised Learning for Contextualized Extractive Summarization">
+<meta property="og:url" content="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2020/02/17/Report-Self-Supervised-Learning-for-Contextualized-Extractive-Summarization/index.html">
 <meta property="og:site_name" content="鱼咸滚酱">
-<meta property="og:description" content="Anaconda安装成功之后，需要配置环境变量。    vim ~/.zshrcexport PATH=”/Applications/anaconda3/bin:$PATH”source ~/.zshrcconda –version   #测试是否配置成功">
+<meta property="og:description" content="Self-Supervised Learning for Contextualized Extractive Summarization一、概述​        引入三个辅助预训练方法Mask、Replace、Switch，以自监督的方式来捕获文档级的上下文信息，属于抽取式摘要方式。 ​        代码：https:// github.com/hongwang600/Summarization">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-11T07:23:44.520Z">
+<meta property="og:updated_time" content="2020-02-17T06:56:21.329Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mac下Anaconda配置环境变量">
-<meta name="twitter:description" content="Anaconda安装成功之后，需要配置环境变量。    vim ~/.zshrcexport PATH=”/Applications/anaconda3/bin:$PATH”source ~/.zshrcconda –version   #测试是否配置成功">
+<meta name="twitter:title" content="Report: Self-Supervised Learning for Contextualized Extractive Summarization">
+<meta name="twitter:description" content="Self-Supervised Learning for Contextualized Extractive Summarization一、概述​        引入三个辅助预训练方法Mask、Replace、Switch，以自监督的方式来捕获文档级的上下文信息，属于抽取式摘要方式。 ​        代码：https:// github.com/hongwang600/Summarization">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -177,14 +177,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Mac下Anaconda配置环境变量" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Report-Self-Supervised-Learning-for-Contextualized-Extractive-Summarization" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      Mac下Anaconda配置环境变量
+      Report: Self-Supervised Learning for Contextualized Extractive Summarization
     </h1>
   
 
@@ -196,8 +196,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2019/09/11/Mac下Anaconda配置环境变量/" class="archive-article-date">
-        <time datetime="2019-09-11T07:10:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-11</time>
+<a href="/2020/02/17/Report-Self-Supervised-Learning-for-Contextualized-Extractive-Summarization/" class="archive-article-date">
+        <time datetime="2020-02-17T06:46:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-17</time>
 </a>
 
   
@@ -206,10 +206,28 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>Anaconda安装成功之后，需要配置环境变量。  </p>
-<blockquote>
-<p>vim ~/.zshrc<br>export PATH=”/Applications/anaconda3/bin:$PATH”<br>source ~/.zshrc<br>conda –version   #测试是否配置成功</p>
-</blockquote>
+    <h1 id="Self-Supervised-Learning-for-Contextualized-Extractive-Summarization"><a href="#Self-Supervised-Learning-for-Contextualized-Extractive-Summarization" class="headerlink" title="Self-Supervised Learning for Contextualized Extractive Summarization"></a>Self-Supervised Learning for Contextualized Extractive Summarization</h1><h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>​        引入三个辅助预训练方法Mask、Replace、Switch，以自监督的方式来捕获文档级的上下文信息，属于抽取式摘要方式。</p>
+<p>​        代码：https:// github.com/hongwang600/Summarization</p>
+<h2 id="二、模型"><a href="#二、模型" class="headerlink" title="二、模型"></a>二、模型</h2><p>​        这里使用了一个基础模型：一个句子编码器和一个文档级的自注意力机制。句子编码器是一个双向的LSTM，输入是句子序列的Embedding，输出是句子表示；再经过Self-Attention层，输出学习了全局上下文信息的句子表示；再通过线性层判断是否选择该句子。</p>
+
+
+<h2 id="三、预训练方法"><a href="#三、预训练方法" class="headerlink" title="三、预训练方法"></a>三、预训练方法</h2><ol>
+<li><p>Mask</p>
+<p>​        Mask任务就是从候选池中预测Masked的句子。首先，以一定的概率Mask文档中的句子，并将Masked句子存入候选池。其次，用相同的句子编码器获取候选池中句子的表示。接着，模型需要预测每一个Mask位置缺失的句子，会先将Masked句子用<unk>代替，并计算其结合上下文信息的表示。最后，再计算两个表示的余弦相似度。</unk></p>
+
+
+<p>​        为了训练模型，使用排序的损失函数来最大化预测句子与其他句子的边距。</p>
+
+</li>
+<li><p>Replace</p>
+<p>​        以一定的概率用其他文档的句子替换本文档中的句子，并使用一个线性层来预测句子是否被替换。</p>
+
+</li>
+<li><p>Switch</p>
+<p>​        与Replace类似，只不过是与同一文档中的句子进行交换。</p>
+</li>
+</ol>
+<h2 id="四、实验结果"><a href="#四、实验结果" class="headerlink" title="四、实验结果"></a>四、实验结果</h2><p>​        效果的确提升了，而且收敛速度更快。Switch方法的表现最好，但是感觉没有达到读者预想的目标。</p>
 
     
 
@@ -224,7 +242,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/11/Mac下Anaconda配置环境变量/" title="Mac下Anaconda配置环境变量" target="_blank">https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/11/Mac下Anaconda配置环境变量/</a>
+          <a href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2020/02/17/Report-Self-Supervised-Learning-for-Contextualized-Extractive-Summarization/" title="Report: Self-Supervised Learning for Contextualized Extractive Summarization" target="_blank">https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2020/02/17/Report-Self-Supervised-Learning-for-Contextualized-Extractive-Summarization/</a>
         </li>
         <li>
           <strong>版权声明： </strong>
@@ -243,11 +261,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Mac</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Paper</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Anaconda</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Text Summarization</a>
         		</li>
       		
 		</ul>
@@ -303,7 +321,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/11/Mac下Anaconda配置环境变量/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2020/02/17/Report-Self-Supervised-Learning-for-Contextualized-Extractive-Summarization/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -318,18 +336,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2019/09/12/修改Jupyter-Notebook目录/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          修改Jupyter Notebook目录
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/09/10/python自动创建requirements-txt/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">python自动创建requirements.txt</div>
+    <a href="/2020/02/17/Report-Video-Skimming-Taxonomy-and-Comprehensive-Survey/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Report:Video Skimming: Taxonomy and Comprehensive Survey</div>
       <i class="icon-circle-right"></i>
     </a>
   
