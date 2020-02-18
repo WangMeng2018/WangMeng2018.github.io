@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/"/>
-  <updated>2020-02-17T06:56:21.329Z</updated>
+  <updated>2020-02-18T06:48:41.933Z</updated>
   <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/</id>
   
   <author>
@@ -17,13 +17,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Report: Sentence Centrality Revisited for Unsupervised Summarization</title>
+    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2020/02/18/Report-Sentence-Centrality-Revisited-for-Unsupervised-Summarization/"/>
+    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2020/02/18/Report-Sentence-Centrality-Revisited-for-Unsupervised-Summarization/</id>
+    <published>2020-02-18T06:40:01.000Z</published>
+    <updated>2020-02-18T06:48:41.933Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="Paper" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Paper/"/>
+    
+      <category term="Text Summarization" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Text-Summarization/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Report: Self-Supervised Learning for Contextualized Extractive Summarization</title>
     <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2020/02/17/Report-Self-Supervised-Learning-for-Contextualized-Extractive-Summarization/"/>
     <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2020/02/17/Report-Self-Supervised-Learning-for-Contextualized-Extractive-Summarization/</id>
     <published>2020-02-17T06:46:50.000Z</published>
     <updated>2020-02-17T06:56:21.329Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Self-Supervised-Learning-for-Contextualized-Extractive-Summarization"><a href="#Self-Supervised-Learning-for-Contextualized-Extractive-Summarization" class="headerlink" title="Self-Supervised Learning for Contextualized Extractive Summarization"></a>Self-Supervised Learning for Contextualized Extractive Summarization</h1><h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>​        引入三个辅助预训练方法Mask、Replace、Switch，以自监督的方式来捕获文档级的上下文信息，属于抽取式摘要方式。</p><p>​        代码：https:// github.com/hongwang600/Summarization</p><h2 id="二、模型"><a href="#二、模型" class="headerlink" title="二、模型"></a>二、模型</h2><p>​        这里使用了一个基础模型：一个句子编码器和一个文档级的自注意力机制。句子编码器是一个双向的LSTM，输入是句子序列的Embedding，输出是句子表示；再经过Self-Attention层，输出学习了全局上下文信息的句子表示；再通过线性层判断是否选择该句子。</p><h2 id="三、预训练方法"><a href="#三、预训练方法" class="headerlink" title="三、预训练方法"></a>三、预训练方法</h2><ol><li><p>Mask</p><p>​        Mask任务就是从候选池中预测Masked的句子。首先，以一定的概率Mask文档中的句子，并将Masked句子存入候选池。其次，用相同的句子编码器获取候选池中句子的表示。接着，模型需要预测每一个Mask位置缺失的句子，会先将Masked句子用<unk>代替，并计算其结合上下文信息的表示。最后，再计算两个表示的余弦相似度。</unk></p><p>​        为了训练模型，使用排序的损失函数来最大化预测句子与其他句子的边距。</p></li><li><p>Replace</p><p>​        以一定的概率用其他文档的句子替换本文档中的句子，并使用一个线性层来预测句子是否被替换。</p></li><li><p>Switch</p><p>​        与Replace类似，只不过是与同一文档中的句子进行交换。</p></li></ol><h2 id="四、实验结果"><a href="#四、实验结果" class="headerlink" title="四、实验结果"></a>四、实验结果</h2><p>​        效果的确提升了，而且收敛速度更快。Switch方法的表现最好，但是感觉没有达到读者预想的目标。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="Self-Supervised-Learning-for-Contextualized-Extractive-Summarization"><a href="#Self-Supervised-Learning-for-Contextualized-Extractive-Summarization" class="headerlink" title="Self-Supervised Learning for Contextualized Extractive Summarization"></a>Self-Supervised Learning for Contextualized Extractive Summarization</h1><h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>​        引入三个辅助预训练方法Mask、Replace、Switch，以自监督的方式来捕获文档级的上下文信息，属于抽取式摘要方式。</p><p>​        代码：https:// github.com/hongwang600/Summarization</p><h2 id="二、模型"><a href="#二、模型" class="headerlink" title="二、模型"></a>二、模型</h2><p>​        这里使用了一个基础模型：一个句子编码器和一个文档级的自注意力机制。句子编码器是一个双向的LSTM，输入是句子序列的Embedding，输出是句子表示；再经过Self-Attention层，输出学习了全局上下文信息的句子表示；再通过线性层判断是否选择该句子。</p><img src="/2020/02/17/Report-Self-Supervised-Learning-for-Contextualized-Extractive-Summarization/1.png" title="avatar"><h2 id="三、预训练方法"><a href="#三、预训练方法" class="headerlink" title="三、预训练方法"></a>三、预训练方法</h2><ol><li><p>Mask</p><p>​        Mask任务就是从候选池中预测Masked的句子。首先，以一定的概率Mask文档中的句子，并将Masked句子存入候选池。其次，用相同的句子编码器获取候选池中句子的表示。接着，模型需要预测每一个Mask位置缺失的句子，会先将Masked句子用<unk>代替，并计算其结合上下文信息的表示。最后，再计算两个表示的余弦相似度。</unk></p><img src="/2020/02/17/Report-Self-Supervised-Learning-for-Contextualized-Extractive-Summarization/2.png" title="avatar"><p>​        为了训练模型，使用排序的损失函数来最大化预测句子与其他句子的边距。</p><img src="/2020/02/17/Report-Self-Supervised-Learning-for-Contextualized-Extractive-Summarization/3.png" title="avatar"></li><li><p>Replace</p><p>​        以一定的概率用其他文档的句子替换本文档中的句子，并使用一个线性层来预测句子是否被替换。</p><img src="/2020/02/17/Report-Self-Supervised-Learning-for-Contextualized-Extractive-Summarization/4.png" title="avatar"></li><li><p>Switch</p><p>​        与Replace类似，只不过是与同一文档中的句子进行交换。</p></li></ol><h2 id="四、实验结果"><a href="#四、实验结果" class="headerlink" title="四、实验结果"></a>四、实验结果</h2><p>​        效果的确提升了，而且收敛速度更快。Switch方法的表现最好，但是感觉没有达到读者预想的目标。</p>]]></content>
     
     <summary type="html">
     
@@ -520,35 +538,6 @@
     
     
       <category term="文献检索" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/%E6%96%87%E7%8C%AE%E6%A3%80%E7%B4%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>修改Jupyter Notebook目录</title>
-    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/12/%E4%BF%AE%E6%94%B9Jupyter-Notebook%E7%9B%AE%E5%BD%95/"/>
-    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/12/修改Jupyter-Notebook目录/</id>
-    <published>2019-09-12T04:48:22.000Z</published>
-    <updated>2019-09-12T04:55:00.244Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li><p>打开 Anaconda Prompt ，输入:   </p><blockquote><p>jupyter notebook –generate-config  </p></blockquote></li><li><p>找到 jupyter_notebook_config.py 的路径并打此文件;  </p></li><li><p>找到 c.NotebookApp.notebook_dir 这个变量，赋值为： ‘E:\Code\Jupyter-notebook’;  </p><img src="/2019/09/12/修改Jupyter-Notebook目录/1.jpg" title="avatar">  <p>Ubuntu下的修改方法类似。</p></li><li><p>改完后保存，再次通过 Anaconda Navigator 进入 Jupyter Notebook 的时候会发现默认路径已经更改。  </p></li><li><p>如果直接通过 Jupyter Notebook 的快捷方式进入，默认目录还是原来那个。如果需要修改，找到快捷方式，右键打开属性，将“目标” 最后面的 “%USERPROFILE%” 删除就可以了。  </p></li></ol><p>参考链接：  </p><ul><li><a href="https://blog.csdn.net/white_rabbit_2/article/details/83862429" target="_blank" rel="noopener">https://blog.csdn.net/white_rabbit_2/article/details/83862429</a>  </li><li><a href="https://blog.csdn.net/weixin_36292173/article/details/76209839" target="_blank" rel="noopener">https://blog.csdn.net/weixin_36292173/article/details/76209839</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;打开 Anaconda Prompt ，输入:   &lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;jupyter notebook –generate-config  &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;找到 jupyter_not
-      
-    
-    </summary>
-    
-    
-      <category term="软件" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/%E8%BD%AF%E4%BB%B6/"/>
     
   </entry>
   
