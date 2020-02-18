@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>Report: STRASS: A Light and Effective Method for Extractive Summarization Based on Sentence Embeddings</title>
+      <link href="/2020/02/18/Report-STRASS-A-Light-and-Effective-Method-for-Extractive-Summarization-Based-on-Sentence-Embeddings/"/>
+      <url>/2020/02/18/Report-STRASS-A-Light-and-Effective-Method-for-Extractive-Summarization-Based-on-Sentence-Embeddings/</url>
+      
+        <content type="html"><![CDATA[<h1 id="STRASS-A-Light-and-Effective-Method-for-Extractive-Summarization-Based-on-Sentence-Embeddings"><a href="#STRASS-A-Light-and-Effective-Method-for-Extractive-Summarization-Based-on-Sentence-Embeddings" class="headerlink" title="STRASS: A Light and Effective Method for Extractive Summarization Based on Sentence Embeddings"></a>STRASS: A Light and Effective Method for Extractive Summarization Based on Sentence Embeddings</h1><h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>​        STRASS: Summarization by TRAnsformation Selection and Scoring</p><p>​        整体思路：抽取式摘要，选择句子Embedding与文档Embedding最接近的句子。模型会学习一个文档Embedding的转换，并最大化抽取摘要与真实摘要的相似度。</p><h2 id="二、相关工作"><a href="#二、相关工作" class="headerlink" title="二、相关工作"></a>二、相关工作</h2><p>​        摘要分成两类：生成式摘要和抽取式摘要。</p><ol><li>生成式摘要：生成新的文本来概括文档。可以建模成Seq-Seq的问题。典型模型有PGN。</li><li>抽取式摘要：两类方法解决，一个是序列标注，标注是否作为摘要的一部分；另一个是排序，越重要的句子排名越高。</li><li>两者结合：先抽取式选择句子，再用生成式方法重写他们。</li></ol><h2 id="三、模型"><a href="#三、模型" class="headerlink" title="三、模型"></a>三、模型</h2><p>​        模型总体分为四步：</p><img src="/2020/02/18/Report-STRASS-A-Light-and-Effective-Method-for-Extractive-Summarization-Based-on-Sentence-Embeddings/1.png" title="avatar"><p>​        第一步，利用单层MLP将文档Embedding转换成特定形式；</p><p>​        第二步，句子选择生成摘要，句子选择时会提供一个阈值；</p><img src="/2020/02/18/Report-STRASS-A-Light-and-Effective-Method-for-Extractive-Summarization-Based-on-Sentence-Embeddings/2.png" title="avatar"><p>​        第三步，生成的摘要的近似表示；</p><img src="/2020/02/18/Report-STRASS-A-Light-and-Effective-Method-for-Extractive-Summarization-Based-on-Sentence-Embeddings/3.png" title="avatar"><p>​        第四步，计算与真实摘要的相似度，再反向传播。这里还考虑了一个压缩比的问题，系数越大，越倾向于生成短摘要。</p><img src="/2020/02/18/Report-STRASS-A-Light-and-Effective-Method-for-Extractive-Summarization-Based-on-Sentence-Embeddings/4.png" title="avatar"><h2 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h2><p>​        缺点：不能处理多主题文档的摘要问题；没有考虑摘要句子的位置信息。</p><p>​        优点：速度快，CPU就能够训练。</p><p>​        提出了一个新的CASS的法语数据集。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Paper </tag>
+            
+            <tag> Text Summarization </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Report: Sentence Centrality Revisited for Unsupervised Summarization</title>
       <link href="/2020/02/18/Report-Sentence-Centrality-Revisited-for-Unsupervised-Summarization/"/>
       <url>/2020/02/18/Report-Sentence-Centrality-Revisited-for-Unsupervised-Summarization/</url>
