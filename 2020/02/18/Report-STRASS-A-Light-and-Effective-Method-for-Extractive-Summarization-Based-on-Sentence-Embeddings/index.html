@@ -9,22 +9,22 @@
   <title>Report: STRASS: A Light and Effective Method for Extractive Summarization Based on Sentence Embeddings | 鱼咸滚酱</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="STRASS: A Light and Effective Method for Extractive Summarization Based on Sentence Embeddings一、概述​        STRASS: Summarization by TRAnsformation Selection and Scoring ​        整体思路：抽取式摘要，选择句子Embeddi">
+  <meta name="description" content="STRASS: A Light and Effective Method for Extractive Summarization Based on Sentence Embeddings一、概述​STRASS: Summarization by TRAnsformation Selection and Scoring 整体思路：抽取式摘要，选择句子Embedding与文档Embedding最接近">
 <meta name="keywords" content="Paper,Text Summarization">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Report: STRASS: A Light and Effective Method for Extractive Summarization Based on Sentence Embeddings">
 <meta property="og:url" content="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2020/02/18/Report-STRASS-A-Light-and-Effective-Method-for-Extractive-Summarization-Based-on-Sentence-Embeddings/index.html">
 <meta property="og:site_name" content="鱼咸滚酱">
-<meta property="og:description" content="STRASS: A Light and Effective Method for Extractive Summarization Based on Sentence Embeddings一、概述​        STRASS: Summarization by TRAnsformation Selection and Scoring ​        整体思路：抽取式摘要，选择句子Embeddi">
+<meta property="og:description" content="STRASS: A Light and Effective Method for Extractive Summarization Based on Sentence Embeddings一、概述​STRASS: Summarization by TRAnsformation Selection and Scoring 整体思路：抽取式摘要，选择句子Embedding与文档Embedding最接近">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://github.com/2020/02/18/Report-STRASS-A-Light-and-Effective-Method-for-Extractive-Summarization-Based-on-Sentence-Embeddings/1.png">
 <meta property="og:image" content="https://github.com/2020/02/18/Report-STRASS-A-Light-and-Effective-Method-for-Extractive-Summarization-Based-on-Sentence-Embeddings/2.png">
 <meta property="og:image" content="https://github.com/2020/02/18/Report-STRASS-A-Light-and-Effective-Method-for-Extractive-Summarization-Based-on-Sentence-Embeddings/3.png">
 <meta property="og:image" content="https://github.com/2020/02/18/Report-STRASS-A-Light-and-Effective-Method-for-Extractive-Summarization-Based-on-Sentence-Embeddings/4.png">
-<meta property="og:updated_time" content="2020-02-18T09:15:09.242Z">
+<meta property="og:updated_time" content="2020-02-28T08:59:09.816Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Report: STRASS: A Light and Effective Method for Extractive Summarization Based on Sentence Embeddings">
-<meta name="twitter:description" content="STRASS: A Light and Effective Method for Extractive Summarization Based on Sentence Embeddings一、概述​        STRASS: Summarization by TRAnsformation Selection and Scoring ​        整体思路：抽取式摘要，选择句子Embeddi">
+<meta name="twitter:description" content="STRASS: A Light and Effective Method for Extractive Summarization Based on Sentence Embeddings一、概述​STRASS: Summarization by TRAnsformation Selection and Scoring 整体思路：抽取式摘要，选择句子Embedding与文档Embedding最接近">
 <meta name="twitter:image" content="https://github.com/2020/02/18/Report-STRASS-A-Light-and-Effective-Method-for-Extractive-Summarization-Based-on-Sentence-Embeddings/1.png">
   
   
@@ -217,8 +217,8 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="STRASS-A-Light-and-Effective-Method-for-Extractive-Summarization-Based-on-Sentence-Embeddings"><a href="#STRASS-A-Light-and-Effective-Method-for-Extractive-Summarization-Based-on-Sentence-Embeddings" class="headerlink" title="STRASS: A Light and Effective Method for Extractive Summarization Based on Sentence Embeddings"></a>STRASS: A Light and Effective Method for Extractive Summarization Based on Sentence Embeddings</h1><h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>​        STRASS: Summarization by TRAnsformation Selection and Scoring</p>
-<p>​        整体思路：抽取式摘要，选择句子Embedding与文档Embedding最接近的句子。模型会学习一个文档Embedding的转换，并最大化抽取摘要与真实摘要的相似度。</p>
+    <h1 id="STRASS-A-Light-and-Effective-Method-for-Extractive-Summarization-Based-on-Sentence-Embeddings"><a href="#STRASS-A-Light-and-Effective-Method-for-Extractive-Summarization-Based-on-Sentence-Embeddings" class="headerlink" title="STRASS: A Light and Effective Method for Extractive Summarization Based on Sentence Embeddings"></a>STRASS: A Light and Effective Method for Extractive Summarization Based on Sentence Embeddings</h1><h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>​STRASS: Summarization by TRAnsformation Selection and Scoring</p>
+<p>整体思路：抽取式摘要，选择句子Embedding与文档Embedding最接近的句子。模型会学习一个文档Embedding的转换，并最大化抽取摘要与真实摘要的相似度。</p>
 <h2 id="二、相关工作"><a href="#二、相关工作" class="headerlink" title="二、相关工作"></a>二、相关工作</h2><p>​        摘要分成两类：生成式摘要和抽取式摘要。</p>
 <ol>
 <li>生成式摘要：生成新的文本来概括文档。可以建模成Seq-Seq的问题。典型模型有PGN。</li>
