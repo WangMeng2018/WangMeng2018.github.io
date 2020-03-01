@@ -188,6 +188,192 @@
             
 
   
+    <article id="post-Report-Fill-in-the-BLANC-Human-free-Quality-Estimation-of-Document-Summaries" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/03/01/Report-Fill-in-the-BLANC-Human-free-Quality-Estimation-of-Document-Summaries/" target="_blank">Report: Fill in the BLANC: Human-free Quality Estimation of Document Summaries</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/03/01/Report-Fill-in-the-BLANC-Human-free-Quality-Estimation-of-Document-Summaries/" class="archive-article-date">
+        <time datetime="2020-03-01T08:42:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-01</time>
+</a>
+
+  
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="Fill-in-the-BLANC-Human-free-Quality-Estimation-of-Document-Summaries"><a href="#Fill-in-the-BLANC-Human-free-Quality-Estimation-of-Document-Summaries" class="headerlink" title="Fill in the BLANC: Human-free Quality Estimation of Document Summaries"></a>Fill in the BLANC: Human-free Quality Estimation of Document Summaries</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>​        BLANC: automatic estimation of document summary quality. ROUGE require human-written reference summaries, BLANC allowing for fully human-free summary quality estimation.</p>
+<ul>
+<li>objective             客观</li>
+<li>reproducible      可复现</li>
+<li>fully automate   全自动</li>
+</ul>
+<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h2><p>Estimation methods:</p>
+<ol>
+<li><p>ROUGE family of methods: </p>
+<ul>
+<li>Advantages: <ul>
+<li>well-deﬁned</li>
+<li>reproducible</li>
+</ul>
+</li>
+<li>Disadvantages: <ul>
+<li>require a human-written reference summary or summaries for comparison, completely disregarding the original document text.</li>
+<li>ROUGE method is limited to measuring a mechanical overlap of text tokens with little regard to semantics.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Human evaluation:</p>
+<ul>
+<li>Advantages:<ul>
+<li>far more meaningful than ROUG</li>
+<li>far more powerful than ROUG</li>
+</ul>
+</li>
+<li>Disadvantages:<ul>
+<li>far less reproducible</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Train a model on document summaries annotated with human quality scores</p>
+<ul>
+<li>Advantages:<ul>
+<li>evaluate summaries without further human involvement</li>
+<li>achieve high agreement with human labelers</li>
+<li>objective and reproducible</li>
+</ul>
+</li>
+<li>Disadvantages:<ul>
+<li>not generalize 针对特定任务需要针对性训练</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Estimate how “helpful” a summary is for the task of understanding a text</p>
+<ul>
+<li>Disadvantages:<ul>
+<li>one must choose from a vast set of questions one might ask of a text, presupposing knowledge of the document itself and seriously limiting its reproducibility.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="2-Method"><a href="#2-Method" class="headerlink" title="2. Method"></a>2. Method</h2><h3 id="2-1-Introducing-BLANC"><a href="#2-1-Introducing-BLANC" class="headerlink" title="2.1 Introducing BLANC"></a>2.1 Introducing BLANC</h3><p>​        Consider these ingredients for an ideal summary quality estimator:</p>
+<ol>
+<li>It should measure the functional qualities of a summary as directly as possible. </li>
+<li>It should reliably estimate quality across a broad range of document domains and styles. (Model should be well-documented, well-understood, widely used, and open source.)</li>
+</ol>
+<p>​        The deﬁnition of BLANC: a measure of how well a summary helps an independent pre-trained language model while it performs its language understanding task on a document.  (focusing on the masked token task, also known as the Cloze task(完形填空任务))</p>
+<p>​        BLANC scores should strongly correlate with the summary quality scores of human judges, even when split into multiple quality dimensions. These are the key intuitions:</p>
+<ol>
+<li><p>A more informative summary should help a language model with tasks such as sentence entailment prediction and masked token reconstruction.（一个信息丰富的摘要应该有助于语言模型完成句子蕴涵预测和掩蔽标记重构等任务。）</p>
+</li>
+<li><p>A less factually correct summary should be less helpful to a language model performing inference on the document’s text.（不太符合事实的摘要对用于文本推断的语言模型帮助不大。）</p>
+</li>
+<li><p>A more ﬂuent summary should be better understood by a language model because it better matches the distribution of text on which it was pre-trained.（语言模型应该能够更好地理解更流畅的摘要，因为它能够更好地匹配预先训练过的文本的分布）</p>
+</li>
+</ol>
+<p>​        We explore two versions of BLANC: BLANC-help and a BLANC-tune.The essential difference between them:</p>
+<ol>
+<li><p>BLANC-help uses the summary text by directly concatenating it to each document sentence during inference.</p>
+</li>
+<li><p>BLANC-tune uses the summary text to ﬁne-tune the language model, and then processes the entire document.</p>
+</li>
+</ol>
+<p>Thus with BLANC-help, the language model refers to the summary each time it attempts to understand a part of the document text. While with BLANC-tune, the model learns from the summary ﬁrst, and then uses its gained skill to help it understand the entire document.(在blanco -help中，每当试图理解文档文本的一部分时，语言模型都会引用摘要。使用blanco -tune时，模型首先从摘要中学习，然后使用获得的技能帮助它理解整个文档。)</p>
+<h3 id="2-2-BLANC-help"><a href="#2-2-BLANC-help" class="headerlink" title="2.2 BLANC-help"></a>2.2 BLANC-help</h3><img src="/2020/03/01/Report-Fill-in-the-BLANC-Human-free-Quality-Estimation-of-Document-Summaries/1.png" title="avatar">
+
+<p>​        There are many possible choices for how to mask the tokens. Our aim is to mask approximately 15% of tokens in a sentence, and evenly cover all tokens.The unmasking is done twice for each sentence of the text and for each allowed choice of masked tokens in the sentence. First, the unmasking is done for input composed of the summary concatenated with the sentence. Second, the unmasking is done for input composed of a “ﬁller” concatenated with the sentence. The ﬁller has exactly the same lengths as the summary, but each summary token is replaced by a period symbol (“.”).</p>
+<h3 id="2-3-BLANC-tune"><a href="#2-3-BLANC-tune" class="headerlink" title="2.3 BLANC-tune"></a>2.3 BLANC-tune</h3><img src="/2020/03/01/Report-Fill-in-the-BLANC-Human-free-Quality-Estimation-of-Document-Summaries/2.png" title="avatar">
+
+<p>​        As in the case of BLANC-help, we deﬁne BLANC-tune by comparing the accuracy of two reconstructions: one that does use the summary, and another that does not. In the case of BLANC-help, this was the difference between placing the summary vs. placing the ﬁller in front of a sentence. Now, in the case of BLANC-tune, we compare the performance of a model ﬁne-tuned on the summary text vs. a model that has never seen the summary.</p>
+<h3 id="2-4-Extractive-summaries-no-copy-pair-guard"><a href="#2-4-Extractive-summaries-no-copy-pair-guard" class="headerlink" title="2.4 Extractive summaries: no-copy-pair guard"></a>2.4 Extractive summaries: no-copy-pair guard</h3><p>​        In the case of purely extractive summaries, the process of calculating BLANC scores may pair a summary with sentences from the text that have been copied into the summary. This exact sentence copying should be unfairly helpful in unmasking words in the original sentence.</p>
+<p>​        We may exclude any pairing of exact copy sentences from the calculation of the measure.</p>
+<ol>
+<li><p>In the process of iterating over text sentences, whenever a sentence contains its exact copy in the summary, it is skipped.</p>
+</li>
+<li><p>In the process of iterating over text sentences, whenever a sentence contains its exact copy in the summary, the copy of the sentence is removed from the summary (only for this speciﬁc step in the process).</p>
+</li>
+</ol>
+<h2 id="3-Comparison-with-human-evaluation-scores"><a href="#3-Comparison-with-human-evaluation-scores" class="headerlink" title="3. Comparison with human evaluation scores"></a>3. Comparison with human evaluation scores</h2><p>​        The BLANC measures do not require any “gold-labeled” data: No human-written summaries nor human-annotated quality scores are needed. Theoretically, the measures should reﬂect how ﬂuent, informative, and factually correct a summary is, simply because only ﬂuent, informative, correct summaries are helpful to the underlying language model.</p>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Paper</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Text Summarization</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Estimation Method</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/03/01/Report-Fill-in-the-BLANC-Human-free-Quality-Estimation-of-Document-Summaries/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Report-A-Survey-on-Knowledge-Graphs-Representation-Acquisition-and-Applications" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1291,106 +1477,6 @@
 
 
   
-    <article id="post-Linux安装JDK" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/09/28/Linux安装JDK/" target="_blank">Linux安装JDK</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/09/28/Linux安装JDK/" class="archive-article-date">
-        <time datetime="2019-09-28T05:58:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-28</time>
-</a>
-
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <ol>
-<li><p>先将jdk1.7的安装包下载到本地，在上传到Linux；</p>
-</li>
-<li><p>tar zxvf  jdk-7u80-linux-x64.tar.gz</p>
-</li>
-<li><p>vim ~/.bashrc</p>
-</li>
-<li><p>export JAVA_HOME=/home/wangmeng/jdk1.7.0_80<br>export CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:<br>$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar<br>export PATH=$PATH:$JAVA_HOME/bin</p>
-</li>
-<li><p>source ~/.bashrc</p>
-</li>
-<li><p>java -version</p>
-</li>
-</ol>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Ubuntu</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/09/28/Linux安装JDK/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1537,15 +1623,15 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Docker</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">软件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Docker</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1577,11 +1663,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Knowledge Graph</a>
+                <a href="javascript:void(0)" class="js-tag color3">Estimation Method</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Video Summarization</a>
+                <a href="javascript:void(0)" class="js-tag color1">Knowledge Graph</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1593,11 +1679,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">GLPK</a>
+                <a href="javascript:void(0)" class="js-tag color5">Video Summarization</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
+                <a href="javascript:void(0)" class="js-tag color5">GLPK</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1606,6 +1692,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">C++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
               </li>
              
               <li class="article-tag-list-item">
