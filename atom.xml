@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/"/>
-  <updated>2020-03-01T08:46:42.211Z</updated>
+  <updated>2020-03-04T09:24:15.195Z</updated>
   <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Report: Attend to the beginning: A study on using bidirectional attention for extractive summarization</title>
+    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2020/03/04/Report-Attend-to-the-beginning-A-study-on-using-bidirectional-attention-for-extractive-summarization/"/>
+    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2020/03/04/Report-Attend-to-the-beginning-A-study-on-using-bidirectional-attention-for-extractive-summarization/</id>
+    <published>2020-03-04T09:22:48.000Z</published>
+    <updated>2020-03-04T09:24:15.195Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Attend-to-the-beginning-A-study-on-using-bidirectional-attention-for-extractive-summarization"><a href="#Attend-to-the-beginning-A-study-on-using-bidirectional-attention-for-extractive-summarization" class="headerlink" title="Attend to the beginning: A study on using bidirectional attention for extractive summarization"></a>Attend to the beginning: A study on using bidirectional attention for extractive summarization</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>​        This work proposes attending to the beginning of a document, to improve the performance of extractive summarization models when applied to forum discussion data.</p><h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h2><p>​        Text summarization has been applied to different natural language domains; news, academic papers, emails, meeting notes, forum discussions, etc..(新闻、学术文章、邮件、会议记录、论坛交流等等，除了新闻，其他领域的摘要生成都不是成熟。)</p><p>​        This work proposes integrating bidirectional attention mechanism in extractive summarization models, to help to attend to early pieces of text (initial comment). The main objective is to beneﬁt from the dependency between the initial comment and the following comments and try to distinguish between important, and irrelevant or superﬁcial replies.</p><p>​        Contributions in this work are threefold:</p><ol><li>First, we introduce integrating bidirectional attention mechanism into extractive summarization models, to help to attend to earlier pieces of text.</li><li>Second, we achieved a new SOTA on the forum discussion dataset through the proposed attending to the beginning mechanism.</li><li>Third, to further verify the transferability of our hypothesis (i.e. attending to the beginning), we perform evaluations to show that attending to earlier sentence in a more generic text, can also beneﬁt summarization models on different domains other than discussions.</li></ol><h2 id="2-Dataset"><a href="#2-Dataset" class="headerlink" title="2. Dataset"></a>2. Dataset</h2><p>​        This work employs two extractive summarization datasets.</p><ol><li>The discussion dataset proposed by (Tarnpradab, Liu, and Hua 2017, <a href="https://www.dropbox.com/s/heevii01b1l6s0a/threadDataSet.zip?dl=0" target="_blank" rel="noopener">https://www.dropbox.com/s/heevii01b1l6s0a/threadDataSet.zip?dl=0</a>) . The discussion dataset is extracted from trip advisor forum discussions.</li><li>Microsoft Word(MSW) dataset(未公开) . MSW dataset was used to verify the transferability of our hypothesis to more generic textual domains.</li></ol><h2 id="3-Baselines"><a href="#3-Baselines" class="headerlink" title="3. Baselines"></a>3. Baselines</h2><ol><li>Sumy <a href="https://pypi.org/project/sumy/" target="_blank" rel="noopener">https://pypi.org/project/sumy/</a></li><li>LSA + clustering</li><li>SummaRuNNer <a href="https://github.com/amagooda/SummaRuNNer_coattention">https://github.com/amagooda/SummaRuNNer_coattention</a></li><li>SiATL</li></ol><h2 id="4-Models"><a href="#4-Models" class="headerlink" title="4. Models"></a>4. Models</h2><img src="/2020/03/04/Report-Attend-to-the-beginning-A-study-on-using-bidirectional-attention-for-extractive-summarization/1.png" title="avatar"><h2 id="5-Experiments"><a href="#5-Experiments" class="headerlink" title="5. Experiments"></a>5. Experiments</h2><p>​        Experimental designs address the following hypotheses:</p><ul><li><p>Hypothesis 1 (H1) : Attending to the beginning of a discussion thread, would help extractive summarization models to select more salient sentences.（关注一个讨论线程的开始，将有助于提取摘要模型选择更突出的句子。）</p></li><li><p>Hypothesis 2 (H2) : Non-auto-regressive models such as SiATL might be more suitable for thread discussion summarization, compared to auto-regressive models such as SummaRuNNer.（与自动回归模型(如SummaRuNNer)相比，非自回归模型(如SiATL)可能更适合用于线程讨论摘要。）</p></li><li><p>Hypothesis 3 (H3) : Adding additional features, such as contextual embeddings (e.g. BERT) and keywords can give summarization models a boost in performance. （添加额外的特性，例如上下文嵌入(例如BERT)和关键字，可以提高总结模型的性能。）</p></li><li><p>Hypothesis 4 (H4) : Attend to the beginning is transferable to different forms of text other than discussion threads.（注意开头可以转移到除讨论线程之外的其他文本形式。）</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Attend-to-the-beginning-A-study-on-using-bidirectional-attention-for-extractive-summarization&quot;&gt;&lt;a href=&quot;#Attend-to-the-beginning-A-s
+      
+    
+    </summary>
+    
+    
+      <category term="Paper" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Paper/"/>
+    
+      <category term="Text Summarization" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Text-Summarization/"/>
+    
+  </entry>
   
   <entry>
     <title>Report: Fill in the BLANC: Human-free Quality Estimation of Document Summaries</title>
@@ -513,30 +538,6 @@
     
     
       <category term="Git" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Git/"/>
-    
-      <category term="软件" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/%E8%BD%AF%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>you-get安装</title>
-    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/19/you-get%E5%AE%89%E8%A3%85/"/>
-    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/19/you-get安装/</id>
-    <published>2019-09-19T11:30:31.000Z</published>
-    <updated>2019-09-19T02:05:14.158Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="一、安装"><a href="#一、安装" class="headerlink" title="一、安装"></a>一、安装</h1><p>使用<em>pip install you-get</em>命令安装即可。  </p><h1 id="二、视频下载"><a href="#二、视频下载" class="headerlink" title="二、视频下载"></a>二、视频下载</h1><ol><li><p>下载视频<br>打开cmd，输入”you-get+空格+视频url”即可下载。  </p></li><li><p>暂停  </p></li></ol><p><em>Ctrl+C</em>是中断下载任务。下次下载相同的视频时，默认继续上次未完成的下载（前提时未将上次下载的临时.download文件删除，否则重新下载），如已经完成则会自动跳过。  </p><ol start="3"><li>自定义下载名称和保存路径<br>使用-o（小写的o）设置保存路径，-O(大写的O)设置下载文件的名称。<br>例如：<em>you-get -o ./ -O test.mp4 <a href="https://www.youtube.com/example" target="_blank" rel="noopener">https://www.youtube.com/example</a></em>  </li></ol><h1 id="三、批量下载"><a href="#三、批量下载" class="headerlink" title="三、批量下载"></a>三、批量下载</h1><p>you-get支持批量下载，复制的是视频首页或者简介页的地址。</p><h1 id="四、本地播放"><a href="#四、本地播放" class="headerlink" title="四、本地播放"></a>四、本地播放</h1><p>本地播放器播放网页视频：让网页视频在本地播放，没有任何广告和评论部分。  </p><ol><li>进入视频播放器的安装目录：<em>cd D:\PotPlayer</em>  </li><li>输入以下参数：<em>ou-get -p xxx.exe url</em>  </li><li>比如： <em>you-get -p PotPlayerMini64.exe <a href="https://www.iqiyi.com/example.html" target="_blank" rel="noopener">https://www.iqiyi.com/example.html</a></em>  </li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;一、安装&quot;&gt;&lt;a href=&quot;#一、安装&quot; class=&quot;headerlink&quot; title=&quot;一、安装&quot;&gt;&lt;/a&gt;一、安装&lt;/h1&gt;&lt;p&gt;使用&lt;em&gt;pip install you-get&lt;/em&gt;命令安装即可。  &lt;/p&gt;
-&lt;h1 id=&quot;二、视频下载&quot;&gt;&lt;a
-      
-    
-    </summary>
-    
     
       <category term="软件" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/%E8%BD%AF%E4%BB%B6/"/>
     
