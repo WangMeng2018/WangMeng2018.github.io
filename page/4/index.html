@@ -188,6 +188,145 @@
             
 
   
+    <article id="post-Ubuntu安装Mysql" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2019/09/10/Ubuntu安装Mysql/" target="_blank">Ubuntu安装Mysql</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2019/09/10/Ubuntu安装Mysql/" class="archive-article-date">
+        <time datetime="2019-09-10T07:19:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
+</a>
+
+  
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="安装Mysql"><a href="#安装Mysql" class="headerlink" title="安装Mysql"></a>安装Mysql</h1><ol>
+<li>首先安装服务端、客户端以及其他的依赖库；  </li>
+</ol>
+<blockquote>
+<p>sudo apt-get install mysql-server<br>sudo apt install mysql-client<br>sudo apt install libmysqlclient-dev  </p>
+</blockquote>
+<ol start="2">
+<li>测试是否安装成功。</li>
+</ol>
+<blockquote>
+<p>sudo netstat -tap | grep mysql  </p>
+</blockquote>
+<h1 id="设置允许远程访问"><a href="#设置允许远程访问" class="headerlink" title="设置允许远程访问"></a>设置允许远程访问</h1><ol>
+<li>修改配置文件mysqld.conf；  </li>
+</ol>
+<blockquote>
+<p>sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf  </p>
+</blockquote>
+<p>将文件中的bind-address = 127.0.0.1这一行注释掉。  </p>
+<ol start="2">
+<li>进入Mysql数据库；  </li>
+</ol>
+<blockquote>
+<p>mysql -u root -p  </p>
+</blockquote>
+<p>进入MySQL命令行表示安装成功。  </p>
+<ol start="3">
+<li>执行授权命令；  </li>
+</ol>
+<blockquote>
+<p>GRANT ALL PRIVILEGES ON <em>.</em> TO ‘root’@’%’ IDENTIFIED BY ‘密码’ WITH GRANT OPTION;  </p>
+</blockquote>
+<p>其中，root是数据库的用户，*表示所有IP都可以登录该数据库。  </p>
+<ol start="4">
+<li>保存设置；  </li>
+</ol>
+<blockquote>
+<p>flush privileges;  </p>
+</blockquote>
+<ol start="5">
+<li><p>退出Mysql用exit；  </p>
+</li>
+<li><p>重启Mysql。</p>
+</li>
+</ol>
+<blockquote>
+<p>service mysql restart  </p>
+</blockquote>
+<p>参考链接：<br><a href="https://andy6804tw.github.io/2019/01/29/ubuntu-mysql-setting/#2-%E9%80%B2%E5%85%A5-mysql-%E6%9C%8D%E5%8B%99" target="_blank" rel="noopener">https://andy6804tw.github.io/2019/01/29/ubuntu-mysql-setting/#2-%E9%80%B2%E5%85%A5-mysql-%E6%9C%8D%E5%8B%99</a>  </p>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Ubuntu</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Mysql</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2019/09/10/Ubuntu安装Mysql/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Docker创建镜像" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -796,11 +935,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Mac</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Ubuntu</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Ubuntu</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Mac</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -1122,103 +1261,9 @@
 
 
   
-    <article id="post-Mac配置Tunnelblick" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/09/01/Mac配置Tunnelblick/" target="_blank">Mac配置Tunnelblick</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/09/01/Mac配置Tunnelblick/" class="archive-article-date">
-        <time datetime="2019-09-01T09:16:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-01</time>
-</a>
-
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <ol>
-<li>Tunnelblick破解版安装;</li>
-<li>安装之后，点击Tunnelblick，选择我没有配置文件，为我生成配置文件;</li>
-<li>打开自动生成的文件夹，打开config.ovpn;</li>
-<li>配置文件设置：将OpenVPN解压，获取config文件夹，将其中的client.ovpn中的内容复制到config.ovpn中，同时将config文件夹中的其他文件复制到自动生成的文件夹中;</li>
-<li>将自动生成的文件夹改名为trec6.tblk;</li>
-<li>点击右上角的tunnelblick图标，选择VPN详情，将trec6.tblk拖到配置栏中。或者双击进行配置。</li>
-</ol>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Mac</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/09/01/Mac配置Tunnelblick/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
     </nav>
   
 
@@ -1366,14 +1411,6 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Mac</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Anaconda</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
@@ -1387,6 +1424,14 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Ubuntu</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Mac</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Anaconda</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1426,11 +1471,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
+                <a href="javascript:void(0)" class="js-tag color2">VSCode</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">VSCode</a>
+                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
               </li>
              
               <li class="article-tag-list-item">
