@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/"/>
-  <updated>2020-03-05T08:48:30.724Z</updated>
+  <updated>2020-03-06T07:58:49.738Z</updated>
   <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Report: GameWikiSum: a Novel Large Multi-Document Summarization Dataset</title>
+    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2020/03/06/Report-GameWikiSum-a-Novel-Large-Multi-Document-Summarization-Dataset/"/>
+    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2020/03/06/Report-GameWikiSum-a-Novel-Large-Multi-Document-Summarization-Dataset/</id>
+    <published>2020-03-06T07:56:11.000Z</published>
+    <updated>2020-03-06T07:58:49.738Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="GameWikiSum-a-Novel-Large-Multi-Document-Summarization-Dataset"><a href="#GameWikiSum-a-Novel-Large-Multi-Document-Summarization-Dataset" class="headerlink" title="GameWikiSum: a Novel Large Multi-Document Summarization Dataset"></a>GameWikiSum: a Novel Large Multi-Document Summarization Dataset</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>​        GameWikiSum: <a href="https://github.com/Diego999/GameWikiSum">https://github.com/Diego999/GameWikiSum</a></p><p>​        Input documents consist of long professional video game reviews as well as references of their gameplay sections in Wikipedia pages. Both abstractive and extractive models can be trained on it.</p><h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h2><p>​        The dataset contains 14 652 samples, based on professional video game reviews obtained via Metacritic and gameplay sections from Wikipedia. Wikipedia pages are available in multiple languages, which opens up the possibility for multilingual multi-document summarization.</p><h2 id="2-GameWikiSum"><a href="#2-GameWikiSum" class="headerlink" title="2. GameWikiSum"></a>2. GameWikiSum</h2><h3 id="2-1-Dataset-Creation"><a href="#2-1-Dataset-Creation" class="headerlink" title="2.1. Dataset Creation"></a>2.1. Dataset Creation</h3><p>​        Reviewed aspects in video games include the gameplay, richness, and diversity of dialogues, or the soundtrack. Compared to usual reviews written by users, these are assumed to be of higher-quality and longer.</p><p>​        In order to match games with their respective Wikipedia pages, we use the game title as the query in the Wikipedia search engine and employ a set of heuristic rules.</p><h3 id="2-2-Heuristic-matching"><a href="#2-2-Heuristic-matching" class="headerlink" title="2.2. Heuristic matching"></a>2.2. Heuristic matching</h3><p>​         Crawl approximately 265 000 professional reviews for around 72 000 games and 26 000 Wikipedia gameplay sections. Design some heuristics because there is no automatic mapping between a game to its Wikipedia page. The heuristics are the followings and applied in this order:</p><ol><li><p>Exact title match: titles must match exactly;</p></li><li><p>Removing tags: when a game has the same name than its franchise, its Wikipedia page has a title similar to Game (year video game) or Game (video game);</p></li><li><p>Extension match: sometimes, a sequel or an extension is not listed in Wikipedia. In this case, we map it to the Wikipedia page of the original game.</p></li></ol><p>We only keep games with at least one review and a matching Wikipedia page, containing a gameplay section.</p><h3 id="2-3-Descriptive-Statistics"><a href="#2-3-Descriptive-Statistics" class="headerlink" title="2.3. Descriptive Statistics"></a>2.3. Descriptive Statistics</h3><img src="/2020/03/06/Report-GameWikiSum-a-Novel-Large-Multi-Document-Summarization-Dataset/1.png" title="avatar"><h2 id="3-Experiments-and-Results"><a href="#3-Experiments-and-Results" class="headerlink" title="3. Experiments and Results"></a>3. Experiments and Results</h2><h3 id="3-1-Evaluation-Metric"><a href="#3-1-Evaluation-Metric" class="headerlink" title="3.1. Evaluation Metric"></a>3.1. Evaluation Metric</h3><img src="/2020/03/06/Report-GameWikiSum-a-Novel-Large-Multi-Document-Summarization-Dataset/2.png" title="avatar"><h3 id="3-3-Results"><a href="#3-3-Results" class="headerlink" title="3.3. Results"></a>3.3. Results</h3><img src="/2020/03/06/Report-GameWikiSum-a-Novel-Large-Multi-Document-Summarization-Dataset/3.png" title="avatar">]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;GameWikiSum-a-Novel-Large-Multi-Document-Summarization-Dataset&quot;&gt;&lt;a href=&quot;#GameWikiSum-a-Novel-Large-Multi-Document-Summarization-Dat
+      
+    
+    </summary>
+    
+    
+      <category term="Paper" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Paper/"/>
+    
+      <category term="Text Summarization" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Text-Summarization/"/>
+    
+      <category term="Dataset" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Dataset/"/>
+    
+  </entry>
   
   <entry>
     <title>Report: Discriminative Adversarial Search for Abstractive Summarization</title>
@@ -508,33 +535,6 @@
       <category term="软件" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/%E8%BD%AF%E4%BB%B6/"/>
     
       <category term="Windows" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Windows/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ubuntu下安装和使用GLPK</title>
-    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/21/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8GLPK/"/>
-    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/21/Ubuntu下安装和使用GLPK/</id>
-    <published>2019-09-21T06:12:46.000Z</published>
-    <updated>2019-09-22T12:51:49.990Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="一、安装"><a href="#一、安装" class="headerlink" title="一、安装"></a>一、安装</h1><blockquote><ul><li>wget <a href="http://ftp.gnu.org/gnu/glpk/glpk-4.65.tar.gz" target="_blank" rel="noopener">http://ftp.gnu.org/gnu/glpk/glpk-4.65.tar.gz</a></li><li>tar -xzvf glpk-4.65.tar.gz</li><li>./configure</li><li>make</li><li>sudo make install</li></ul></blockquote><p>使用前可能还需要修改一下/etc/ld.so.conf.d/libc.conf文件</p><blockquote><ul><li>udo vim /etc/ld.so.conf.d/libc.conf</li><li>/usr/local/lib/  需要有/号在lib后面</li><li>sudo ldconfig /etc/ld.so.conf.d/lib.conf</li><li>sudo ldconfig /etc/ld.so.conf</li></ul></blockquote><h1 id="二、使用："><a href="#二、使用：" class="headerlink" title="二、使用："></a>二、使用：</h1><ol><li>编辑glpsolEx.mod文件： vim glpsolEx.mod</li><li>执行 glpsol -m glpsolEx.mod -o glpsolEx.sol ，将结果输出到 glpsolEx.sol中。</li><li>说明：glpsolEx.mod文件内容如下：  </li></ol><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Variables */</span>  </span><br><span class="line"><span class="keyword">var</span> x1 &gt;= <span class="number">0</span>;  </span><br><span class="line"><span class="keyword">var</span> x2 &gt;= <span class="number">0</span>;</span><br><span class="line"><span class="keyword">var</span> x3 &gt;= <span class="number">0</span>;  </span><br><span class="line"><span class="comment">/* Object function */</span>  </span><br><span class="line">maximize z: x1 + <span class="number">14</span>*x2 + <span class="number">6</span>*x3;  </span><br><span class="line"><span class="comment">/* Constrains */</span>  </span><br><span class="line">s.t. con1: x1 + x2 + x3 &lt;= <span class="number">4</span>;  </span><br><span class="line">s.t. con2: x1  &lt;= <span class="number">2</span>;  </span><br><span class="line">s.t. con3: x3  &lt;= <span class="number">3</span>;  </span><br><span class="line">s.t. con4: <span class="number">3</span>*x2 + x3  &lt;= <span class="number">6</span>;  </span><br><span class="line">end;</span><br></pre></td></tr></table></figure><p>参考链接:  </p><ul><li><a href="http://www.cnblogs.com/jostree/p/4156204.html" target="_blank" rel="noopener">http://www.cnblogs.com/jostree/p/4156204.html</a></li><li><a href="https://blog.csdn.net/danwuxie/article/details/80981169" target="_blank" rel="noopener">https://blog.csdn.net/danwuxie/article/details/80981169</a></li><li><a href="https://blog.csdn.net/zhuoyuezai/article/details/78844549" target="_blank" rel="noopener">https://blog.csdn.net/zhuoyuezai/article/details/78844549</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;一、安装&quot;&gt;&lt;a href=&quot;#一、安装&quot; class=&quot;headerlink&quot; title=&quot;一、安装&quot;&gt;&lt;/a&gt;一、安装&lt;/h1&gt;&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;wget &lt;a href=&quot;http://ftp.gnu.org/gnu/glpk/g
-      
-    
-    </summary>
-    
-    
-      <category term="Ubuntu" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Ubuntu/"/>
-    
-      <category term="GLPK" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/GLPK/"/>
     
   </entry>
   

@@ -188,6 +188,123 @@
             
 
   
+    <article id="post-Ubuntu下安装和使用GLPK" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2019/09/21/Ubuntu下安装和使用GLPK/" target="_blank">Ubuntu下安装和使用GLPK</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2019/09/21/Ubuntu下安装和使用GLPK/" class="archive-article-date">
+        <time datetime="2019-09-21T06:12:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-21</time>
+</a>
+
+  
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="一、安装"><a href="#一、安装" class="headerlink" title="一、安装"></a>一、安装</h1><blockquote>
+<ul>
+<li>wget <a href="http://ftp.gnu.org/gnu/glpk/glpk-4.65.tar.gz" target="_blank" rel="noopener">http://ftp.gnu.org/gnu/glpk/glpk-4.65.tar.gz</a></li>
+<li>tar -xzvf glpk-4.65.tar.gz</li>
+<li>./configure</li>
+<li>make</li>
+<li>sudo make install</li>
+</ul>
+</blockquote>
+<p>使用前可能还需要修改一下/etc/ld.so.conf.d/libc.conf文件</p>
+<blockquote>
+<ul>
+<li>udo vim /etc/ld.so.conf.d/libc.conf</li>
+<li>/usr/local/lib/  需要有/号在lib后面</li>
+<li>sudo ldconfig /etc/ld.so.conf.d/lib.conf</li>
+<li>sudo ldconfig /etc/ld.so.conf</li>
+</ul>
+</blockquote>
+<h1 id="二、使用："><a href="#二、使用：" class="headerlink" title="二、使用："></a>二、使用：</h1><ol>
+<li>编辑glpsolEx.mod文件： vim glpsolEx.mod</li>
+<li>执行 glpsol -m glpsolEx.mod -o glpsolEx.sol ，将结果输出到 glpsolEx.sol中。</li>
+<li>说明：glpsolEx.mod文件内容如下：  </li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Variables */</span>  </span><br><span class="line"><span class="keyword">var</span> x1 &gt;= <span class="number">0</span>;  </span><br><span class="line"><span class="keyword">var</span> x2 &gt;= <span class="number">0</span>;</span><br><span class="line"><span class="keyword">var</span> x3 &gt;= <span class="number">0</span>;  </span><br><span class="line"><span class="comment">/* Object function */</span>  </span><br><span class="line">maximize z: x1 + <span class="number">14</span>*x2 + <span class="number">6</span>*x3;  </span><br><span class="line"><span class="comment">/* Constrains */</span>  </span><br><span class="line">s.t. con1: x1 + x2 + x3 &lt;= <span class="number">4</span>;  </span><br><span class="line">s.t. con2: x1  &lt;= <span class="number">2</span>;  </span><br><span class="line">s.t. con3: x3  &lt;= <span class="number">3</span>;  </span><br><span class="line">s.t. con4: <span class="number">3</span>*x2 + x3  &lt;= <span class="number">6</span>;  </span><br><span class="line">end;</span><br></pre></td></tr></table></figure>
+
+<p>参考链接:  </p>
+<ul>
+<li><a href="http://www.cnblogs.com/jostree/p/4156204.html" target="_blank" rel="noopener">http://www.cnblogs.com/jostree/p/4156204.html</a></li>
+<li><a href="https://blog.csdn.net/danwuxie/article/details/80981169" target="_blank" rel="noopener">https://blog.csdn.net/danwuxie/article/details/80981169</a></li>
+<li><a href="https://blog.csdn.net/zhuoyuezai/article/details/78844549" target="_blank" rel="noopener">https://blog.csdn.net/zhuoyuezai/article/details/78844549</a></li>
+</ul>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Ubuntu</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">GLPK</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2019/09/21/Ubuntu下安装和使用GLPK/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Git上传100MB限制" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1094,132 +1211,6 @@
 
 
   
-    <article id="post-Windows安装Mysql" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/09/10/Windows安装Mysql/" target="_blank">Windows安装Mysql</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/09/10/Windows安装Mysql/" class="archive-article-date">
-        <time datetime="2019-09-10T07:23:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
-</a>
-
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <ol>
-<li><p>下载链接：<a href="https://dev.mysql.com/downloads/mysql/5.7.html#downloads" target="_blank" rel="noopener">https://dev.mysql.com/downloads/mysql/5.7.html#downloads</a><br>本机选择的是Mysql5.7.13 zip版本;  </p>
-</li>
-<li><p>解压mysql-5.7.13-winx64.zip，并移动到安装目录下；</p>
-</li>
-<li><p>添加系统环境变量path，内容为D:\MySQL\mysql-5.7.13-winx64 ;  </p>
-</li>
-<li><p>修改配置文件my-default.ini，添加内容：  </p>
-<blockquote>
-<p>basedir = D:\MySQL\mysql-5.7.13-winx64<br>datadir = D:\MySQL\mysql-5.7.13-winx64\data</p>
-</blockquote>
-</li>
-<li><p>以管理员身份运行cmd，输入cd D:\MySQL\mysql-5.7.13-winx64\bin；</p>
-</li>
-<li><p>输入.\mysqld –initialize-insecure –user=mysql 回车;  </p>
-</li>
-<li><p>输入 .\mysqld install 回车;  </p>
-</li>
-<li><p>输入net start mysql 回车启动mysql服务  管理员权限;  </p>
-</li>
-<li><p>输入.\mysql -u root -p 回车登录mysql数据库，没有密码，直接回车;  </p>
-</li>
-<li><p>测试，输入show databases:  </p>
-<img src="/2019/09/10/Windows安装Mysql/1.jpg" title="avatar">  
-
-</li>
-</ol>
-<p>输入quit，退出。  </p>
-<ol start="11">
-<li>输入net stop mysql，停止mysql程序。</li>
-</ol>
-<p>参考链接:  </p>
-<ul>
-<li><a href="https://www.cnblogs.com/ayyl/p/5978418.html" target="_blank" rel="noopener">https://www.cnblogs.com/ayyl/p/5978418.html</a>  </li>
-<li><a href="https://www.cnblogs.com/reyinever/p/8551977.html" target="_blank" rel="noopener">https://www.cnblogs.com/reyinever/p/8551977.html</a>  </li>
-</ul>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Windows</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Mysql</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/09/10/Windows安装Mysql/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
@@ -1411,6 +1402,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Estimation Method</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Dataset</a>
               </li>
              
               <li class="article-tag-list-item">

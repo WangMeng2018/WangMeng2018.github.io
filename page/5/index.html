@@ -188,6 +188,111 @@
             
 
   
+    <article id="post-Ubuntu-SSR" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2019/09/01/Ubuntu-SSR/" target="_blank">Ubuntu SSR</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2019/09/01/Ubuntu-SSR/" class="archive-article-date">
+        <time datetime="2019-09-01T12:05:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-01</time>
+</a>
+
+  
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="Ubuntu安装ssr客户端"><a href="#Ubuntu安装ssr客户端" class="headerlink" title="Ubuntu安装ssr客户端"></a>Ubuntu安装ssr客户端</h2><blockquote>
+<ul>
+<li>wget <a href="http://www.djangoz.com/ssr" target="_blank" rel="noopener">http://www.djangoz.com/ssr</a>  </li>
+<li>sudo mv ssr /usr/local/bin  </li>
+<li>sudo chmod 766 /usr/local/bin/ssr  </li>
+<li>ssr install  </li>
+<li>ssr config  </li>
+</ul>
+</blockquote>
+<p>最后一步ssr config，将找的有效节点信息的配置导入，比如用下图中的内容替换config中的内容。<br>有效节点可以在youtube吾爱分享频道、yassuo.xyz、woocloud.online等等的站点获取。  </p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"server"</span>: <span class="string">"jp1.ssrnode.top"</span>,</span><br><span class="line">    <span class="attr">"local_address"</span>: <span class="string">"127.0.0.1"</span>,</span><br><span class="line">    <span class="attr">"local_port"</span>: <span class="number">1080</span>,</span><br><span class="line">    <span class="attr">"timeout"</span>: <span class="number">300</span>,</span><br><span class="line">    <span class="attr">"workers"</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">"server_port"</span>: <span class="number">61536</span>,</span><br><span class="line">    <span class="attr">"password"</span>: <span class="string">"8ELIWb"</span>,</span><br><span class="line">    <span class="attr">"method"</span>: <span class="string">"rc4-md5"</span>,</span><br><span class="line">    <span class="attr">"obfs"</span>: <span class="string">"http_simple"</span>,</span><br><span class="line">    <span class="attr">"obfs_param"</span>: <span class="string">"3027117564.microsoft.com"</span>,</span><br><span class="line">    <span class="attr">"protocol"</span>: <span class="string">"auth_aes128_sha1"</span>,</span><br><span class="line">    <span class="attr">"protocol_param"</span>: <span class="string">"17564:7vdNqp"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果没有git，需要安装： <em>sudo apt-get install git</em></p>
+<h2 id="Ubuntu代理设置"><a href="#Ubuntu代理设置" class="headerlink" title="Ubuntu代理设置"></a>Ubuntu代理设置</h2><p>Ubuntu与Mac和Windows不同，浏览器需要手动设置代理。  </p>
+<ol>
+<li>首先安装SwitchyOmega插件，如果安装Google拒绝安装离线插件，可以先将crx文件改成zip或者rar文件，再加载已解压文件，可以成功安装。  </li>
+<li>安装成功后，再进行配置。新建情景模式或者直接在默认的proxy中按图所示进行修改，主要是代理协议、服务器和代理端口。<img src="/2019/09/01/Ubuntu-SSR/proxy.jpg" title="avatar"></li>
+<li>可以安装一些规则，填完规则列表格式和网址之后，点击立即更新情景模式。  <img src="/2019/09/01/Ubuntu-SSR/principle.jpg" title="avatar"></li>
+</ol>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Ubuntu</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2019/09/01/Ubuntu-SSR/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Mac配置Tunnelblick" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -473,6 +578,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Estimation Method</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Dataset</a>
               </li>
              
               <li class="article-tag-list-item">

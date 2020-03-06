@@ -188,6 +188,114 @@
             
 
   
+    <article id="post-Report-A-Simple-Theoretical-Model-of-Importance-for-Summarization" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/02/16/Report-A-Simple-Theoretical-Model-of-Importance-for-Summarization/" target="_blank">Report:A Simple Theoretical Model of Importance for Summarization</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/02/16/Report-A-Simple-Theoretical-Model-of-Importance-for-Summarization/" class="archive-article-date">
+        <time datetime="2020-02-16T12:24:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-16</time>
+</a>
+
+  
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="A-Simple-Theoretical-Model-of-Importance-for-Summarization"><a href="#A-Simple-Theoretical-Model-of-Importance-for-Summarization" class="headerlink" title="A Simple Theoretical Model of Importance for Summarization"></a>A Simple Theoretical Model of Importance for Summarization</h1><h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>​        整体思路：摘要的主要目的就是在损失最小信息量的情况下，最大限度表达原文信息量，因此基于信息论来研究摘要任务是合适的。然而信息论着重于研究信息的不确定性，容易忽略语言中的语义信息，因此直接应用信息论不适合。论文里将文本切分成最基本的语义单元，语义单元负责语义部分，而信息论只需要关注由语义单元构成的文本信息即可。（语义单元可以是字符、词、n-gram、具有更复杂语义语法内容的单元，也称为原子信息块。）文本则是用这些基本语义单元的概率分布来表示。</p>
+<h2 id="二、框架"><a href="#二、框架" class="headerlink" title="二、框架"></a>二、框架</h2><p>​        论文从四个不同的角度，在本质上对摘要本身做了分析。分别是冗余度(redundancy)，相关性(relevance)，informativeness，重要性(importance)。其中，重要性是论文新突出的理念，它结合了其余三个概念的内容，并进行了公式化。</p>
+<h3 id="1-相关性Relevance"><a href="#1-相关性Relevance" class="headerlink" title="1. 相关性Relevance"></a>1. 相关性Relevance</h3><p>​        目前大部分模型对摘要抽取或生成的目标都可近似为相关性。对于有监督学习训练来说，抽取式摘要的训练数据标注了哪些句子是摘要句。最后任务转化为对每个句子做二分类问题，而生成式摘要的seq2seq模型中，也是与标注的人工摘要进行语义单元上的差异计算。对于无监督学习来说，大部分的方法的建模目标都是相关性。</p>
+<p>​        通过阅读摘要，应该降低对原文的不确定感，摘要文本应当以最小的信息损失来推断原文文档。从统计学角度来看，摘要和原文档都各自满足一定的概率分布，而分布之间的接近程度可以简单的使用交叉熵（cross-entropy）衡量。CE指的是交叉熵的函数，注意到这里有个负号，因为交叉熵越小，表示摘要和文档的差异越小，那么相关性应当越强。<br>​<br>​                                                                            REL(S,D) = −CE(S,D)</p>
+<h3 id="2-冗余度Redundancy"><a href="#2-冗余度Redundancy" class="headerlink" title="2. 冗余度Redundancy"></a>2. 冗余度Redundancy</h3><p>​        如果简单的使用相关性来对文档中的句子进行排序，然后选择相关性最高的某些句子来生成摘要，但由于相关性分数接近的句子表述的内容通常也是接近的，因此摘要的冗余度就会很高。而一个好的摘要应该是包含不同的信息，而不是大量相似的信息，而冗余度可以使用熵进行描述。</p>
+<img src="/2020/02/16/Report-A-Simple-Theoretical-Model-of-Importance-for-Summarization/1.png" title="avatar">
+
+<p>​        那么冗余度可以表示为Red(S)=−H(S) 。建模的目标是冗余度尽量小，那么表示S SS的熵值越大，表示文本的不确定性越好，所包含的信息量也越大，对应的冗余度也就越小。</p>
+<h3 id="3-信息量Informativeness"><a href="#3-信息量Informativeness" class="headerlink" title="3. 信息量Informativeness"></a>3. 信息量Informativeness</h3><p>​        根据论文的叙述，这个概念假设当前有一个背景知识库K，此时需要对文档D进行摘要抽取，那么候选摘要S对于K来说，应当新增尽可能多的信息，才能让读者在阅读摘要后获取最多的新信息。如果摘要句子说的都是用户早就知道的事情，那么阅读摘要没有给用户产生任何价值。</p>
+<p>​        相关性和冗余度只是在当前处理文档的范围内进行建模，但是人类的语言是有庞大的常识库的。只使用相关性和冗余度有其局限性，因此才引入了informativeness的概念。那么如何度量这个概念呢？informativeness的目标是让S尽可能与K不同，同时K也是由语义单元组成的文本语料集合，因此也可以用Pk来表示K的概率分布，与相关性类似，使用交叉熵来衡量两个概率分布的差异性。</p>
+<img src="/2020/02/16/Report-A-Simple-Theoretical-Model-of-Importance-for-Summarization/2.png" title="avatar">
+
+<h3 id="4-重要性Importance"><a href="#4-重要性Importance" class="headerlink" title="4. 重要性Importance"></a>4. 重要性Importance</h3><p>​        针对的是语义单元，目标是计算每个语义单元的重要性分数，在构造摘要时，根据每个语义单元的评分来丢弃不需要的语义单元。</p>
+<img src="/2020/02/16/Report-A-Simple-Theoretical-Model-of-Importance-for-Summarization/3.png" title="avatar">
+
+<h3 id="5-整合四个维度"><a href="#5-整合四个维度" class="headerlink" title="5. 整合四个维度"></a>5. 整合四个维度</h3><img src="/2020/02/16/Report-A-Simple-Theoretical-Model-of-Importance-for-Summarization/4.png" title="avatar">
+
+<h2 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h2><p>​        纯理论论文，没有具体模型，定性分析文本摘要的生成与评估。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li><a href="https://zhuanlan.zhihu.com/p/76492696" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/76492696</a></li>
+<li><a href="https://blog.csdn.net/Forlogen/article/details/98963499" target="_blank" rel="noopener">https://blog.csdn.net/Forlogen/article/details/98963499</a></li>
+</ol>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Paper</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Text Summarization</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/02/16/Report-A-Simple-Theoretical-Model-of-Importance-for-Summarization/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Report-A-Study-of-Human-Summaries-of-Scientific-Articles" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1063,123 +1171,6 @@
 
 
   
-    <article id="post-Ubuntu下安装和使用GLPK" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/09/21/Ubuntu下安装和使用GLPK/" target="_blank">Ubuntu下安装和使用GLPK</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/09/21/Ubuntu下安装和使用GLPK/" class="archive-article-date">
-        <time datetime="2019-09-21T06:12:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-21</time>
-</a>
-
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="一、安装"><a href="#一、安装" class="headerlink" title="一、安装"></a>一、安装</h1><blockquote>
-<ul>
-<li>wget <a href="http://ftp.gnu.org/gnu/glpk/glpk-4.65.tar.gz" target="_blank" rel="noopener">http://ftp.gnu.org/gnu/glpk/glpk-4.65.tar.gz</a></li>
-<li>tar -xzvf glpk-4.65.tar.gz</li>
-<li>./configure</li>
-<li>make</li>
-<li>sudo make install</li>
-</ul>
-</blockquote>
-<p>使用前可能还需要修改一下/etc/ld.so.conf.d/libc.conf文件</p>
-<blockquote>
-<ul>
-<li>udo vim /etc/ld.so.conf.d/libc.conf</li>
-<li>/usr/local/lib/  需要有/号在lib后面</li>
-<li>sudo ldconfig /etc/ld.so.conf.d/lib.conf</li>
-<li>sudo ldconfig /etc/ld.so.conf</li>
-</ul>
-</blockquote>
-<h1 id="二、使用："><a href="#二、使用：" class="headerlink" title="二、使用："></a>二、使用：</h1><ol>
-<li>编辑glpsolEx.mod文件： vim glpsolEx.mod</li>
-<li>执行 glpsol -m glpsolEx.mod -o glpsolEx.sol ，将结果输出到 glpsolEx.sol中。</li>
-<li>说明：glpsolEx.mod文件内容如下：  </li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Variables */</span>  </span><br><span class="line"><span class="keyword">var</span> x1 &gt;= <span class="number">0</span>;  </span><br><span class="line"><span class="keyword">var</span> x2 &gt;= <span class="number">0</span>;</span><br><span class="line"><span class="keyword">var</span> x3 &gt;= <span class="number">0</span>;  </span><br><span class="line"><span class="comment">/* Object function */</span>  </span><br><span class="line">maximize z: x1 + <span class="number">14</span>*x2 + <span class="number">6</span>*x3;  </span><br><span class="line"><span class="comment">/* Constrains */</span>  </span><br><span class="line">s.t. con1: x1 + x2 + x3 &lt;= <span class="number">4</span>;  </span><br><span class="line">s.t. con2: x1  &lt;= <span class="number">2</span>;  </span><br><span class="line">s.t. con3: x3  &lt;= <span class="number">3</span>;  </span><br><span class="line">s.t. con4: <span class="number">3</span>*x2 + x3  &lt;= <span class="number">6</span>;  </span><br><span class="line">end;</span><br></pre></td></tr></table></figure>
-
-<p>参考链接:  </p>
-<ul>
-<li><a href="http://www.cnblogs.com/jostree/p/4156204.html" target="_blank" rel="noopener">http://www.cnblogs.com/jostree/p/4156204.html</a></li>
-<li><a href="https://blog.csdn.net/danwuxie/article/details/80981169" target="_blank" rel="noopener">https://blog.csdn.net/danwuxie/article/details/80981169</a></li>
-<li><a href="https://blog.csdn.net/zhuoyuezai/article/details/78844549" target="_blank" rel="noopener">https://blog.csdn.net/zhuoyuezai/article/details/78844549</a></li>
-</ul>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Ubuntu</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">GLPK</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/09/21/Ubuntu下安装和使用GLPK/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
@@ -1371,6 +1362,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Estimation Method</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Dataset</a>
               </li>
              
               <li class="article-tag-list-item">

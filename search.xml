@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>Report: GameWikiSum: a Novel Large Multi-Document Summarization Dataset</title>
+      <link href="/2020/03/06/Report-GameWikiSum-a-Novel-Large-Multi-Document-Summarization-Dataset/"/>
+      <url>/2020/03/06/Report-GameWikiSum-a-Novel-Large-Multi-Document-Summarization-Dataset/</url>
+      
+        <content type="html"><![CDATA[<h1 id="GameWikiSum-a-Novel-Large-Multi-Document-Summarization-Dataset"><a href="#GameWikiSum-a-Novel-Large-Multi-Document-Summarization-Dataset" class="headerlink" title="GameWikiSum: a Novel Large Multi-Document Summarization Dataset"></a>GameWikiSum: a Novel Large Multi-Document Summarization Dataset</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>​        GameWikiSum: <a href="https://github.com/Diego999/GameWikiSum">https://github.com/Diego999/GameWikiSum</a></p><p>​        Input documents consist of long professional video game reviews as well as references of their gameplay sections in Wikipedia pages. Both abstractive and extractive models can be trained on it.</p><h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h2><p>​        The dataset contains 14 652 samples, based on professional video game reviews obtained via Metacritic and gameplay sections from Wikipedia. Wikipedia pages are available in multiple languages, which opens up the possibility for multilingual multi-document summarization.</p><h2 id="2-GameWikiSum"><a href="#2-GameWikiSum" class="headerlink" title="2. GameWikiSum"></a>2. GameWikiSum</h2><h3 id="2-1-Dataset-Creation"><a href="#2-1-Dataset-Creation" class="headerlink" title="2.1. Dataset Creation"></a>2.1. Dataset Creation</h3><p>​        Reviewed aspects in video games include the gameplay, richness, and diversity of dialogues, or the soundtrack. Compared to usual reviews written by users, these are assumed to be of higher-quality and longer.</p><p>​        In order to match games with their respective Wikipedia pages, we use the game title as the query in the Wikipedia search engine and employ a set of heuristic rules.</p><h3 id="2-2-Heuristic-matching"><a href="#2-2-Heuristic-matching" class="headerlink" title="2.2. Heuristic matching"></a>2.2. Heuristic matching</h3><p>​         Crawl approximately 265 000 professional reviews for around 72 000 games and 26 000 Wikipedia gameplay sections. Design some heuristics because there is no automatic mapping between a game to its Wikipedia page. The heuristics are the followings and applied in this order:</p><ol><li><p>Exact title match: titles must match exactly;</p></li><li><p>Removing tags: when a game has the same name than its franchise, its Wikipedia page has a title similar to Game (year video game) or Game (video game);</p></li><li><p>Extension match: sometimes, a sequel or an extension is not listed in Wikipedia. In this case, we map it to the Wikipedia page of the original game.</p></li></ol><p>We only keep games with at least one review and a matching Wikipedia page, containing a gameplay section.</p><h3 id="2-3-Descriptive-Statistics"><a href="#2-3-Descriptive-Statistics" class="headerlink" title="2.3. Descriptive Statistics"></a>2.3. Descriptive Statistics</h3><img src="/2020/03/06/Report-GameWikiSum-a-Novel-Large-Multi-Document-Summarization-Dataset/1.png" title="avatar"><h2 id="3-Experiments-and-Results"><a href="#3-Experiments-and-Results" class="headerlink" title="3. Experiments and Results"></a>3. Experiments and Results</h2><h3 id="3-1-Evaluation-Metric"><a href="#3-1-Evaluation-Metric" class="headerlink" title="3.1. Evaluation Metric"></a>3.1. Evaluation Metric</h3><img src="/2020/03/06/Report-GameWikiSum-a-Novel-Large-Multi-Document-Summarization-Dataset/2.png" title="avatar"><h3 id="3-3-Results"><a href="#3-3-Results" class="headerlink" title="3.3. Results"></a>3.3. Results</h3><img src="/2020/03/06/Report-GameWikiSum-a-Novel-Large-Multi-Document-Summarization-Dataset/3.png" title="avatar">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Paper </tag>
+            
+            <tag> Text Summarization </tag>
+            
+            <tag> Dataset </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Report: Discriminative Adversarial Search for Abstractive Summarization</title>
       <link href="/2020/03/05/Report-Discriminative-Adversarial-Search-for-Abstractive-Summarization/"/>
       <url>/2020/03/05/Report-Discriminative-Adversarial-Search-for-Abstractive-Summarization/</url>
