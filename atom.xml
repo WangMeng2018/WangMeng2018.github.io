@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/"/>
-  <updated>2020-03-06T07:58:49.738Z</updated>
+  <updated>2020-03-11T08:36:38.829Z</updated>
   <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Report: Learning by Semantic Similarity Makes Abstractive Summarization Better</title>
+    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2020/03/11/Report-Learning-by-Semantic-Similarity-Makes-Abstractive-Summarization-Better/"/>
+    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2020/03/11/Report-Learning-by-Semantic-Similarity-Makes-Abstractive-Summarization-Better/</id>
+    <published>2020-03-11T08:34:10.000Z</published>
+    <updated>2020-03-11T08:36:38.829Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Learning-by-Semantic-Similarity-Makes-Abstractive-Summarization-Better"><a href="#Learning-by-Semantic-Similarity-Makes-Abstractive-Summarization-Better" class="headerlink" title="Learning by Semantic Similarity Makes Abstractive Summarization Better"></a>Learning by Semantic Similarity Makes Abstractive Summarization Better</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>​        One of the obstacles of abstractive summarization is the presence of various potentially correct predictions.</p><p>​        <strong><em>Semantic Similarity strategy</em></strong>:  consider semantic meanings of generated summaries while training. Our training objective includes maximizing semantic similarity score which is calculated by an additional layer that estimates semantic similarity between generated summary and reference summary.</p><p>​        Code: <a href="https://github.com/icml-2020-nlp/semsim">https://github.com/icml-2020-nlp/semsim</a></p><h2 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h2><img src="/2020/03/11/Report-Learning-by-Semantic-Similarity-Makes-Abstractive-Summarization-Better/1.png" title="avatar"><img src="/2020/03/11/Report-Learning-by-Semantic-Similarity-Makes-Abstractive-Summarization-Better/2.png" title="avatar"><p>​        文章认为原来的最大似然目标函数不能处理多个参考摘要的问题，反而会引入噪声，所以使用生成摘要和参考摘要的语义相似度作为目标函数。语义相似度的计算方法很简单，但是很难训练，还需要和最大似然求和，作为最终的目标函数才能加快训练。看实验分析，ROUGE指标的确有提升。</p><p>​        总的来说，该论文的创新度不高。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Learning-by-Semantic-Similarity-Makes-Abstractive-Summarization-Better&quot;&gt;&lt;a href=&quot;#Learning-by-Semantic-Similarity-Makes-Abstractive-
+      
+    
+    </summary>
+    
+    
+      <category term="Paper" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Paper/"/>
+    
+      <category term="Text Summarization" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Text-Summarization/"/>
+    
+      <category term="Abstractive Summarization" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Abstractive-Summarization/"/>
+    
+  </entry>
   
   <entry>
     <title>Report: GameWikiSum: a Novel Large Multi-Document Summarization Dataset</title>
@@ -502,31 +529,6 @@
 &lt;li&gt;win+R，输入regedit打开注册表编辑器；&lt;/li&gt;
 &lt;li&gt;定位到 &lt;em&gt;HKEY_LOCAL_MACHINE\SOFTWARE\Classes\txtfile\shell\Open\command&lt;/em&gt; 这个注册表下面；&lt;/li&gt;
 &lt;li&gt;右边有
-      
-    
-    </summary>
-    
-    
-      <category term="软件" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/%E8%BD%AF%E4%BB%B6/"/>
-    
-      <category term="Windows" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Windows/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows安装XShell</title>
-    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/22/Windows%E5%AE%89%E8%A3%85XShell/"/>
-    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/22/Windows安装XShell/</id>
-    <published>2019-09-22T06:36:09.000Z</published>
-    <updated>2019-09-22T06:37:49.404Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="一、下载安装"><a href="#一、下载安装" class="headerlink" title="一、下载安装"></a>一、下载安装</h1><p>可直接从官网下载免费版：<a href="https://www.netsarang.com/zh/" target="_blank" rel="noopener">https://www.netsarang.com/zh/</a>  </p><p>使用邮箱接受下载链接，直接安装。</p><h1 id="二、问题解决"><a href="#二、问题解决" class="headerlink" title="二、问题解决"></a>二、问题解决</h1><p>如果遇到问题，类似只能对当前安装的产品有效，说明之前安装版本没有删除干净，可以到到C盘，C:\Program Files (x86)\InstallShield Installation Information，删掉{F3FDFD5A-A201-407B-887F-399484764ECA}这个文件夹就可以，不一定是那个。可以备份全删，重新安装后在粘贴回去。  </p><p>参考链接：<br><a href="https://blog.csdn.net/qq_17758709/article/details/78920641" target="_blank" rel="noopener">https://blog.csdn.net/qq_17758709/article/details/78920641</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;一、下载安装&quot;&gt;&lt;a href=&quot;#一、下载安装&quot; class=&quot;headerlink&quot; title=&quot;一、下载安装&quot;&gt;&lt;/a&gt;一、下载安装&lt;/h1&gt;&lt;p&gt;可直接从官网下载免费版：&lt;a href=&quot;https://www.netsarang.com/zh/&quot; ta
       
     
     </summary>

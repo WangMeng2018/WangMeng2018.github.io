@@ -188,6 +188,104 @@
             
 
   
+    <article id="post-Report-Learning-by-Semantic-Similarity-Makes-Abstractive-Summarization-Better" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/03/11/Report-Learning-by-Semantic-Similarity-Makes-Abstractive-Summarization-Better/" target="_blank">Report: Learning by Semantic Similarity Makes Abstractive Summarization Better</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/03/11/Report-Learning-by-Semantic-Similarity-Makes-Abstractive-Summarization-Better/" class="archive-article-date">
+        <time datetime="2020-03-11T08:34:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-11</time>
+</a>
+
+  
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="Learning-by-Semantic-Similarity-Makes-Abstractive-Summarization-Better"><a href="#Learning-by-Semantic-Similarity-Makes-Abstractive-Summarization-Better" class="headerlink" title="Learning by Semantic Similarity Makes Abstractive Summarization Better"></a>Learning by Semantic Similarity Makes Abstractive Summarization Better</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>​        One of the obstacles of abstractive summarization is the presence of various potentially correct predictions.</p>
+<p>​        <strong><em>Semantic Similarity strategy</em></strong>:  consider semantic meanings of generated summaries while training. Our training objective includes maximizing semantic similarity score which is calculated by an additional layer that estimates semantic similarity between generated summary and reference summary.</p>
+<p>​        Code: <a href="https://github.com/icml-2020-nlp/semsim">https://github.com/icml-2020-nlp/semsim</a></p>
+<h2 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h2><img src="/2020/03/11/Report-Learning-by-Semantic-Similarity-Makes-Abstractive-Summarization-Better/1.png" title="avatar">
+<img src="/2020/03/11/Report-Learning-by-Semantic-Similarity-Makes-Abstractive-Summarization-Better/2.png" title="avatar">
+
+<p>​        文章认为原来的最大似然目标函数不能处理多个参考摘要的问题，反而会引入噪声，所以使用生成摘要和参考摘要的语义相似度作为目标函数。语义相似度的计算方法很简单，但是很难训练，还需要和最大似然求和，作为最终的目标函数才能加快训练。看实验分析，ROUGE指标的确有提升。</p>
+<p>​        总的来说，该论文的创新度不高。</p>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Paper</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Text Summarization</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Abstractive Summarization</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/03/11/Report-Learning-by-Semantic-Similarity-Makes-Abstractive-Summarization-Better/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Report-GameWikiSum-a-Novel-Large-Multi-Document-Summarization-Dataset" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1374,131 +1472,6 @@
 
 
   
-    <article id="post-Report-Video-Skimming-Taxonomy-and-Comprehensive-Survey" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/02/17/Report-Video-Skimming-Taxonomy-and-Comprehensive-Survey/" target="_blank">Report:Video Skimming: Taxonomy and Comprehensive Survey</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/02/17/Report-Video-Skimming-Taxonomy-and-Comprehensive-Survey/" class="archive-article-date">
-        <time datetime="2020-02-17T06:23:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-17</time>
-</a>
-
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="Video-Skimming-Taxonomy-and-Comprehensive-Survey"><a href="#Video-Skimming-Taxonomy-and-Comprehensive-Survey" class="headerlink" title="Video Skimming: Taxonomy and Comprehensive Survey"></a>Video Skimming: Taxonomy and Comprehensive Survey</h1><h2 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h2><p>​        Video Skimming视频略读，又称为动态视频摘要。静态视频摘要是指提取视频中的关键帧，而动态视频摘要是生成短视频。可以利用内部信息和外部信息。内部信息是指视频、音频和文本；外部信息是指用户评论、用户打分、视频回顾（类似于影评）。</p>
-<h2 id="二、系统架构"><a href="#二、系统架构" class="headerlink" title="二、系统架构"></a>二、系统架构</h2><img src="/2020/02/17/Report-Video-Skimming-Taxonomy-and-Comprehensive-Survey/1.png" title="avatar">
-
-<ol>
-<li><p>Segmentation：将当前视频分成更小的单元，称为skim     unit。将视频分成最小的可理解单元，并单独处理。最小的可理解单元是指可以传达特定含义的帧数最少的单元。</p>
-</li>
-<li><p>Importance computation：计算skim unit的重要性。</p>
-</li>
-<li><p>User preferences：设定用户需求，比如skim长度、skim类型（强调或者总括）。</p>
-</li>
-<li><p>Skim unit selection：选择需要的skim unit，去重。</p>
-</li>
-</ol>
-<h2 id="三、分类"><a href="#三、分类" class="headerlink" title="三、分类"></a>三、分类</h2><ol>
-<li>不同领域的视频摘要说明以及评估标准：</li>
-</ol>
-<img src="/2020/02/17/Report-Video-Skimming-Taxonomy-and-Comprehensive-Survey/2.png" title="avatar">
-
-<ol start="2">
-<li>不同类型的视频摘要的发展趋势：</li>
-</ol>
-<img src="/2020/02/17/Report-Video-Skimming-Taxonomy-and-Comprehensive-Survey/3.png" title="avatar">
-
-<ol start="3">
-<li>论文中还有详细的数据集划分。</li>
-</ol>
-<h2 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h2><h4 id="挑战："><a href="#挑战：" class="headerlink" title="挑战："></a>挑战：</h4><ol>
-<li>深度学习方法缺乏大量的训练数据；</li>
-<li>长视频摘要问题；</li>
-<li>实时摘要问题；</li>
-<li>多模态或者跨媒体摘要问题。</li>
-</ol>
-<h4 id="未来方向："><a href="#未来方向：" class="headerlink" title="未来方向："></a>未来方向：</h4><ol>
-<li>确定最佳摘要长度；</li>
-<li>视频摘要的可理解性，确定最小视频单元的时间长度；</li>
-<li>通用领域的视频摘要问题；</li>
-<li>为其他任务合成数据集；</li>
-<li>评估标准的问题。</li>
-</ol>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Paper</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Video Summarization</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/02/17/Report-Video-Skimming-Taxonomy-and-Comprehensive-Survey/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1657,19 +1630,19 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Ubuntu</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Mac</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Anaconda</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Ubuntu</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1689,15 +1662,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Estimation Method</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Dataset</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Video Summarization</a>
+                <a href="javascript:void(0)" class="js-tag color3">Estimation Method</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Abstractive Summarization</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1709,11 +1682,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">GLPK</a>
+                <a href="javascript:void(0)" class="js-tag color5">Video Summarization</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
+                <a href="javascript:void(0)" class="js-tag color5">GLPK</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1722,6 +1695,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">C++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
               </li>
              
               <li class="article-tag-list-item">

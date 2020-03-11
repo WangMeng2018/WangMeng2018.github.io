@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>Report: Learning by Semantic Similarity Makes Abstractive Summarization Better</title>
+      <link href="/2020/03/11/Report-Learning-by-Semantic-Similarity-Makes-Abstractive-Summarization-Better/"/>
+      <url>/2020/03/11/Report-Learning-by-Semantic-Similarity-Makes-Abstractive-Summarization-Better/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Learning-by-Semantic-Similarity-Makes-Abstractive-Summarization-Better"><a href="#Learning-by-Semantic-Similarity-Makes-Abstractive-Summarization-Better" class="headerlink" title="Learning by Semantic Similarity Makes Abstractive Summarization Better"></a>Learning by Semantic Similarity Makes Abstractive Summarization Better</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>​        One of the obstacles of abstractive summarization is the presence of various potentially correct predictions.</p><p>​        <strong><em>Semantic Similarity strategy</em></strong>:  consider semantic meanings of generated summaries while training. Our training objective includes maximizing semantic similarity score which is calculated by an additional layer that estimates semantic similarity between generated summary and reference summary.</p><p>​        Code: <a href="https://github.com/icml-2020-nlp/semsim">https://github.com/icml-2020-nlp/semsim</a></p><h2 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h2><img src="/2020/03/11/Report-Learning-by-Semantic-Similarity-Makes-Abstractive-Summarization-Better/1.png" title="avatar"><img src="/2020/03/11/Report-Learning-by-Semantic-Similarity-Makes-Abstractive-Summarization-Better/2.png" title="avatar"><p>​        文章认为原来的最大似然目标函数不能处理多个参考摘要的问题，反而会引入噪声，所以使用生成摘要和参考摘要的语义相似度作为目标函数。语义相似度的计算方法很简单，但是很难训练，还需要和最大似然求和，作为最终的目标函数才能加快训练。看实验分析，ROUGE指标的确有提升。</p><p>​        总的来说，该论文的创新度不高。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Paper </tag>
+            
+            <tag> Text Summarization </tag>
+            
+            <tag> Abstractive Summarization </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Report: GameWikiSum: a Novel Large Multi-Document Summarization Dataset</title>
       <link href="/2020/03/06/Report-GameWikiSum-a-Novel-Large-Multi-Document-Summarization-Dataset/"/>
       <url>/2020/03/06/Report-GameWikiSum-a-Novel-Large-Multi-Document-Summarization-Dataset/</url>
@@ -781,9 +804,9 @@
       
         <tags>
             
-            <tag> Ubuntu </tag>
-            
             <tag> Mac </tag>
+            
+            <tag> Ubuntu </tag>
             
             <tag> VSCode </tag>
             
