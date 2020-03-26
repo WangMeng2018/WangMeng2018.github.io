@@ -188,6 +188,114 @@
             
 
   
+    <article id="post-Ubuntu安装Docker" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2019/09/04/Ubuntu安装Docker/" target="_blank">Ubuntu安装Docker</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2019/09/04/Ubuntu安装Docker/" class="archive-article-date">
+        <time datetime="2019-09-04T06:31:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-04</time>
+</a>
+
+  
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <ol>
+<li>从Docker仓库下载安装，首先确保能够访问Docker仓库地址:<a href="https://download.docker.com/linux/ubuntu，" target="_blank" rel="noopener">https://download.docker.com/linux/ubuntu，</a> 如果能够访问，按照下面的操作步骤进行安装。  <blockquote>
+<p>sudo apt update<br>sudo apt install apt-transport-https ca-certificates curl software-properties-common</p>
+</blockquote>
+</li>
+<li>在/etc/apt/sources.list.d/docker.list文件中添加下面内容；  <blockquote>
+<p>deb [arch=amd64] <a href="https://download.docker.com/linux/ubuntu" target="_blank" rel="noopener">https://download.docker.com/linux/ubuntu</a> bionic stable</p>
+</blockquote>
+</li>
+<li>添加秘钥；  <blockquote>
+<p>curl -fsSL <a href="https://download.docker.com/linux/ubuntu/gpg" target="_blank" rel="noopener">https://download.docker.com/linux/ubuntu/gpg</a> | sudo apt-key add -</p>
+</blockquote>
+</li>
+<li>安装docker-ce；  <blockquote>
+<p>sudo apt install docker-ce</p>
+</blockquote>
+</li>
+<li>查看是否安装成功。  <blockquote>
+<p>docker –version<br>输出结果： Docker version 19.03.2, build 6a30dfc</p>
+</blockquote>
+</li>
+</ol>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Software</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Programe</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2019/09/04/Ubuntu安装Docker/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-VSCode远程连接开发" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -835,11 +943,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Dataset</a>
+                <a href="javascript:void(0)" class="js-tag color3">Estimation Method</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Estimation Method</a>
+                <a href="javascript:void(0)" class="js-tag color3">Dataset</a>
               </li>
              
               <li class="article-tag-list-item">

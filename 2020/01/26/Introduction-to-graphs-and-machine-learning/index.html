@@ -6,21 +6,31 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master">
-  <title>Push Docker镜像到远程仓库 | 鱼咸滚酱</title>
+  <title>Introduction to graphs and machine learning | 鱼咸滚酱</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="将本地Docker镜像Push到远程仓库，命令如下：    docker tag local-image:tagname new-repo:tagnamedocker push new-repo:tagname">
-<meta name="keywords" content="Software,Programe">
+  <meta name="description" content="Introduction to graphs and machine learningDavid Mack Resources:  How to get started with machine learning on graphs  1. Why machine learn on graphs? Graphs are everywhere. Life sciences、Finance、Socia">
+<meta name="keywords" content="Notebook">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Push Docker镜像到远程仓库">
-<meta property="og:url" content="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/06/Push-Docker镜像到远程仓库/index.html">
+<meta property="og:title" content="Introduction to graphs and machine learning">
+<meta property="og:url" content="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2020/01/26/Introduction-to-graphs-and-machine-learning/index.html">
 <meta property="og:site_name" content="鱼咸滚酱">
-<meta property="og:description" content="将本地Docker镜像Push到远程仓库，命令如下：    docker tag local-image:tagname new-repo:tagnamedocker push new-repo:tagname">
+<meta property="og:description" content="Introduction to graphs and machine learningDavid Mack Resources:  How to get started with machine learning on graphs  1. Why machine learn on graphs? Graphs are everywhere. Life sciences、Finance、Socia">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-03-26T07:57:29.708Z">
+<meta property="og:image" content="https://github.com/2020/01/26/Introduction-to-graphs-and-machine-learning/1.png">
+<meta property="og:image" content="https://github.com/2020/01/26/Introduction-to-graphs-and-machine-learning/2.png">
+<meta property="og:image" content="https://github.com/2020/01/26/Introduction-to-graphs-and-machine-learning/3.png">
+<meta property="og:image" content="https://github.com/2020/01/26/Introduction-to-graphs-and-machine-learning/4.png">
+<meta property="og:image" content="https://github.com/2020/01/26/Introduction-to-graphs-and-machine-learning/5.png">
+<meta property="og:image" content="https://github.com/2020/01/26/Introduction-to-graphs-and-machine-learning/6.png">
+<meta property="og:image" content="https://github.com/2020/01/26/Introduction-to-graphs-and-machine-learning/7.png">
+<meta property="og:image" content="https://github.com/2020/01/26/Introduction-to-graphs-and-machine-learning/8.png">
+<meta property="og:image" content="https://github.com/2020/01/26/Introduction-to-graphs-and-machine-learning/9.png">
+<meta property="og:updated_time" content="2020-03-26T08:16:35.150Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Push Docker镜像到远程仓库">
-<meta name="twitter:description" content="将本地Docker镜像Push到远程仓库，命令如下：    docker tag local-image:tagname new-repo:tagnamedocker push new-repo:tagname">
+<meta name="twitter:title" content="Introduction to graphs and machine learning">
+<meta name="twitter:description" content="Introduction to graphs and machine learningDavid Mack Resources:  How to get started with machine learning on graphs  1. Why machine learn on graphs? Graphs are everywhere. Life sciences、Finance、Socia">
+<meta name="twitter:image" content="https://github.com/2020/01/26/Introduction-to-graphs-and-machine-learning/1.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -183,14 +193,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Push-Docker镜像到远程仓库" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Introduction-to-graphs-and-machine-learning" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      Push Docker镜像到远程仓库
+      Introduction to graphs and machine learning
     </h1>
   
 
@@ -202,8 +212,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2019/09/06/Push-Docker镜像到远程仓库/" class="archive-article-date">
-        <time datetime="2019-09-06T12:14:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-06</time>
+<a href="/2020/01/26/Introduction-to-graphs-and-machine-learning/" class="archive-article-date">
+        <time datetime="2020-01-26T08:11:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-26</time>
 </a>
 
   
@@ -212,10 +222,93 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>将本地Docker镜像Push到远程仓库，命令如下：  </p>
-<blockquote>
-<p>docker tag local-image:tagname new-repo:tagname<br>docker push new-repo:tagname</p>
-</blockquote>
+    <h1 id="Introduction-to-graphs-and-machine-learning"><a href="#Introduction-to-graphs-and-machine-learning" class="headerlink" title="Introduction to graphs and machine learning"></a>Introduction to graphs and machine learning</h1><p><a href="https://octavian.ai" target="_blank" rel="noopener">David Mack</a></p>
+<p>Resources:</p>
+<ul>
+<li><a href="https://medium.com/octavian-ai/how-to-get-started-with-machine-learning-on-graphs-7f0795c83763" target="_blank" rel="noopener">How to get started with machine learning on graphs</a></li>
+</ul>
+<h2 id="1-Why-machine-learn-on-graphs"><a href="#1-Why-machine-learn-on-graphs" class="headerlink" title="1. Why machine learn on graphs?"></a>1. Why machine learn on graphs?</h2><ol>
+<li><p>Graphs are everywhere.</p>
+<p>Life sciences、Finance、Social networks、 Users actions over time、Blockchain</p>
+</li>
+<li><p>Current ML often ignores the greater context of data.</p>
+</li>
+</ol>
+<img src="/2020/01/26/Introduction-to-graphs-and-machine-learning/1.png" title="avatar">
+
+<ol start="3">
+<li>Graphs let your model harness more information.</li>
+</ol>
+<img src="/2020/01/26/Introduction-to-graphs-and-machine-learning/2.png" title="avatar">
+
+
+
+<h2 id="2-Common-model-tasks"><a href="#2-Common-model-tasks" class="headerlink" title="2. Common model tasks"></a>2. Common model tasks</h2><img src="/2020/01/26/Introduction-to-graphs-and-machine-learning/3.png" title="avatar">
+
+
+
+<h2 id="3-Approaches"><a href="#3-Approaches" class="headerlink" title="3. Approaches"></a>3. Approaches</h2><p>How to do ML on graphs？</p>
+<img src="/2020/01/26/Introduction-to-graphs-and-machine-learning/4.png" title="avatar">
+
+
+
+<h3 id="3-1-Shape-the-graph-into-a-table"><a href="#3-1-Shape-the-graph-into-a-table" class="headerlink" title="3.1 Shape the graph into a table"></a>3.1 Shape the graph into a table</h3><h4 id="3-1-1-Common-approaches"><a href="#3-1-1-Common-approaches" class="headerlink" title="3.1.1 Common approaches"></a>3.1.1 Common approaches</h4><ol>
+<li>Fixed size representation</li>
+</ol>
+<img src="/2020/01/26/Introduction-to-graphs-and-machine-learning/5.png" title="avatar">
+
+<p>   This is a padded fixed size lists.</p>
+<ol start="2">
+<li>Random walks to embeddings</li>
+</ol>
+<img src="/2020/01/26/Introduction-to-graphs-and-machine-learning/6.png" title="avatar">
+
+<p>   The most popular implementation of this is <a href="https://arxiv.org/pdf/1607.00653.pdf" target="_blank" rel="noopener">node2vec</a></p>
+<p>   Embed nodes using the sequences:</p>
+<p>   ​    Generate an embedding, i.e a vector, for each node such that nodes in the same neighborhood have similar embedding vectors:</p>
+<ul>
+<li>Assign each node n an embedding en </li>
+<li>For each sequence (n1, n2 .. nX), for each pair of nodes, calculate their dot product as a score (this is the SkipGram method)</li>
+<li>Maximize these scores whilst minimizing the score of randomly selected (e.g. not sampled from the graph) sequences of nodes (‘negative sampling’)</li>
+<li>Use gradient descent!</li>
+</ul>
+<ol start="3">
+<li>Question-Answering using a database engine</li>
+</ol>
+<img src="/2020/01/26/Introduction-to-graphs-and-machine-learning/7.png" title="avatar">
+<img src="/2020/01/26/Introduction-to-graphs-and-machine-learning/8.png" title="avatar">
+
+
+
+<h4 id="3-1-2-Pros-and-Cons"><a href="#3-1-2-Pros-and-Cons" class="headerlink" title="3.1.2 Pros and Cons"></a>3.1.2 Pros and Cons</h4><ol>
+<li>Pros:<ul>
+<li>Fast to get started with</li>
+<li>Easily use existing ML libraries, architecture and infrastructure</li>
+<li>Can get the job done</li>
+</ul>
+</li>
+<li>Cons:<ul>
+<li>Discards some of the graph’s information</li>
+</ul>
+</li>
+</ol>
+<h3 id="3-2-Turn-the-graph-into-a-network"><a href="#3-2-Turn-the-graph-into-a-network" class="headerlink" title="3.2 Turn the graph into a network"></a>3.2 Turn the graph into a network</h3><h4 id="3-2-1-Common-approaches"><a href="#3-2-1-Common-approaches" class="headerlink" title="3.2.1 Common approaches"></a>3.2.1 Common approaches</h4><ol>
+<li>Graph Convolutional Network / Graph Network</li>
+</ol>
+<img src="/2020/01/26/Introduction-to-graphs-and-machine-learning/9.png" title="avatar">
+
+<h4 id="3-2-2-Pros-and-Cons"><a href="#3-2-2-Pros-and-Cons" class="headerlink" title="3.2.2 Pros and Cons"></a>3.2.2 Pros and Cons</h4><ol>
+<li>Pros:<ul>
+<li>All of the graph structure is available to the network</li>
+</ul>
+</li>
+<li>Cons:<ul>
+<li>Less library and infrastructure support</li>
+<li>Less well researched ML methods</li>
+<li>May be slower to train on current hardware</li>
+</ul>
+</li>
+</ol>
 
     
 
@@ -230,7 +323,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/06/Push-Docker镜像到远程仓库/" title="Push Docker镜像到远程仓库" target="_blank">https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/06/Push-Docker镜像到远程仓库/</a>
+          <a href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2020/01/26/Introduction-to-graphs-and-machine-learning/" title="Introduction to graphs and machine learning" target="_blank">https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2020/01/26/Introduction-to-graphs-and-machine-learning/</a>
         </li>
         <li>
           <strong>版权声明： </strong>
@@ -249,11 +342,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Software</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Programe</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Notebook</a>
         		</li>
       		
 		</ul>
@@ -309,7 +398,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/06/Push-Docker镜像到远程仓库/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2020/01/26/Introduction-to-graphs-and-machine-learning/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -324,18 +413,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2019/09/07/Docker命令/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/02/16/Report-A-Study-of-Human-Summaries-of-Scientific-Articles/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Docker命令
+          Report:A Study of Human Summaries of Scientific Articles
         
       </div>
     </a>
   
   
-    <a href="/2019/09/06/Mac安装Docker/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Mac安装Docker</div>
+    <a href="/2020/01/26/结合知识的推荐系统/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">结合知识的推荐系统</div>
       <i class="icon-circle-right"></i>
     </a>
   

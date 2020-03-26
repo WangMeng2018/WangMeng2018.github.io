@@ -566,6 +566,175 @@
 
 
   
+    <article id="post-Introduction-to-graphs-and-machine-learning" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/01/26/Introduction-to-graphs-and-machine-learning/" target="_blank">Introduction to graphs and machine learning</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/01/26/Introduction-to-graphs-and-machine-learning/" class="archive-article-date">
+        <time datetime="2020-01-26T08:11:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-26</time>
+</a>
+
+  
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="Introduction-to-graphs-and-machine-learning"><a href="#Introduction-to-graphs-and-machine-learning" class="headerlink" title="Introduction to graphs and machine learning"></a>Introduction to graphs and machine learning</h1><p><a href="https://octavian.ai" target="_blank" rel="noopener">David Mack</a></p>
+<p>Resources:</p>
+<ul>
+<li><a href="https://medium.com/octavian-ai/how-to-get-started-with-machine-learning-on-graphs-7f0795c83763" target="_blank" rel="noopener">How to get started with machine learning on graphs</a></li>
+</ul>
+<h2 id="1-Why-machine-learn-on-graphs"><a href="#1-Why-machine-learn-on-graphs" class="headerlink" title="1. Why machine learn on graphs?"></a>1. Why machine learn on graphs?</h2><ol>
+<li><p>Graphs are everywhere.</p>
+<p>Life sciences、Finance、Social networks、 Users actions over time、Blockchain</p>
+</li>
+<li><p>Current ML often ignores the greater context of data.</p>
+</li>
+</ol>
+<img src="/2020/01/26/Introduction-to-graphs-and-machine-learning/1.png" title="avatar">
+
+<ol start="3">
+<li>Graphs let your model harness more information.</li>
+</ol>
+<img src="/2020/01/26/Introduction-to-graphs-and-machine-learning/2.png" title="avatar">
+
+
+
+<h2 id="2-Common-model-tasks"><a href="#2-Common-model-tasks" class="headerlink" title="2. Common model tasks"></a>2. Common model tasks</h2><img src="/2020/01/26/Introduction-to-graphs-and-machine-learning/3.png" title="avatar">
+
+
+
+<h2 id="3-Approaches"><a href="#3-Approaches" class="headerlink" title="3. Approaches"></a>3. Approaches</h2><p>How to do ML on graphs？</p>
+<img src="/2020/01/26/Introduction-to-graphs-and-machine-learning/4.png" title="avatar">
+
+
+
+<h3 id="3-1-Shape-the-graph-into-a-table"><a href="#3-1-Shape-the-graph-into-a-table" class="headerlink" title="3.1 Shape the graph into a table"></a>3.1 Shape the graph into a table</h3><h4 id="3-1-1-Common-approaches"><a href="#3-1-1-Common-approaches" class="headerlink" title="3.1.1 Common approaches"></a>3.1.1 Common approaches</h4><ol>
+<li>Fixed size representation</li>
+</ol>
+<img src="/2020/01/26/Introduction-to-graphs-and-machine-learning/5.png" title="avatar">
+
+<p>   This is a padded fixed size lists.</p>
+<ol start="2">
+<li>Random walks to embeddings</li>
+</ol>
+<img src="/2020/01/26/Introduction-to-graphs-and-machine-learning/6.png" title="avatar">
+
+<p>   The most popular implementation of this is <a href="https://arxiv.org/pdf/1607.00653.pdf" target="_blank" rel="noopener">node2vec</a></p>
+<p>   Embed nodes using the sequences:</p>
+<p>   ​    Generate an embedding, i.e a vector, for each node such that nodes in the same neighborhood have similar embedding vectors:</p>
+<ul>
+<li>Assign each node n an embedding en </li>
+<li>For each sequence (n1, n2 .. nX), for each pair of nodes, calculate their dot product as a score (this is the SkipGram method)</li>
+<li>Maximize these scores whilst minimizing the score of randomly selected (e.g. not sampled from the graph) sequences of nodes (‘negative sampling’)</li>
+<li>Use gradient descent!</li>
+</ul>
+<ol start="3">
+<li>Question-Answering using a database engine</li>
+</ol>
+<img src="/2020/01/26/Introduction-to-graphs-and-machine-learning/7.png" title="avatar">
+<img src="/2020/01/26/Introduction-to-graphs-and-machine-learning/8.png" title="avatar">
+
+
+
+<h4 id="3-1-2-Pros-and-Cons"><a href="#3-1-2-Pros-and-Cons" class="headerlink" title="3.1.2 Pros and Cons"></a>3.1.2 Pros and Cons</h4><ol>
+<li>Pros:<ul>
+<li>Fast to get started with</li>
+<li>Easily use existing ML libraries, architecture and infrastructure</li>
+<li>Can get the job done</li>
+</ul>
+</li>
+<li>Cons:<ul>
+<li>Discards some of the graph’s information</li>
+</ul>
+</li>
+</ol>
+<h3 id="3-2-Turn-the-graph-into-a-network"><a href="#3-2-Turn-the-graph-into-a-network" class="headerlink" title="3.2 Turn the graph into a network"></a>3.2 Turn the graph into a network</h3><h4 id="3-2-1-Common-approaches"><a href="#3-2-1-Common-approaches" class="headerlink" title="3.2.1 Common approaches"></a>3.2.1 Common approaches</h4><ol>
+<li>Graph Convolutional Network / Graph Network</li>
+</ol>
+<img src="/2020/01/26/Introduction-to-graphs-and-machine-learning/9.png" title="avatar">
+
+<h4 id="3-2-2-Pros-and-Cons"><a href="#3-2-2-Pros-and-Cons" class="headerlink" title="3.2.2 Pros and Cons"></a>3.2.2 Pros and Cons</h4><ol>
+<li>Pros:<ul>
+<li>All of the graph structure is available to the network</li>
+</ul>
+</li>
+<li>Cons:<ul>
+<li>Less library and infrastructure support</li>
+<li>Less well researched ML methods</li>
+<li>May be slower to train on current hardware</li>
+</ul>
+</li>
+</ol>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Notebook</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/01/26/Introduction-to-graphs-and-machine-learning/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-结合知识的推荐系统" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1312,96 +1481,6 @@
 
 
   
-    <article id="post-Tex中找不到-sty文件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/09/25/Tex中找不到-sty文件/" target="_blank">Tex中找不到.sty文件</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/09/25/Tex中找不到-sty文件/" class="archive-article-date">
-        <time datetime="2019-09-25T03:01:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-25</time>
-</a>
-
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>问题：Tex编译报错，找不到指定的.sty文件。  </p>
-<p>解决办法：从网上下载对应的sty文件，并拷贝到当前.tex目录下。  </p>
-<p>下载链接：<a href="https://searchcode.com/codesearch/view/31207532/#" target="_blank" rel="noopener">https://searchcode.com/codesearch/view/31207532/#</a>  </p>
-<p>可以在View File Tree中搜索。  </p>
-<img src="/2019/09/25/Tex中找不到-sty文件/1.png" title="avatar">
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Software</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Programe</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/09/25/Tex中找不到-sty文件/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
@@ -1572,11 +1651,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Dataset</a>
+                <a href="javascript:void(0)" class="js-tag color3">Estimation Method</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Estimation Method</a>
+                <a href="javascript:void(0)" class="js-tag color3">Dataset</a>
               </li>
              
               <li class="article-tag-list-item">
