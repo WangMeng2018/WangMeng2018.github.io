@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/"/>
-  <updated>2020-03-11T08:36:38.829Z</updated>
+  <updated>2020-03-26T07:36:59.760Z</updated>
   <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Machine Learning in Materials Science</title>
+    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2020/03/26/Machine-Learning-in-Materials-Science/"/>
+    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2020/03/26/Machine-Learning-in-Materials-Science/</id>
+    <published>2020-03-26T07:36:08.000Z</published>
+    <updated>2020-03-26T07:36:59.760Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Machine-Learning-in-Materials-Science"><a href="#Machine-Learning-in-Materials-Science" class="headerlink" title="Machine Learning in Materials Science"></a>Machine Learning in Materials Science</h1><p>Resources:</p><ol><li><a href="https://onlinelibrary.wiley.com/doi/full/10.1002/inf2.12028" target="_blank" rel="noopener">https://onlinelibrary.wiley.com/doi/full/10.1002/inf2.12028</a></li></ol><h2 id="1-新材料开发"><a href="#1-新材料开发" class="headerlink" title="1. 新材料开发"></a>1. 新材料开发</h2><ol><li><p>计算机模拟材料分子特性</p><p>替代人工挑选，ML加速研发，准确率高，而且专业素质要求低。</p></li><li><p>如何合成</p></li><li><p>优化周期</p></li><li><p>实际应用</p><p>性质、制备、优化、器件结构优化；</p><p>DFT计算材料性质，成本高。</p></li></ol><h2 id="2-作用"><a href="#2-作用" class="headerlink" title="2. 作用"></a>2. 作用</h2><ol><li><p>性质预测</p></li><li><p>宏观材料：图像分析铁轨的腐蚀程度；</p></li><li><p>纳米材料</p></li><li><p>分子性质：字符串分析 + 图像分析</p></li><li><p>增强化学理论</p></li></ol><h2 id="3-新化合物发现"><a href="#3-新化合物发现" class="headerlink" title="3. 新化合物发现"></a>3. 新化合物发现</h2><ol><li><p>结构导向</p></li><li><p>元素导向</p></li><li><p>反向设计</p></li></ol><h2 id="4-展望"><a href="#4-展望" class="headerlink" title="4. 展望"></a>4. 展望</h2><ol><li><p>适用更小的数据集</p></li><li><p>提供更可靠的数据</p></li><li><p>优化材料特征表示</p></li><li><p>增强模型的可解释性</p></li></ol><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol><li>创新在于设计，不在实验；</li><li>文献提取，结构化提取事实关系：The Open Science monitor；</li><li>机器阅读，更可靠地提取结构化内容。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Machine-Learning-in-Materials-Science&quot;&gt;&lt;a href=&quot;#Machine-Learning-in-Materials-Science&quot; class=&quot;headerlink&quot; title=&quot;Machine Learning i
+      
+    
+    </summary>
+    
+    
+      <category term="Notebook" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Notebook/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Report: Learning by Semantic Similarity Makes Abstractive Summarization Better</title>
     <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2020/03/11/Report-Learning-by-Semantic-Similarity-Makes-Abstractive-Summarization-Better/"/>
     <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2020/03/11/Report-Learning-by-Semantic-Similarity-Makes-Abstractive-Summarization-Better/</id>
     <published>2020-03-11T08:34:10.000Z</published>
-    <updated>2020-03-11T08:36:38.829Z</updated>
+    <updated>2020-03-11T08:37:46.324Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Learning-by-Semantic-Similarity-Makes-Abstractive-Summarization-Better"><a href="#Learning-by-Semantic-Similarity-Makes-Abstractive-Summarization-Better" class="headerlink" title="Learning by Semantic Similarity Makes Abstractive Summarization Better"></a>Learning by Semantic Similarity Makes Abstractive Summarization Better</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>​        One of the obstacles of abstractive summarization is the presence of various potentially correct predictions.</p><p>​        <strong><em>Semantic Similarity strategy</em></strong>:  consider semantic meanings of generated summaries while training. Our training objective includes maximizing semantic similarity score which is calculated by an additional layer that estimates semantic similarity between generated summary and reference summary.</p><p>​        Code: <a href="https://github.com/icml-2020-nlp/semsim">https://github.com/icml-2020-nlp/semsim</a></p><h2 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h2><img src="/2020/03/11/Report-Learning-by-Semantic-Similarity-Makes-Abstractive-Summarization-Better/1.png" title="avatar"><img src="/2020/03/11/Report-Learning-by-Semantic-Similarity-Makes-Abstractive-Summarization-Better/2.png" title="avatar"><p>​        文章认为原来的最大似然目标函数不能处理多个参考摘要的问题，反而会引入噪声，所以使用生成摘要和参考摘要的语义相似度作为目标函数。语义相似度的计算方法很简单，但是很难训练，还需要和最大似然求和，作为最终的目标函数才能加快训练。看实验分析，ROUGE指标的确有提升。</p><p>​        总的来说，该论文的创新度不高。</p>]]></content>
     
@@ -509,34 +532,6 @@
       <category term="Windows" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Windows/"/>
     
       <category term="Tex" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Tex/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows设置Notepad++为txt的默认打开方式</title>
-    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/23/Windows%E8%AE%BE%E7%BD%AENotepad-%E4%B8%BAtxt%E7%9A%84%E9%BB%98%E8%AE%A4%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F/"/>
-    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/23/Windows设置Notepad-为txt的默认打开方式/</id>
-    <published>2019-09-23T03:25:18.000Z</published>
-    <updated>2019-09-23T03:27:21.740Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li>win+R，输入regedit打开注册表编辑器；</li><li>定位到 <em>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\txtfile\shell\Open\command</em> 这个注册表下面；</li><li>右边有一个REG_SZ类型数据点右键修改为你的NotePad++安装目录；</li><li>修改数值数据为 (“D:\Notepad++\notepad++.exe %1”)；</li><li>系统默认为自带的NotePad打开<br>%SystemRoot%\system32\NOTEPAD.EXE %1，这个是默认的地址，如果想恢复系统默认情况，修改为此值。</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ol&gt;
-&lt;li&gt;win+R，输入regedit打开注册表编辑器；&lt;/li&gt;
-&lt;li&gt;定位到 &lt;em&gt;HKEY_LOCAL_MACHINE\SOFTWARE\Classes\txtfile\shell\Open\command&lt;/em&gt; 这个注册表下面；&lt;/li&gt;
-&lt;li&gt;右边有
-      
-    
-    </summary>
-    
-    
-      <category term="软件" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/%E8%BD%AF%E4%BB%B6/"/>
-    
-      <category term="Windows" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Windows/"/>
     
   </entry>
   
