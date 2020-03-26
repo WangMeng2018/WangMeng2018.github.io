@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/"/>
-  <updated>2020-03-26T07:45:16.968Z</updated>
+  <updated>2020-03-26T07:36:59.760Z</updated>
   <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/</id>
   
   <author>
@@ -15,29 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>结合知识的推荐系统</title>
-    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2020/03/26/%E7%BB%93%E5%90%88%E7%9F%A5%E8%AF%86%E7%9A%84%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/"/>
-    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2020/03/26/结合知识的推荐系统/</id>
-    <published>2020-03-26T07:37:52.000Z</published>
-    <updated>2020-03-26T07:45:16.968Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="结合知识的推荐系统"><a href="#结合知识的推荐系统" class="headerlink" title="结合知识的推荐系统"></a>结合知识的推荐系统</h1><p><a href="https://www.microsoft.com/en-us/research/people/xingx/" target="_blank" rel="noopener">谢幸</a></p><p>Resources:</p><ul><li><p><a href="https://mp.weixin.qq.com/s/WgnWaP-NXbVWgQb-4YTfhg" target="_blank" rel="noopener">中文解读</a></p></li><li><p><a href="https://github.com/microsoft/recommenders">推荐系统案例代码</a></p></li></ul><img src="/2020/03/26/结合知识的推荐系统/1.png" title="avatar"><h2 id="1-Knowledge-Graph（知识图谱）"><a href="#1-Knowledge-Graph（知识图谱）" class="headerlink" title="1. Knowledge Graph（知识图谱）"></a>1. Knowledge Graph（知识图谱）</h2><h3 id="1-1-Knowledge-Enhanced-Recommendation（知识增强的推荐系统）"><a href="#1-1-Knowledge-Enhanced-Recommendation（知识增强的推荐系统）" class="headerlink" title="1.1 Knowledge Enhanced Recommendation（知识增强的推荐系统）"></a>1.1 Knowledge Enhanced Recommendation（知识增强的推荐系统）</h3><p>​       知识增强的推荐系统可以有效解决推荐中几大问题：</p><ul><li><p>准确性</p></li><li><ul><li>关于items的更多的语义内容</li><li>更深度的用户兴趣表示</li></ul></li><li><p>多样性</p></li><li><ul><li>知识图谱中不同的关系类型</li><li>通过不同的语义路径拓展用户兴趣</li></ul></li><li><p>可解释性</p></li><li><ul><li>将用户兴趣与推荐结果相连接</li><li>改善用户满意度，提升用户信任度</li><li><img src="/2020/03/26/结合知识的推荐系统/2.png" title="avatar"></li></ul></li></ul><h3 id="1-2-Knowledge-Graph-Embedding（知识图谱嵌入表示）"><a href="#1-2-Knowledge-Graph-Embedding（知识图谱嵌入表示）" class="headerlink" title="1.2 Knowledge Graph Embedding（知识图谱嵌入表示）"></a>1.2 Knowledge Graph Embedding（知识图谱嵌入表示）</h3><p>​        知识图谱嵌入表示是为知识图谱中的每一个实体和关系都学习一个低维的向量表示，使他们可以保持结构和语义知识。</p><ol><li>Distance-based Models（基于距离的模型）</li></ol><img src="/2020/03/26/结合知识的推荐系统/3.png" title="avatar"><ol start="2"><li>Matching-based Models（基于匹配的模型）</li></ol><img src="/2020/03/26/结合知识的推荐系统/4.png" title="avatar"><ol start="3"><li>训练方式</li></ol><img src="/2020/03/26/结合知识的推荐系统/5.png" title="avatar"><h2 id="2-Collaborative-Knowledge-Embedding（协同知识嵌入）"><a href="#2-Collaborative-Knowledge-Embedding（协同知识嵌入）" class="headerlink" title="2. Collaborative Knowledge Embedding（协同知识嵌入）"></a>2. Collaborative Knowledge Embedding（协同知识嵌入）</h2><h3 id="2-1-协同知识嵌入"><a href="#2-1-协同知识嵌入" class="headerlink" title="2.1 协同知识嵌入"></a>2.1 协同知识嵌入</h3><ul><li><p>结构知识</p></li><li><ul><li>Direct, act等</li></ul></li><li><p>视觉知识</p></li><li><ul><li>电影海报，书籍封面图像等</li></ul></li><li><p>文本知识</p></li><li><ul><li>电影描述，评论等</li></ul></li></ul><img src="/2020/03/26/结合知识的推荐系统/6.png" title="avatar"><h3 id="2-2-经典论文"><a href="#2-2-经典论文" class="headerlink" title="2.2 经典论文"></a>2.2 经典论文</h3><ol><li><p>论文名称：Collaborative Knowledge Base Embedding for Recommender Systems, KDD 2016</p></li><li><p>模型：</p></li></ol><img src="/2020/03/26/结合知识的推荐系统/7.png" title="avatar"><ol start="3"><li>数据：</li></ol><img src="/2020/03/26/结合知识的推荐系统/8.png" title="avatar"><h2 id="3-Deep-Knowledge-aware-Network"><a href="#3-Deep-Knowledge-aware-Network" class="headerlink" title="3. Deep Knowledge-aware Network"></a>3. Deep Knowledge-aware Network</h2><h3 id="3-1-经典论文"><a href="#3-1-经典论文" class="headerlink" title="3.1 经典论文"></a>3.1 经典论文</h3><ol><li><p>论文名称：Deep Knowledge-Aware Network for News Recommendation, WWW 2018</p></li><li><p>思路示例图：</p></li></ol><img src="/2020/03/26/结合知识的推荐系统/9.png" title="avatar"><ol start="3"><li><p>处理过程：</p></li><li><p>提取知识表示：</p></li></ol><img src="/2020/03/26/结合知识的推荐系统/10.png" title="avatar"><ol start="5"><li>模型：</li></ol><img src="/2020/03/26/结合知识的推荐系统/11.png" title="avatar"><h2 id="4-Ripple-Network"><a href="#4-Ripple-Network" class="headerlink" title="4. Ripple Network"></a>4. Ripple Network</h2><h3 id="4-1-经典论文"><a href="#4-1-经典论文" class="headerlink" title="4.1 经典论文"></a>4.1 经典论文</h3><ol><li><p>论文名称：Ripple Network: Propagating User Preferences on the Knowledge Graph for Recommender Systems, CIKM 2018</p></li><li><p>思路示例图：</p></li></ol><img src="/2020/03/26/结合知识的推荐系统/12.png" title="avatar"><ol start="3"><li>模型：</li></ol><img src="/2020/03/26/结合知识的推荐系统/13.png" title="avatar"><ol start="4"><li>结果：</li></ol><img src="/2020/03/26/结合知识的推荐系统/14.png" title="avatar"><h2 id="5-可解释性推荐"><a href="#5-可解释性推荐" class="headerlink" title="5. 可解释性推荐"></a>5. 可解释性推荐</h2><h3 id="5-1-经典论文"><a href="#5-1-经典论文" class="headerlink" title="5.1 经典论文"></a>5.1 经典论文</h3><ol><li><p>论文名称：Explainable Recommendation Through Attentive Multi-View Learning</p></li><li><p>模型：</p></li></ol><img src="/2020/03/26/结合知识的推荐系统/15.png" title="avatar"><ol start="3"><li>数据：</li></ol><img src="/2020/03/26/结合知识的推荐系统/16.png" title="avatar"><h2 id="6-总结"><a href="#6-总结" class="headerlink" title="6. 总结"></a>6. 总结</h2><ol><li><p>总结：知识图扩展了每个item的信息量，加强了它们之间的联系；带来推荐结果额外的多样性和可解释性；</p></li><li><p>未来工作：</p><p>•将图形推理与推荐系统集成；</p><p>•联合设计和优化推荐算法和底层架构；</p><p>•处理知识的时间演变；</p></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;结合知识的推荐系统&quot;&gt;&lt;a href=&quot;#结合知识的推荐系统&quot; class=&quot;headerlink&quot; title=&quot;结合知识的推荐系统&quot;&gt;&lt;/a&gt;结合知识的推荐系统&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://www.microsoft.com/en-us/r
-      
-    
-    </summary>
-    
-    
-      <category term="Notebook" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Notebook/"/>
-    
-  </entry>
   
   <entry>
     <title>Machine Learning in Materials Science</title>
@@ -394,11 +371,34 @@
   </entry>
   
   <entry>
+    <title>结合知识的推荐系统</title>
+    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2020/01/26/%E7%BB%93%E5%90%88%E7%9F%A5%E8%AF%86%E7%9A%84%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/"/>
+    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2020/01/26/结合知识的推荐系统/</id>
+    <published>2020-01-26T07:37:52.000Z</published>
+    <updated>2020-03-26T07:48:01.673Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="结合知识的推荐系统"><a href="#结合知识的推荐系统" class="headerlink" title="结合知识的推荐系统"></a>结合知识的推荐系统</h1><p><a href="https://www.microsoft.com/en-us/research/people/xingx/" target="_blank" rel="noopener">谢幸</a></p><p>Resources:</p><ul><li><p><a href="https://mp.weixin.qq.com/s/WgnWaP-NXbVWgQb-4YTfhg" target="_blank" rel="noopener">中文解读</a></p></li><li><p><a href="https://github.com/microsoft/recommenders">推荐系统案例代码</a></p></li></ul><img src="/2020/01/26/结合知识的推荐系统/1.png" title="avatar"><h2 id="1-Knowledge-Graph（知识图谱）"><a href="#1-Knowledge-Graph（知识图谱）" class="headerlink" title="1. Knowledge Graph（知识图谱）"></a>1. Knowledge Graph（知识图谱）</h2><h3 id="1-1-Knowledge-Enhanced-Recommendation（知识增强的推荐系统）"><a href="#1-1-Knowledge-Enhanced-Recommendation（知识增强的推荐系统）" class="headerlink" title="1.1 Knowledge Enhanced Recommendation（知识增强的推荐系统）"></a>1.1 Knowledge Enhanced Recommendation（知识增强的推荐系统）</h3><p>​       知识增强的推荐系统可以有效解决推荐中几大问题：</p><ul><li><p>准确性</p></li><li><ul><li>关于items的更多的语义内容</li><li>更深度的用户兴趣表示</li></ul></li><li><p>多样性</p></li><li><ul><li>知识图谱中不同的关系类型</li><li>通过不同的语义路径拓展用户兴趣</li></ul></li><li><p>可解释性</p></li><li><ul><li>将用户兴趣与推荐结果相连接</li><li>改善用户满意度，提升用户信任度</li><li><img src="/2020/01/26/结合知识的推荐系统/2.png" title="avatar"></li></ul></li></ul><h3 id="1-2-Knowledge-Graph-Embedding（知识图谱嵌入表示）"><a href="#1-2-Knowledge-Graph-Embedding（知识图谱嵌入表示）" class="headerlink" title="1.2 Knowledge Graph Embedding（知识图谱嵌入表示）"></a>1.2 Knowledge Graph Embedding（知识图谱嵌入表示）</h3><p>​        知识图谱嵌入表示是为知识图谱中的每一个实体和关系都学习一个低维的向量表示，使他们可以保持结构和语义知识。</p><ol><li>Distance-based Models（基于距离的模型）</li></ol><img src="/2020/01/26/结合知识的推荐系统/3.png" title="avatar"><ol start="2"><li>Matching-based Models（基于匹配的模型）</li></ol><img src="/2020/01/26/结合知识的推荐系统/4.png" title="avatar"><ol start="3"><li>训练方式</li></ol><img src="/2020/01/26/结合知识的推荐系统/5.png" title="avatar"><h2 id="2-Collaborative-Knowledge-Embedding（协同知识嵌入）"><a href="#2-Collaborative-Knowledge-Embedding（协同知识嵌入）" class="headerlink" title="2. Collaborative Knowledge Embedding（协同知识嵌入）"></a>2. Collaborative Knowledge Embedding（协同知识嵌入）</h2><h3 id="2-1-协同知识嵌入"><a href="#2-1-协同知识嵌入" class="headerlink" title="2.1 协同知识嵌入"></a>2.1 协同知识嵌入</h3><ul><li><p>结构知识</p></li><li><ul><li>Direct, act等</li></ul></li><li><p>视觉知识</p></li><li><ul><li>电影海报，书籍封面图像等</li></ul></li><li><p>文本知识</p></li><li><ul><li>电影描述，评论等</li></ul></li></ul><img src="/2020/01/26/结合知识的推荐系统/6.png" title="avatar"><h3 id="2-2-经典论文"><a href="#2-2-经典论文" class="headerlink" title="2.2 经典论文"></a>2.2 经典论文</h3><ol><li><p>论文名称：Collaborative Knowledge Base Embedding for Recommender Systems, KDD 2016</p></li><li><p>模型：</p></li></ol><img src="/2020/01/26/结合知识的推荐系统/7.png" title="avatar"><ol start="3"><li>数据：</li></ol><img src="/2020/01/26/结合知识的推荐系统/8.png" title="avatar"><h2 id="3-Deep-Knowledge-aware-Network"><a href="#3-Deep-Knowledge-aware-Network" class="headerlink" title="3. Deep Knowledge-aware Network"></a>3. Deep Knowledge-aware Network</h2><h3 id="3-1-经典论文"><a href="#3-1-经典论文" class="headerlink" title="3.1 经典论文"></a>3.1 经典论文</h3><ol><li><p>论文名称：Deep Knowledge-Aware Network for News Recommendation, WWW 2018</p></li><li><p>思路示例图：</p></li></ol><img src="/2020/01/26/结合知识的推荐系统/9.png" title="avatar"><ol start="3"><li><p>处理过程：</p></li><li><p>提取知识表示：</p></li></ol><img src="/2020/01/26/结合知识的推荐系统/10.png" title="avatar"><ol start="5"><li>模型：</li></ol><img src="/2020/01/26/结合知识的推荐系统/11.png" title="avatar"><h2 id="4-Ripple-Network"><a href="#4-Ripple-Network" class="headerlink" title="4. Ripple Network"></a>4. Ripple Network</h2><h3 id="4-1-经典论文"><a href="#4-1-经典论文" class="headerlink" title="4.1 经典论文"></a>4.1 经典论文</h3><ol><li><p>论文名称：Ripple Network: Propagating User Preferences on the Knowledge Graph for Recommender Systems, CIKM 2018</p></li><li><p>思路示例图：</p></li></ol><img src="/2020/01/26/结合知识的推荐系统/12.png" title="avatar"><ol start="3"><li>模型：</li></ol><img src="/2020/01/26/结合知识的推荐系统/13.png" title="avatar"><ol start="4"><li>结果：</li></ol><img src="/2020/01/26/结合知识的推荐系统/14.png" title="avatar"><h2 id="5-可解释性推荐"><a href="#5-可解释性推荐" class="headerlink" title="5. 可解释性推荐"></a>5. 可解释性推荐</h2><h3 id="5-1-经典论文"><a href="#5-1-经典论文" class="headerlink" title="5.1 经典论文"></a>5.1 经典论文</h3><ol><li><p>论文名称：Explainable Recommendation Through Attentive Multi-View Learning</p></li><li><p>模型：</p></li></ol><img src="/2020/01/26/结合知识的推荐系统/15.png" title="avatar"><ol start="3"><li>数据：</li></ol><img src="/2020/01/26/结合知识的推荐系统/16.png" title="avatar"><h2 id="6-总结"><a href="#6-总结" class="headerlink" title="6. 总结"></a>6. 总结</h2><ol><li><p>总结：知识图扩展了每个item的信息量，加强了它们之间的联系；带来推荐结果额外的多样性和可解释性；</p></li><li><p>未来工作：</p><p>•将图形推理与推荐系统集成；</p><p>•联合设计和优化推荐算法和底层架构；</p><p>•处理知识的时间演变；</p></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;结合知识的推荐系统&quot;&gt;&lt;a href=&quot;#结合知识的推荐系统&quot; class=&quot;headerlink&quot; title=&quot;结合知识的推荐系统&quot;&gt;&lt;/a&gt;结合知识的推荐系统&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://www.microsoft.com/en-us/r
+      
+    
+    </summary>
+    
+    
+      <category term="Notebook" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Notebook/"/>
+    
+  </entry>
+  
+  <entry>
     <title>python使用json.dump的中文编码问题</title>
     <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/10/10/python%E4%BD%BF%E7%94%A8json-dump%E7%9A%84%E4%B8%AD%E6%96%87%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/"/>
     <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/10/10/python使用json-dump的中文编码问题/</id>
     <published>2019-10-10T12:27:18.000Z</published>
-    <updated>2019-10-10T12:34:42.148Z</updated>
+    <updated>2020-03-26T07:57:53.172Z</updated>
     
     <content type="html"><![CDATA[<p>当json中有中文字符串时，直接<em>dump</em>会出错，需要在<em>open</em>函数中加上<em>encoding=‘utf-8’</em>，<em>dump</em>函数中加上<em>ensure_ascii=False</em>。  </p><img src="/2019/10/10/python使用json-dump的中文编码问题/1.png" title="avatar">]]></content>
     
@@ -413,7 +413,7 @@
     </summary>
     
     
-      <category term="Python" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Python/"/>
+      <category term="Programe" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Programe/"/>
     
   </entry>
   
@@ -422,7 +422,7 @@
     <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/28/Linux%E5%AE%89%E8%A3%85JDK/"/>
     <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/28/Linux安装JDK/</id>
     <published>2019-09-28T05:58:49.000Z</published>
-    <updated>2019-09-28T06:00:58.772Z</updated>
+    <updated>2020-03-26T07:56:53.272Z</updated>
     
     <content type="html"><![CDATA[<ol><li><p>先将jdk1.7的安装包下载到本地，在上传到Linux；</p></li><li><p>tar zxvf  jdk-7u80-linux-x64.tar.gz</p></li><li><p>vim ~/.bashrc</p></li><li><p>export JAVA_HOME=/home/wangmeng/jdk1.7.0_80<br>export CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:<br>$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar<br>export PATH=$PATH:$JAVA_HOME/bin</p></li><li><p>source ~/.bashrc</p></li><li><p>java -version</p></li></ol>]]></content>
     
@@ -443,9 +443,9 @@
     </summary>
     
     
-      <category term="Java" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Java/"/>
+      <category term="Software" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Software/"/>
     
-      <category term="Ubuntu" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Ubuntu/"/>
+      <category term="Programe" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Programe/"/>
     
   </entry>
   
@@ -454,7 +454,7 @@
     <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/27/Visual-Studio%E4%B8%ADC-%E4%BD%BF%E7%94%A8Scanf%E6%8A%A5%E9%94%99/"/>
     <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/27/Visual-Studio中C-使用Scanf报错/</id>
     <published>2019-09-27T01:14:01.000Z</published>
-    <updated>2019-09-27T01:21:12.075Z</updated>
+    <updated>2020-03-26T07:59:19.569Z</updated>
     
     <content type="html"><![CDATA[<p>解决办法：  </p><ol><li><p>在新建项目时，取消SDL前的勾号；  </p><img src="/2019/09/27/Visual-Studio中C-使用Scanf报错/1.png" title="avatar"></li><li><p>项目属性;<br>预处理器定义 编辑：增加首项：_CRT_SECURE_NO_WARNINGS  </p><img src="/2019/09/27/Visual-Studio中C-使用Scanf报错/2.png" title="avatar"></li><li><p>可以在代码生成中关闭安全检查。  </p><img src="/2019/09/27/Visual-Studio中C-使用Scanf报错/3.png" title="avatar"></li></ol>]]></content>
     
@@ -473,7 +473,9 @@
     </summary>
     
     
-      <category term="C++" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/C/"/>
+      <category term="Software" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Software/"/>
+    
+      <category term="Programe" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Programe/"/>
     
   </entry>
   
@@ -482,7 +484,7 @@
     <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/26/Tex%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/"/>
     <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/26/Tex中文乱码/</id>
     <published>2019-09-26T01:44:02.000Z</published>
-    <updated>2019-09-26T01:46:55.363Z</updated>
+    <updated>2020-03-26T07:58:24.288Z</updated>
     
     <content type="html"><![CDATA[<p>加上带注释的语句：  </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">\documentclass&#123;article&#125;</span><br><span class="line">\usepackage&#123;amsmath,amssymb&#125;</span><br><span class="line">\usepackage&#123;latexsym&#125;</span><br><span class="line">\usepackage&#123;CJK&#125;</span><br><span class="line"></span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">\begin&#123;CJK*&#125;&#123;GBK&#125;&#123;gsbn&#125;       # 需要添加</span><br><span class="line">文本内容</span><br><span class="line"></span><br><span class="line">\end&#123;CJK*&#125;                    # 需要添加</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -497,9 +499,9 @@
     </summary>
     
     
-      <category term="Windows" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Windows/"/>
+      <category term="Software" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Software/"/>
     
-      <category term="Tex" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Tex/"/>
+      <category term="Programe" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Programe/"/>
     
   </entry>
   
@@ -508,7 +510,7 @@
     <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/25/Tex%E4%B8%AD%E6%89%BE%E4%B8%8D%E5%88%B0-sty%E6%96%87%E4%BB%B6/"/>
     <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/25/Tex中找不到-sty文件/</id>
     <published>2019-09-25T03:01:52.000Z</published>
-    <updated>2019-09-25T03:05:19.997Z</updated>
+    <updated>2020-03-26T07:58:34.748Z</updated>
     
     <content type="html"><![CDATA[<p>问题：Tex编译报错，找不到指定的.sty文件。  </p><p>解决办法：从网上下载对应的sty文件，并拷贝到当前.tex目录下。  </p><p>下载链接：<a href="https://searchcode.com/codesearch/view/31207532/#" target="_blank" rel="noopener">https://searchcode.com/codesearch/view/31207532/#</a>  </p><p>可以在View File Tree中搜索。  </p><img src="/2019/09/25/Tex中找不到-sty文件/1.png" title="avatar">]]></content>
     
@@ -524,9 +526,9 @@
     </summary>
     
     
-      <category term="Windows" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Windows/"/>
+      <category term="Software" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Software/"/>
     
-      <category term="Tex" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Tex/"/>
+      <category term="Programe" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Programe/"/>
     
   </entry>
   
