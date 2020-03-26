@@ -188,6 +188,249 @@
             
 
   
+    <article id="post-结合知识的推荐系统" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/03/26/结合知识的推荐系统/" target="_blank">结合知识的推荐系统</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/03/26/结合知识的推荐系统/" class="archive-article-date">
+        <time datetime="2020-03-26T07:37:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-26</time>
+</a>
+
+  
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="结合知识的推荐系统"><a href="#结合知识的推荐系统" class="headerlink" title="结合知识的推荐系统"></a>结合知识的推荐系统</h1><p><a href="https://www.microsoft.com/en-us/research/people/xingx/" target="_blank" rel="noopener">谢幸</a></p>
+<p>Resources:</p>
+<ul>
+<li><p><a href="https://mp.weixin.qq.com/s/WgnWaP-NXbVWgQb-4YTfhg" target="_blank" rel="noopener">中文解读</a></p>
+</li>
+<li><p><a href="https://github.com/microsoft/recommenders">推荐系统案例代码</a></p>
+</li>
+</ul>
+
+
+
+
+<h2 id="1-Knowledge-Graph（知识图谱）"><a href="#1-Knowledge-Graph（知识图谱）" class="headerlink" title="1. Knowledge Graph（知识图谱）"></a>1. Knowledge Graph（知识图谱）</h2><h3 id="1-1-Knowledge-Enhanced-Recommendation（知识增强的推荐系统）"><a href="#1-1-Knowledge-Enhanced-Recommendation（知识增强的推荐系统）" class="headerlink" title="1.1 Knowledge Enhanced Recommendation（知识增强的推荐系统）"></a>1.1 Knowledge Enhanced Recommendation（知识增强的推荐系统）</h3><p>​       知识增强的推荐系统可以有效解决推荐中几大问题：</p>
+<ul>
+<li><p>准确性</p>
+</li>
+<li><ul>
+<li>关于items的更多的语义内容</li>
+<li>更深度的用户兴趣表示</li>
+</ul>
+</li>
+<li><p>多样性</p>
+</li>
+<li><ul>
+<li>知识图谱中不同的关系类型</li>
+<li>通过不同的语义路径拓展用户兴趣</li>
+</ul>
+</li>
+<li><p>可解释性</p>
+</li>
+<li><ul>
+<li>将用户兴趣与推荐结果相连接</li>
+<li>改善用户满意度，提升用户信任度</li>
+<li>
+
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-2-Knowledge-Graph-Embedding（知识图谱嵌入表示）"><a href="#1-2-Knowledge-Graph-Embedding（知识图谱嵌入表示）" class="headerlink" title="1.2 Knowledge Graph Embedding（知识图谱嵌入表示）"></a>1.2 Knowledge Graph Embedding（知识图谱嵌入表示）</h3><p>​        知识图谱嵌入表示是为知识图谱中的每一个实体和关系都学习一个低维的向量表示，使他们可以保持结构和语义知识。</p>
+<ol>
+<li>Distance-based Models（基于距离的模型）</li>
+</ol>
+
+
+<ol start="2">
+<li>Matching-based Models（基于匹配的模型）</li>
+</ol>
+
+
+<ol start="3">
+<li>训练方式</li>
+</ol>
+
+
+
+
+<h2 id="2-Collaborative-Knowledge-Embedding（协同知识嵌入）"><a href="#2-Collaborative-Knowledge-Embedding（协同知识嵌入）" class="headerlink" title="2. Collaborative Knowledge Embedding（协同知识嵌入）"></a>2. Collaborative Knowledge Embedding（协同知识嵌入）</h2><h3 id="2-1-协同知识嵌入"><a href="#2-1-协同知识嵌入" class="headerlink" title="2.1 协同知识嵌入"></a>2.1 协同知识嵌入</h3><ul>
+<li><p>结构知识</p>
+</li>
+<li><ul>
+<li>Direct, act等</li>
+</ul>
+</li>
+<li><p>视觉知识</p>
+</li>
+<li><ul>
+<li>电影海报，书籍封面图像等</li>
+</ul>
+</li>
+<li><p>文本知识</p>
+</li>
+<li><ul>
+<li>电影描述，评论等</li>
+</ul>
+</li>
+</ul>
+
+
+<h3 id="2-2-经典论文"><a href="#2-2-经典论文" class="headerlink" title="2.2 经典论文"></a>2.2 经典论文</h3><ol>
+<li><p>论文名称：Collaborative Knowledge Base Embedding for Recommender Systems, KDD 2016</p>
+</li>
+<li><p>模型：</p>
+</li>
+</ol>
+
+
+<ol start="3">
+<li>数据：</li>
+</ol>
+
+
+
+
+<h2 id="3-Deep-Knowledge-aware-Network"><a href="#3-Deep-Knowledge-aware-Network" class="headerlink" title="3. Deep Knowledge-aware Network"></a>3. Deep Knowledge-aware Network</h2><h3 id="3-1-经典论文"><a href="#3-1-经典论文" class="headerlink" title="3.1 经典论文"></a>3.1 经典论文</h3><ol>
+<li><p>论文名称：Deep Knowledge-Aware Network for News Recommendation, WWW 2018</p>
+</li>
+<li><p>思路示例图：</p>
+</li>
+</ol>
+
+
+<ol start="3">
+<li><p>处理过程：</p>
+</li>
+<li><p>提取知识表示：</p>
+</li>
+</ol>
+
+
+<ol start="5">
+<li>模型：</li>
+</ol>
+
+
+
+
+<h2 id="4-Ripple-Network"><a href="#4-Ripple-Network" class="headerlink" title="4. Ripple Network"></a>4. Ripple Network</h2><h3 id="4-1-经典论文"><a href="#4-1-经典论文" class="headerlink" title="4.1 经典论文"></a>4.1 经典论文</h3><ol>
+<li><p>论文名称：Ripple Network: Propagating User Preferences on the Knowledge Graph for Recommender Systems, CIKM 2018</p>
+</li>
+<li><p>思路示例图：</p>
+</li>
+</ol>
+
+
+<ol start="3">
+<li>模型：</li>
+</ol>
+
+
+<ol start="4">
+<li>结果：</li>
+</ol>
+
+
+
+
+<h2 id="5-可解释性推荐"><a href="#5-可解释性推荐" class="headerlink" title="5. 可解释性推荐"></a>5. 可解释性推荐</h2><h3 id="5-1-经典论文"><a href="#5-1-经典论文" class="headerlink" title="5.1 经典论文"></a>5.1 经典论文</h3><ol>
+<li><p>论文名称：Explainable Recommendation Through Attentive Multi-View Learning</p>
+</li>
+<li><p>模型：</p>
+</li>
+</ol>
+
+
+<ol start="3">
+<li>数据：</li>
+</ol>
+
+
+
+
+<h2 id="6-总结"><a href="#6-总结" class="headerlink" title="6. 总结"></a>6. 总结</h2><ol>
+<li><p>总结：知识图扩展了每个item的信息量，加强了它们之间的联系；带来推荐结果额外的多样性和可解释性；</p>
+</li>
+<li><p>未来工作：</p>
+<p>•将图形推理与推荐系统集成；</p>
+<p>•联合设计和优化推荐算法和底层架构；</p>
+<p>•处理知识的时间演变；</p>
+</li>
+</ol>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Notebook</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/03/26/结合知识的推荐系统/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Machine-Learning-in-Materials-Science" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1395,109 +1638,6 @@
 
 
   
-    <article id="post-Report-Sentence-Centrality-Revisited-for-Unsupervised-Summarization" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/02/18/Report-Sentence-Centrality-Revisited-for-Unsupervised-Summarization/" target="_blank">Report: Sentence Centrality Revisited for Unsupervised Summarization</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/02/18/Report-Sentence-Centrality-Revisited-for-Unsupervised-Summarization/" class="archive-article-date">
-        <time datetime="2020-02-18T06:40:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-18</time>
-</a>
-
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="Sentence-Centrality-Revisited-for-Unsupervised-Summarization"><a href="#Sentence-Centrality-Revisited-for-Unsupervised-Summarization" class="headerlink" title="Sentence Centrality Revisited for Unsupervised Summarization"></a>Sentence Centrality Revisited for Unsupervised Summarization</h1><h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>​        PACSUM：Position-Augmented Centrality based Summarization</p>
-<p>​        整体思路：抽取式摘要，总体还是基于图的排序算法，调整了句子中心度的计算方法。使用BERT来进行句子表示，可以更好地捕获句子意义；将原来的无向图换成有向图，将一条无向边转换成两条有向边。</p>
-<h2 id="二、模型"><a href="#二、模型" class="headerlink" title="二、模型"></a>二、模型</h2><p>​        模型总体分为两大部分：有向图构建和句子相似度计算。</p>
-<h3 id="1-有向图"><a href="#1-有向图" class="headerlink" title="1. 有向图"></a>1. 有向图</h3><p>​        将原来的无向图换成有向图，将一条无向边转换成两条有向边，只是在原来相似度的基础上分别乘以一个不同的系数，这是基于两个句子的连接对两者中心度的贡献是受他们相对位置的影响的，越靠前的句子中心度越高。句子中心度的计算公式如下：</p>
-<img src="/2020/02/18/Report-Sentence-Centrality-Revisited-for-Unsupervised-Summarization/1.png" title="avatar">
-
-<p>​        另外，为了减少超参数数量，令两个系数之和等于1。而且第一个系数偏向于负数，说明，与前面句子的相似度会降低该句子的中心度。</p>
-<h3 id="2-相似度计算"><a href="#2-相似度计算" class="headerlink" title="2. 相似度计算"></a>2. 相似度计算</h3><p>​        第一步：利用微调的BERT对句子进行编码；</p>
-<p>​        第二步：为了微调BERT，使用了一个句子级的分布假设作为微调的目标函数。借鉴负采样的思想，将特定句子的前一句和后一句作为正例，语料中的其他句子作为负例。目标函数如下：</p>
-<img src="/2020/02/18/Report-Sentence-Centrality-Revisited-for-Unsupervised-Summarization/2.png" title="avatar">
-
-<p>其中，两个向量表示是参数不同的BERT得到的。</p>
-<p>​        第三步：相似度直接有两个向量的点乘得到，点乘的效果优于余弦相似度。Beta系数决定了相似度低于多少才被设置为0。</p>
-<img src="/2020/02/18/Report-Sentence-Centrality-Revisited-for-Unsupervised-Summarization/3.png" title="avatar">
-
-<h2 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h2><p>​        代码：<a href="https://github.com/mswellhao/PacSum">https://github.com/mswellhao/PacSum</a></p>
-<p>​        实验效果很好，还没来得及看代码，有兴趣看一下。</p>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Paper</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Text Summarization</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/02/18/Report-Sentence-Centrality-Revisited-for-Unsupervised-Summarization/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1664,15 +1804,15 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Notebook</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Mac</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Anaconda</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Notebook</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1736,11 +1876,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Conda</a>
+                <a href="javascript:void(0)" class="js-tag color5">文献检索</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">文献检索</a>
+                <a href="javascript:void(0)" class="js-tag color1">Conda</a>
               </li>
             
             <div class="clearfix"></div>

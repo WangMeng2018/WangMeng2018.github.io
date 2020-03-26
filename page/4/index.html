@@ -188,6 +188,110 @@
             
 
   
+    <article id="post-修改Jupyter-Notebook目录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2019/09/12/修改Jupyter-Notebook目录/" target="_blank">修改Jupyter Notebook目录</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2019/09/12/修改Jupyter-Notebook目录/" class="archive-article-date">
+        <time datetime="2019-09-12T04:48:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-12</time>
+</a>
+
+  
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <ol>
+<li><p>打开 Anaconda Prompt ，输入:   </p>
+<blockquote>
+<p>jupyter notebook –generate-config  </p>
+</blockquote>
+</li>
+<li><p>找到 jupyter_notebook_config.py 的路径并打此文件;  </p>
+</li>
+<li><p>找到 c.NotebookApp.notebook_dir 这个变量，赋值为： ‘E:\Code\Jupyter-notebook’;  </p>
+<img src="/2019/09/12/修改Jupyter-Notebook目录/1.jpg" title="avatar">  
+<p>Ubuntu下的修改方法类似。</p>
+</li>
+<li><p>改完后保存，再次通过 Anaconda Navigator 进入 Jupyter Notebook 的时候会发现默认路径已经更改。  </p>
+</li>
+<li><p>如果直接通过 Jupyter Notebook 的快捷方式进入，默认目录还是原来那个。如果需要修改，找到快捷方式，右键打开属性，将“目标” 最后面的 “%USERPROFILE%” 删除就可以了。  </p>
+</li>
+</ol>
+<p>参考链接：  </p>
+<ul>
+<li><a href="https://blog.csdn.net/white_rabbit_2/article/details/83862429" target="_blank" rel="noopener">https://blog.csdn.net/white_rabbit_2/article/details/83862429</a>  </li>
+<li><a href="https://blog.csdn.net/weixin_36292173/article/details/76209839" target="_blank" rel="noopener">https://blog.csdn.net/weixin_36292173/article/details/76209839</a></li>
+</ul>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2019/09/12/修改Jupyter-Notebook目录/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Mac下Anaconda配置环境变量" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1172,127 +1276,6 @@
 
 
   
-    <article id="post-VSCode远程连接开发" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/09/02/VSCode远程连接开发/" target="_blank">VSCode远程连接开发</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/09/02/VSCode远程连接开发/" class="archive-article-date">
-        <time datetime="2019-09-02T07:59:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-02</time>
-</a>
-
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>说明： 示例是Mac上的VSCode连接远程Ubuntu服务器。</p>
-<h2 id="一、-服务器配置"><a href="#一、-服务器配置" class="headerlink" title="一、 服务器配置"></a>一、 服务器配置</h2><ol>
-<li>首先，给Ubuntu安装openssh-server；  <blockquote>
-<p>sudo apt-get install openssh-server</p>
-</blockquote>
-</li>
-<li>其次，启动ssh；  <blockquote>
-<p>sudo service ssh start</p>
-</blockquote>
-</li>
-<li>检查ssh是否开启。<blockquote>
-<p>ps -e | grep ssh</p>
-</blockquote>
-</li>
-</ol>
-<h2 id="二、-本地配置"><a href="#二、-本地配置" class="headerlink" title="二、 本地配置"></a>二、 本地配置</h2><ol>
-<li>Mac本身自带了ssh，不必安装；  </li>
-<li>查看是否存在ssh密钥: ~/.ssh/id_rsa_pub；  </li>
-<li>不存在的话，输入命令： ssh-keygen -t rsa -b 4096 ，生成两个文件；  <img src="/2019/09/02/VSCode远程连接开发/key.jpg" title="avatar"></li>
-<li>将本地的公共密钥发送到服务器。  <blockquote>
-<p>ssh-copy-id <a href="mailto:wangmeng@10.61.3.212" target="_blank" rel="noopener">wangmeng@10.61.3.212</a>  </p>
-</blockquote>
-</li>
-</ol>
-<h2 id="三、-VSCode配置"><a href="#三、-VSCode配置" class="headerlink" title="三、 VSCode配置"></a>三、 VSCode配置</h2><ol>
-<li>首先安装VSCode Remote SSH，安装完左侧会显示新图标；  </li>
-<li>点击CONNECTIONS后面的设置图标，再点击第一项进行配置； <img src="/2019/09/02/VSCode远程连接开发/1.jpg" title="avatar"></li>
-<li>设置连接名、服务器地址、服务器上的用户名。  <img src="/2019/09/02/VSCode远程连接开发/2.jpg" title="avatar">
-<img src="/2019/09/02/VSCode远程连接开发/3.jpg" title="avatar">
-</li>
-</ol>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Ubuntu</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Mac</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">VSCode</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/09/02/VSCode远程连接开发/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
@@ -1459,15 +1442,15 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Notebook</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Mac</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Anaconda</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Notebook</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1531,11 +1514,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Conda</a>
+                <a href="javascript:void(0)" class="js-tag color5">文献检索</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">文献检索</a>
+                <a href="javascript:void(0)" class="js-tag color1">Conda</a>
               </li>
             
             <div class="clearfix"></div>

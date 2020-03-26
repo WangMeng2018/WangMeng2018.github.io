@@ -188,6 +188,109 @@
             
 
   
+    <article id="post-Report-Sentence-Centrality-Revisited-for-Unsupervised-Summarization" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/02/18/Report-Sentence-Centrality-Revisited-for-Unsupervised-Summarization/" target="_blank">Report: Sentence Centrality Revisited for Unsupervised Summarization</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/02/18/Report-Sentence-Centrality-Revisited-for-Unsupervised-Summarization/" class="archive-article-date">
+        <time datetime="2020-02-18T06:40:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-18</time>
+</a>
+
+  
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="Sentence-Centrality-Revisited-for-Unsupervised-Summarization"><a href="#Sentence-Centrality-Revisited-for-Unsupervised-Summarization" class="headerlink" title="Sentence Centrality Revisited for Unsupervised Summarization"></a>Sentence Centrality Revisited for Unsupervised Summarization</h1><h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>​        PACSUM：Position-Augmented Centrality based Summarization</p>
+<p>​        整体思路：抽取式摘要，总体还是基于图的排序算法，调整了句子中心度的计算方法。使用BERT来进行句子表示，可以更好地捕获句子意义；将原来的无向图换成有向图，将一条无向边转换成两条有向边。</p>
+<h2 id="二、模型"><a href="#二、模型" class="headerlink" title="二、模型"></a>二、模型</h2><p>​        模型总体分为两大部分：有向图构建和句子相似度计算。</p>
+<h3 id="1-有向图"><a href="#1-有向图" class="headerlink" title="1. 有向图"></a>1. 有向图</h3><p>​        将原来的无向图换成有向图，将一条无向边转换成两条有向边，只是在原来相似度的基础上分别乘以一个不同的系数，这是基于两个句子的连接对两者中心度的贡献是受他们相对位置的影响的，越靠前的句子中心度越高。句子中心度的计算公式如下：</p>
+<img src="/2020/02/18/Report-Sentence-Centrality-Revisited-for-Unsupervised-Summarization/1.png" title="avatar">
+
+<p>​        另外，为了减少超参数数量，令两个系数之和等于1。而且第一个系数偏向于负数，说明，与前面句子的相似度会降低该句子的中心度。</p>
+<h3 id="2-相似度计算"><a href="#2-相似度计算" class="headerlink" title="2. 相似度计算"></a>2. 相似度计算</h3><p>​        第一步：利用微调的BERT对句子进行编码；</p>
+<p>​        第二步：为了微调BERT，使用了一个句子级的分布假设作为微调的目标函数。借鉴负采样的思想，将特定句子的前一句和后一句作为正例，语料中的其他句子作为负例。目标函数如下：</p>
+<img src="/2020/02/18/Report-Sentence-Centrality-Revisited-for-Unsupervised-Summarization/2.png" title="avatar">
+
+<p>其中，两个向量表示是参数不同的BERT得到的。</p>
+<p>​        第三步：相似度直接有两个向量的点乘得到，点乘的效果优于余弦相似度。Beta系数决定了相似度低于多少才被设置为0。</p>
+<img src="/2020/02/18/Report-Sentence-Centrality-Revisited-for-Unsupervised-Summarization/3.png" title="avatar">
+
+<h2 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h2><p>​        代码：<a href="https://github.com/mswellhao/PacSum">https://github.com/mswellhao/PacSum</a></p>
+<p>​        实验效果很好，还没来得及看代码，有兴趣看一下。</p>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Paper</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Text Summarization</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/02/18/Report-Sentence-Centrality-Revisited-for-Unsupervised-Summarization/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Report-Self-Supervised-Learning-for-Contextualized-Extractive-Summarization" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1129,98 +1232,6 @@
 
 
   
-    <article id="post-WinEdt打开tex文件Reading-Error" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/09/24/WinEdt打开tex文件Reading-Error/" target="_blank">WinEdt打开tex文件Reading Error</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/09/24/WinEdt打开tex文件Reading-Error/" class="archive-article-date">
-        <time datetime="2019-09-24T06:41:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-24</time>
-</a>
-
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>错误：WinEdt打开tex文件Reading Error。  </p>
-<p>原因：因为.tex文件中包含了utf-8字符，而在打开的时候并没有指明utf-8打开方式。  </p>
-<p>解决方案：  </p>
-<img src="/2019/09/24/WinEdt打开tex文件Reading-Error/1.png" title="avatar">
-
-<p>参考链接：<br><a href="https://blog.csdn.net/garfielder007/article/details/51619821" target="_blank" rel="noopener">https://blog.csdn.net/garfielder007/article/details/51619821</a></p>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Windows</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Tex</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/09/24/WinEdt打开tex文件Reading-Error/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
@@ -1387,15 +1398,15 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Notebook</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Mac</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Anaconda</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Notebook</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1459,11 +1470,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Conda</a>
+                <a href="javascript:void(0)" class="js-tag color5">文献检索</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">文献检索</a>
+                <a href="javascript:void(0)" class="js-tag color1">Conda</a>
               </li>
             
             <div class="clearfix"></div>
