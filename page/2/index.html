@@ -188,114 +188,6 @@
             
 
   
-    <article id="post-Report-Self-Supervised-Learning-for-Contextualized-Extractive-Summarization" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/02/17/Report-Self-Supervised-Learning-for-Contextualized-Extractive-Summarization/" target="_blank">Report: Self-Supervised Learning for Contextualized Extractive Summarization</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/02/17/Report-Self-Supervised-Learning-for-Contextualized-Extractive-Summarization/" class="archive-article-date">
-        <time datetime="2020-02-17T06:46:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-17</time>
-</a>
-
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="Self-Supervised-Learning-for-Contextualized-Extractive-Summarization"><a href="#Self-Supervised-Learning-for-Contextualized-Extractive-Summarization" class="headerlink" title="Self-Supervised Learning for Contextualized Extractive Summarization"></a>Self-Supervised Learning for Contextualized Extractive Summarization</h1><h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>​        引入三个辅助预训练方法Mask、Replace、Switch，以自监督的方式来捕获文档级的上下文信息，属于抽取式摘要方式。</p>
-<p>​        代码：https:// github.com/hongwang600/Summarization</p>
-<h2 id="二、模型"><a href="#二、模型" class="headerlink" title="二、模型"></a>二、模型</h2><p>​        这里使用了一个基础模型：一个句子编码器和一个文档级的自注意力机制。句子编码器是一个双向的LSTM，输入是句子序列的Embedding，输出是句子表示；再经过Self-Attention层，输出学习了全局上下文信息的句子表示；再通过线性层判断是否选择该句子。</p>
-<img src="/2020/02/17/Report-Self-Supervised-Learning-for-Contextualized-Extractive-Summarization/1.png" title="avatar">
-
-<h2 id="三、预训练方法"><a href="#三、预训练方法" class="headerlink" title="三、预训练方法"></a>三、预训练方法</h2><ol>
-<li><p>Mask</p>
-<p>​        Mask任务就是从候选池中预测Masked的句子。首先，以一定的概率Mask文档中的句子，并将Masked句子存入候选池。其次，用相同的句子编码器获取候选池中句子的表示。接着，模型需要预测每一个Mask位置缺失的句子，会先将Masked句子用<unk>代替，并计算其结合上下文信息的表示。最后，再计算两个表示的余弦相似度。</unk></p>
-<img src="/2020/02/17/Report-Self-Supervised-Learning-for-Contextualized-Extractive-Summarization/2.png" title="avatar">
-
-<p>​        为了训练模型，使用排序的损失函数来最大化预测句子与其他句子的边距。</p>
-<img src="/2020/02/17/Report-Self-Supervised-Learning-for-Contextualized-Extractive-Summarization/3.png" title="avatar">
-</li>
-<li><p>Replace</p>
-<p>​        以一定的概率用其他文档的句子替换本文档中的句子，并使用一个线性层来预测句子是否被替换。</p>
-<img src="/2020/02/17/Report-Self-Supervised-Learning-for-Contextualized-Extractive-Summarization/4.png" title="avatar">
-</li>
-<li><p>Switch</p>
-<p>​        与Replace类似，只不过是与同一文档中的句子进行交换。</p>
-</li>
-</ol>
-<h2 id="四、实验结果"><a href="#四、实验结果" class="headerlink" title="四、实验结果"></a>四、实验结果</h2><p>​        效果的确提升了，而且收敛速度更快。Switch方法的表现最好，但是感觉没有达到读者预想的目标。</p>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Paper</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Text Summarization</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/02/17/Report-Self-Supervised-Learning-for-Contextualized-Extractive-Summarization/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-Report-Video-Skimming-Taxonomy-and-Comprehensive-Survey" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -888,6 +780,140 @@
     
     <p class="article-more-link">
       <a class="article-more-a" href="/2020/01/26/结合知识的推荐系统/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Machine-Learning-in-Materials-Science" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/01/26/Machine-Learning-in-Materials-Science/" target="_blank">Machine Learning in Materials Science</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/01/26/Machine-Learning-in-Materials-Science/" class="archive-article-date">
+        <time datetime="2020-01-26T07:36:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-26</time>
+</a>
+
+  
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="Machine-Learning-in-Materials-Science"><a href="#Machine-Learning-in-Materials-Science" class="headerlink" title="Machine Learning in Materials Science"></a>Machine Learning in Materials Science</h1><p>Resources:</p>
+<ol>
+<li><a href="https://onlinelibrary.wiley.com/doi/full/10.1002/inf2.12028" target="_blank" rel="noopener">https://onlinelibrary.wiley.com/doi/full/10.1002/inf2.12028</a></li>
+</ol>
+<h2 id="1-新材料开发"><a href="#1-新材料开发" class="headerlink" title="1. 新材料开发"></a>1. 新材料开发</h2><ol>
+<li><p>计算机模拟材料分子特性</p>
+<p>替代人工挑选，ML加速研发，准确率高，而且专业素质要求低。</p>
+</li>
+<li><p>如何合成</p>
+</li>
+<li><p>优化周期</p>
+</li>
+<li><p>实际应用</p>
+<p>性质、制备、优化、器件结构优化；</p>
+<p>DFT计算材料性质，成本高。</p>
+</li>
+</ol>
+<h2 id="2-作用"><a href="#2-作用" class="headerlink" title="2. 作用"></a>2. 作用</h2><ol>
+<li><p>性质预测</p>
+</li>
+<li><p>宏观材料：图像分析铁轨的腐蚀程度；</p>
+</li>
+<li><p>纳米材料</p>
+</li>
+<li><p>分子性质：字符串分析 + 图像分析</p>
+</li>
+<li><p>增强化学理论</p>
+</li>
+</ol>
+<h2 id="3-新化合物发现"><a href="#3-新化合物发现" class="headerlink" title="3. 新化合物发现"></a>3. 新化合物发现</h2><ol>
+<li><p>结构导向</p>
+</li>
+<li><p>元素导向</p>
+</li>
+<li><p>反向设计</p>
+</li>
+</ol>
+<h2 id="4-展望"><a href="#4-展望" class="headerlink" title="4. 展望"></a>4. 展望</h2><ol>
+<li><p>适用更小的数据集</p>
+</li>
+<li><p>提供更可靠的数据</p>
+</li>
+<li><p>优化材料特征表示</p>
+</li>
+<li><p>增强模型的可解释性</p>
+</li>
+</ol>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+<li>创新在于设计，不在实验；</li>
+<li>文献提取，结构化提取事实关系：The Open Science monitor；</li>
+<li>机器阅读，更可靠地提取结构化内容。</li>
+</ol>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Notebook</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/01/26/Machine-Learning-in-Materials-Science/">展开全文 >></a>
     </p>
     
 
@@ -1546,11 +1572,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Estimation Method</a>
+                <a href="javascript:void(0)" class="js-tag color3">Dataset</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Dataset</a>
+                <a href="javascript:void(0)" class="js-tag color3">Estimation Method</a>
               </li>
              
               <li class="article-tag-list-item">
