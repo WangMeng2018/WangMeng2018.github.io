@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/"/>
-  <updated>2020-03-11T08:37:46.324Z</updated>
+  <updated>2020-10-20T08:04:03.427Z</updated>
   <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据库命令行批操作</title>
+    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2020/10/20/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%89%B9%E6%93%8D%E4%BD%9C/"/>
+    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2020/10/20/数据库命令行批操作/</id>
+    <published>2020-10-20T07:55:31.000Z</published>
+    <updated>2020-10-20T08:04:03.427Z</updated>
+    
+    <content type="html"><![CDATA[<pre><code>:::@echo off:::echo ------------------ 启动SQL数据库服务 ------------------:::如果没有启动sql服务，会先启动sql服务。“$”后面的是数据库实例名::net start mssql$127.0.0.1:::echo _____________________________________________________:::echo.:::echo _____________________________________________________echo ------------------ 执行T-SQL语句 ----------------sqlcmd -S&quot;127.0.0.1&quot; -U&quot;name&quot; -P&quot;password&quot; -d&quot;xxx1&quot; -Q&quot;SELECT * FROM [xxx1].[xxx2].[xxx3]&quot; -s&quot; &quot; -o C:\Users\data\result.txt -h&quot;-1&quot;echo ------------------ 任务执行完毕 ------------------pause</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;pre&gt;&lt;code&gt;:::@echo off
+:::echo ------------------ 启动SQL数据库服务 ------------------
+:::如果没有启动sql服务，会先启动sql服务。“$”后面的是数据库实例名
+::net start mssql$12
+      
+    
+    </summary>
+    
+    
+      <category term="Database" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Database/"/>
+    
+  </entry>
   
   <entry>
     <title>Report: Learning by Semantic Similarity Makes Abstractive Summarization Better</title>
@@ -491,32 +517,6 @@
 &lt;img src=&quot;/2019/09/27/Visual-Studio中C-使用Scanf报错/1.png&quot; title=&quot;avatar&quot;&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;项目属性;
-      
-    
-    </summary>
-    
-    
-      <category term="Software" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Software/"/>
-    
-      <category term="Programe" scheme="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/tags/Programe/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Tex中文乱码</title>
-    <link href="https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/26/Tex%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/"/>
-    <id>https://github.com/WangMeng2018/WangMeng2018.github.io/tree/master/2019/09/26/Tex中文乱码/</id>
-    <published>2019-09-26T01:44:02.000Z</published>
-    <updated>2020-03-26T07:58:24.288Z</updated>
-    
-    <content type="html"><![CDATA[<p>加上带注释的语句：  </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">\documentclass&#123;article&#125;</span><br><span class="line">\usepackage&#123;amsmath,amssymb&#125;</span><br><span class="line">\usepackage&#123;latexsym&#125;</span><br><span class="line">\usepackage&#123;CJK&#125;</span><br><span class="line"></span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">\begin&#123;CJK*&#125;&#123;GBK&#125;&#123;gsbn&#125;       # 需要添加</span><br><span class="line">文本内容</span><br><span class="line"></span><br><span class="line">\end&#123;CJK*&#125;                    # 需要添加</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;加上带注释的语句：  &lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/s
       
     
     </summary>

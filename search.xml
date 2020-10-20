@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>数据库命令行批操作</title>
+      <link href="/2020/10/20/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%89%B9%E6%93%8D%E4%BD%9C/"/>
+      <url>/2020/10/20/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%89%B9%E6%93%8D%E4%BD%9C/</url>
+      
+        <content type="html"><![CDATA[<pre><code>:::@echo off:::echo ------------------ 启动SQL数据库服务 ------------------:::如果没有启动sql服务，会先启动sql服务。“$”后面的是数据库实例名::net start mssql$127.0.0.1:::echo _____________________________________________________:::echo.:::echo _____________________________________________________echo ------------------ 执行T-SQL语句 ----------------sqlcmd -S&quot;127.0.0.1&quot; -U&quot;name&quot; -P&quot;password&quot; -d&quot;xxx1&quot; -Q&quot;SELECT * FROM [xxx1].[xxx2].[xxx3]&quot; -s&quot; &quot; -o C:\Users\data\result.txt -h&quot;-1&quot;echo ------------------ 任务执行完毕 ------------------pause</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Database </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Report: Learning by Semantic Similarity Makes Abstractive Summarization Better</title>
       <link href="/2020/03/11/Report-Learning-by-Semantic-Similarity-Makes-Abstractive-Summarization-Better/"/>
       <url>/2020/03/11/Report-Learning-by-Semantic-Similarity-Makes-Abstractive-Summarization-Better/</url>
